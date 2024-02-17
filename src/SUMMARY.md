@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Consistency Models](7.md)
 - [Classifier-Free Diffusion Guidance](6.md)
 - [Cascaded Diffusion Models for High Fidelity Image Generation](5.md)
 - [LEARNING ENERGY-BASED MODELS BY DIFFUSIONRECOVERY LIKELIHOOD](4.md)
