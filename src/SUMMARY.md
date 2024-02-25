@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Tackling the Generative Learning Trilemma with Denoising Diffusion GANs](10.md)
 - [Elucidating the Design Space of Diffusion-Based Generative Models](9.md)
 - [SCORE-BASED GENERATIVE MODELING THROUGHSTOCHASTIC DIFFERENTIAL EQUATIONS](8.md)
 - [Consistency Models](7.md)
