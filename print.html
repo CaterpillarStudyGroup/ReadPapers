@@ -1,0 +1,720 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>ReadPapers</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The note of Papers">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/pagetoc.css">
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><div>ReadPapers</div></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="10.html"><strong aria-hidden="true">2.</strong> Tackling the Generative Learning Trilemma with Denoising Diffusion GANs</a></li><li class="chapter-item expanded "><a href="9.html"><strong aria-hidden="true">3.</strong> Elucidating the Design Space of Diffusion-Based Generative Models</a></li><li class="chapter-item expanded "><a href="8.html"><strong aria-hidden="true">4.</strong> SCORE-BASED GENERATIVE MODELING THROUGHSTOCHASTIC DIFFERENTIAL EQUATIONS</a></li><li class="chapter-item expanded "><a href="7.html"><strong aria-hidden="true">5.</strong> Consistency Models</a></li><li class="chapter-item expanded "><a href="6.html"><strong aria-hidden="true">6.</strong> Classifier-Free Diffusion Guidance</a></li><li class="chapter-item expanded "><a href="5.html"><strong aria-hidden="true">7.</strong> Cascaded Diffusion Models for High Fidelity Image Generation</a></li><li class="chapter-item expanded "><a href="4.html"><strong aria-hidden="true">8.</strong> LEARNING ENERGY-BASED MODELS BY DIFFUSIONRECOVERY LIKELIHOOD</a></li><li class="chapter-item expanded "><a href="3.html"><strong aria-hidden="true">9.</strong> On Distillation of Guided Diffusion Models</a></li><li class="chapter-item expanded "><a href="2.html"><strong aria-hidden="true">10.</strong> Denoising Diffusion Implicit Models</a></li><li class="chapter-item expanded "><a href="1.html"><strong aria-hidden="true">11.</strong> PROGRESSIVE DISTILLATION FOR FAST SAMPLING OF DIFFUSION MODELS</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ReadPapers</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/CaterpillarStudyGroup/ReadPapers" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main><div class="sidetoc"><nav class="pagetoc"></nav></div>
+                        <div style="break-before: page; page-break-before: always;"></div><h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p>参考材料：<br />
+https://www.zhihu.com/people/wo-ai-chi-ha-mi-gua-93</p>
+<h1 id="template"><a class="header" href="#template">Template</a></h1>
+<h2 id="核心问题是什么"><a class="header" href="#核心问题是什么">核心问题是什么?</a></h2>
+<h2 id="核心贡献是什么"><a class="header" href="#核心贡献是什么">核心贡献是什么？</a></h2>
+<h2 id="大致方法是什么"><a class="header" href="#大致方法是什么">大致方法是什么？</a></h2>
+<h2 id="有效"><a class="header" href="#有效">有效</a></h2>
+<h2 id="缺陷"><a class="header" href="#缺陷">缺陷</a></h2>
+<h2 id="验证"><a class="header" href="#验证">验证</a></h2>
+<h2 id="启发"><a class="header" href="#启发">启发</a></h2>
+<h2 id="遗留问题"><a class="header" href="#遗留问题">遗留问题</a></h2>
+<h2 id="参考材料"><a class="header" href="#参考材料">参考材料</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tackling-the-generative-learning-trilemma-with-denoising-diffusion-gans"><a class="header" href="#tackling-the-generative-learning-trilemma-with-denoising-diffusion-gans">Tackling the Generative Learning Trilemma with Denoising Diffusion GANs</a></h1>
+<h2 id="核心问题是什么-1"><a class="header" href="#核心问题是什么-1">核心问题是什么?</a></h2>
+<p>作者认为可以从三个维度来评价一个生成模型的好坏：</p>
+<p><img src="https://caterpillarstudygroup.github.io/ImportantArticles/assets/D1-39.png" alt="" /></p>
+<p>其中Diffusion based生成模型的主要问题是生成速度慢，因此需要在保持高采样质量和多样性的前提下，针对采样速度慢的问题进行加速。</p>
+<h2 id="核心贡献是什么-1"><a class="header" href="#核心贡献是什么-1">核心贡献是什么？</a></h2>
+<p>Diffusion模型缓慢采样的根本原因是去噪步骤中的高斯假设，该假设仅适用于小步长。为了实现大步长的去噪，从而减少去噪步骤的总数，作者建议使用复杂的多模态分布对去噪分布进行建模。因此引入了去噪扩散生成对抗网络（去噪扩散 GAN），它使用多模态条件 GAN 对每个去噪步骤进行建模。总之，我们做出以下贡献：</p>
+<ol>
+<li>将扩散模型的缓慢采样归因于去噪分布中的高斯假设，并建议采用复杂的多模态去噪分布。 </li>
+<li>提出去噪扩散 GAN，这是一种扩散模型，其逆过程由条件 GAN 参数化。</li>
+<li>通过仔细的评估，我们证明，与当前图像生成和编辑的扩散模型相比，去噪扩散 GAN 实现了几个数量级的加速。</li>
+</ol>
+<h2 id="大致方法是什么-1"><a class="header" href="#大致方法是什么-1">大致方法是什么？</a></h2>
+<h3 id="denoising-diffusion-gan的设定"><a class="header" href="#denoising-diffusion-gan的设定">Denoising Diffusion GAN的设定</a></h3>
+<p>前向扩散过程与原来的DDPM模型一致，只是T非常小（T &lt; 8），且每个扩散步的\(\beta_t\)很大。<br />
+训练目标为最小化生成分布与真实分布的距离（同DDPM）对抗性损失，这个对抗性损失能够最小化散度。<br />
+判别器的定义为\(D_{\phi}(x_{t-1},x_t,t): R^N \times R^N \times R -&gt; [0,1]\)，即输入N维的\(x_{t-1}\) 和 \(x_{t}\)，输出 \(x_{t-1}\)是\(x_{t}\) 的去噪版本的置信度。<br />
+判别器对真实分布与生成分布做区分，但真实分布是未知的，无法直接训练判别器。为了解决这个问题，作者在这里做了转换：</p>
+<p><img src="./assets/2024-02-25%2021.43.16.png" alt="" /></p>
+<blockquote>
+<p>关于这个转换与非饱和GAN目标这一部分不懂</p>
+</blockquote>
+<h3 id="模型的重参数化"><a class="header" href="#模型的重参数化">模型的重参数化</a></h3>
+<p>直接预测 \(x_{t-1})\)较为困难，因为现在的去噪模型更加复杂，且是一个隐式的模型(原来的建模只是简单的高斯分布)。但是由于正向扩散过程仍然是加的高斯噪声，因此无论步长多大或者数据分布多复杂，依然有 \(q(x_{t-1}|x_t, x_0)\)服从高斯分布这一性质。因此去噪过程为：<br />
+先使用去噪模型 \(f_\theta(x_t,t)\) 预测 x0,再用给定的 xt 和预测出的 x0 来从后验分布 \(q(x_{t-1}|x_t,x_0)\) 中采样得到。<br />
+<img src="https://pic2.zhimg.com/80/v2-2bc134378f7b84da388295590a9ee151_1440w.webp" alt="" /></p>
+<p>训练流程图如下所示:</p>
+<p><img src="./assets/8784a418a165d74d1c70565b5ca091b4_4_Figure_3.png" alt="" /></p>
+<h2 id="有效-1"><a class="header" href="#有效-1">有效</a></h2>
+<h3 id="本文相对于ddpm的优势"><a class="header" href="#本文相对于ddpm的优势">本文相对于DDPM的优势:</a></h3>
+<ol>
+<li>\(p_\theta(x_{t-1}|x_t)\) 的构建类似于原始DDPM，可以利用原来的归纳偏置。但原来的DDPM是以确定性映射的方式由 xt 预测 x0 ,而在作者的设计中 x0 是由带随机隐变量 z 的生成器得到的。这一关键差异使得作者的去噪分布模型 \(p_\theta(x_{t-1}|x_t)\) 能够变得多模态以及更加复杂，而DDPM的去噪模型是简单的、单模态的高斯分布。</li>
+</ol>
+<p>2.对于不同的时间步 t ，xt 相对于原始图片的扰动程度是不同的，因此使用单个网络直接预测不同时间步的 
+\(x_{t-1}\) 可能是困难的。但在作者的设定下生成器只需要预测未经扰动的 x0，然后再利用 \(q_\theta(x_{t-1}|x_t,x_0)\) 加回扰动。</p>
+<h3 id="本文相对于gan的优势"><a class="header" href="#本文相对于gan的优势">本文相对于GAN的优势：</a></h3>
+<p>传统的GAN训练完后一步就能生成样本，而本模型要迭代地去噪来获得样本。因此:</p>
+<ol>
+<li>
+<p>GAN存在训练不稳定以及模式坍缩的问题。</p>
+</li>
+<li>
+<p>直接一步从复杂分布中生成样本是很困难的，而作者的模型将生成过程分解为几个条件的去噪-扩散步骤，每一步由于基于强条件 xt ，相对来说会更容易建模。</p>
+</li>
+<li>
+<p>判别器只看干净的样本可能存在过拟合问题。而扩散过程可以平滑数据分布，使得判别器没那么容易过拟合。<br />
+扩散过程相当于对原始图片加噪声，相当于做了数据增强，有缓解过拟合的作用；另一方面，我们的数据集是有限的，相当于是数据分布上的一些离散的点，加上噪声相当于让点扩散开来，将这些离散的点&quot;连起来&quot;成为一片区域，从而平滑了数据分布。</p>
+</li>
+</ol>
+<h2 id="缺陷-1"><a class="header" href="#缺陷-1">缺陷</a></h2>
+<h2 id="验证-1"><a class="header" href="#验证-1">验证</a></h2>
+<p>移掉隐变量会让模型变成单模态分布，并在消融实验中定量的证明了这一点</p>
+<h2 id="启发-1"><a class="header" href="#启发-1">启发</a></h2>
+<h2 id="遗留问题-1"><a class="header" href="#遗留问题-1">遗留问题</a></h2>
+<h2 id="参考材料-1"><a class="header" href="#参考材料-1">参考材料</a></h2>
+<p>https://zhuanlan.zhihu.com/p/503932823</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="elucidating-the-design-space-of-diffusion-based-generative-models"><a class="header" href="#elucidating-the-design-space-of-diffusion-based-generative-models">Elucidating the Design Space of Diffusion-Based Generative Models</a></h1>
+<h2 id="核心问题是什么-2"><a class="header" href="#核心问题是什么-2">核心问题是什么?</a></h2>
+<p>diffusion model模型的文献在理论方面非常丰富，采样计划、训练动态、噪声水平参数化等的推导往往尽可能直接基于理论框架，这确保了模型具有坚实的理论基础。然而，这种方法存在模糊可用设计空间的危险——所提出的模型可能会显示为紧密耦合的包，其中任何单个组件都无法在不破坏整个系统的情况下进行修改。</p>
+<h2 id="核心贡献是什么-2"><a class="header" href="#核心贡献是什么-2">核心贡献是什么？</a></h2>
+<p>文章用一种新的设计框架统一diffusion-based model，并使用模块化（modular）的思想，分别从采样、训练、score network设计三个方面分析和改进diffusion-based model。</p>
+<ol>
+<li>我们从实践的角度来审视这些模型背后的理论，更多地关注训练和采样阶段出现的“有形”对象和算法，而不是它们可能来自的统计过程。目标是更好地了解这些组件如何连接在一起以及整个系统设计中可用的自由度。</li>
+<li>采样：我们确定了采样的最佳时间离散化，对采样过程应用高阶龙格-库塔方法，评估不同的采样器计划，并分析随机性在采样过程中的有用性。这些改进的结果是合成过程中所需的采样步骤数量显着减少，并且改进的采样器可以用作几种广泛使用的扩散模型的直接替代品。</li>
+<li>训练：虽然我们继续依赖常用的网络架构（DDPM [16]、NCSN [48]），但我们在扩散模型设置中提供了对网络输入、输出和损失函数的预处理的第一个原理分析，并得出提高训练动力的最佳实践。我们还建议在训练期间改进噪声水平的分布，并注意到non-leaking augmentation [25]（通常与 GAN 一起使用）也有利于扩散模型。
+总而言之，我们的贡献可以显着提高结果质量。同时，通过明确列出设计空间的所有关键要素，我们相信我们的方法将使各个组件更容易创新，从而能够对扩散模型的设计空间进行更广泛和有针对性的探索。</li>
+</ol>
+<h2 id="大致方法是什么-2"><a class="header" href="#大致方法是什么-2">大致方法是什么？</a></h2>
+<h3 id="expressing-diffusion-models-in-a-common-framework"><a class="header" href="#expressing-diffusion-models-in-a-common-framework">Expressing diffusion models in a common framework</a></h3>
+<p>假设有方差是\( \sigma_{data} \)的数据分布 \(p_{data}(\mathbf x) \)。通过多次对数据添加方差为\( \sigma \)的高斯噪声，得到的\(p(x; \sigma_{max})\为纯高斯噪声（此处没有考虑缩放）。</p>
+<p>则有下面的ODE描述数据分布随着时间的变化：</p>
+<p><img src="./assets/2024-02-25%2013.03.23.png" alt="" /></p>
+<p>如果把缩放考虑进去，则公式变为：</p>
+<p><img src="./assets/2024-02-25%2012.02.49.png" alt="" /></p>
+<blockquote>
+<p>为了让p(x)与t无关，以下都是基于不考虑缩放的版本。</p>
+</blockquote>
+<p>diffusion-based model都是逐步添加高斯噪声的过程，主要就是两个不同，一个是缩放 s(t)，一个是噪声的大小σ(t)。</p>
+<p>作者在三个预训练模型进行了重构。三个预训练模型代表不同的理论框架和模型系列，都重构到一套统一的框架中。且重构后所有组件之间不存在隐式依赖关系——原则上，各个公式的任何选择（在合理范围内）都会产生一个功能模型。换句话说，更改一个组件并不需要更改其他组件，以便保持模型收敛到极限数据的属性。在实践中，某些选择和组合当然会比其他选择和组合效果更好。</p>
+<p><img src="./assets/556bc2d20922d2fcfe699a44cea8ba8e_2_Table_1.png" alt="" /></p>
+<blockquote>
+<p>表 1：N 是采样期间执行ODE solver迭代的次数。相应的时间步序列是{t0, t1,...。 。 。 , tN }，其中 tN = 0。降噪器定义为\(Dθ (x; σ) = c_{skip}(σ)x + c_{out}(σ)Fθ(c_{in}(σ)x; c_{noise}(σ));\) Fθ 表示原始神经网络层。<br />
+一些公式看起来与原始论文有很大不同，因为间接和递归已被删除；详细信息请参见附录 C。</p>
+</blockquote>
+<p>求解ODE的过程可以把积分离散化，即在离散时间间隔上采取有限步骤。这需要选择离散化方案（例如，Euler 或 Runge-Kutta 的变体）以及离散采样时间 {t0, t1,...。 。 。 ，tN}。许多先前的工作使用欧拉方法，但我们在第 3 节中表明二阶求解器提供了更好的计算权衡。</p>
+<h3 id="improvements-to-deterministic-sampling"><a class="header" href="#improvements-to-deterministic-sampling">Improvements to deterministic sampling</a></h3>
+<p>我们的假设是，与采样过程相关的选择在很大程度上独立于其他组件，例如网络架构和训练细节。</p>
+<p>对 ODE 进行数值求解是遵循真实解轨迹的近似值。在每一步中，求解器都会引入局部截断误差，截断误差会在N 步中累积。</p>
+<ol>
+<li>局部误差通常相对于步长呈超线性缩放，因此增加 N 可以提高解决方案的准确性。</li>
+<li>Euler方法是一阶solver，步长 h 的局部误差为 \(O(h^2)\)。而高阶方法有较小的截断误差，但在每一步需要进行多次网络预测。Heun二阶方法则在误差精度与推断次数之间有比较好的权衡。</li>
+<li>步长{ti}应该随着 σ 的减小而单调减小，并且不需要根据每个样本而变化（附录 D.1）。</li>
+<li>s(t)和σ(t)的选择提供了一种减少上述截断误差的方法，因为它们的大小预计与 dx/dt 的曲率成比例。作者认为这些函数的最佳选择是 σ(t) = t 和 s(t) = 1，这也是 DDIM [47] 中做出的选择。通过这种选择，ODE公式(4) 简化为 dx/dt = (x − D(x; t))/t， 并且 σ 和 t 可以互换。</li>
+</ol>
+<h3 id="stochastic-sampling"><a class="header" href="#stochastic-sampling">Stochastic sampling</a></h3>
+<p>确定性采样有许多好处，例如，能够通过反转 ODE 将真实图像转换为其相应的潜在表示。然而，它输出的质量差于SDE [47, 49]。鉴于 ODE 和 SDE 理论上恢复相同的分布，那么随机性到底有何作用？</p>
+<p><img src="./assets/2024-02-25%2015.17.37.png" alt="" /></p>
+<p>这揭示了为什么随机性在实践中有帮助：隐式朗之万扩散在给定时间将样本推向所需的边缘分布，主动纠正早期采样步骤中发生的任何错误。</p>
+<p>但是，用离散 SDE 求解器步骤逼近 Langevin 项本身会引入误差。之前的结果 [3, 24 , 47 , 49 ] 表明非零 β(t) 是有帮助的，但Song 等人对 β(t) 的隐式选择[49]只是根据经验确定。</p>
+<p>我们提出了一种随机采样器，它将二阶确定性 ODE 积分器与添加和消除噪声的显式的类似 Langevin 的“搅动”相结合。算法 2 中给出了伪代码。</p>
+<p><img src="./assets/2024-02-25%2015.24.51.png" alt="" /></p>
+<p>我们的方法和 Euler-Maruyama 之间的主要区别在于在离散化公式6时存在细微的差异。 Euler-Maruyama方法先添加噪声，然后执行 ODE 步骤。ODE不是从噪声注入后的中间状态开始，而是假设 x 和 σ 在迭代步骤开始时保持在初始状态。在我们的方法中，算法 2 第 7 行用于评估 Dθ 的参数对应于噪声注入后的状态(而Euler-Maruyama 的方法将使用 xi;ti 代替 \(\hat x_i; \hat t_i\)).在 Δt 接近零的极限下，这些选择之间可能没有区别，但当以大步长追求低 NFE 时，区别就变得很重要了。</p>
+<h2 id="有效-2"><a class="header" href="#有效-2">有效</a></h2>
+<h3 id="stochastic-sampling-1"><a class="header" href="#stochastic-sampling-1">Stochastic sampling</a></h3>
+<p>我们的随机采样器明显优于以前的采样器 [24,37,49]，特别是在低步数的情况下</p>
+<h2 id="缺陷-2"><a class="header" href="#缺陷-2">缺陷</a></h2>
+<h2 id="验证-2"><a class="header" href="#验证-2">验证</a></h2>
+<h3 id="improvements-to-deterministic-sampling-1"><a class="header" href="#improvements-to-deterministic-sampling-1">Improvements to deterministic sampling</a></h3>
+<p>我们首先使用这些模型的原始采样器实现测量基线结果，然后使用表 1 中的公式将这些采样器引入我们的统一框架，然后进行改进。这使我们能够评估不同的实际选择，并对适用于所有模型的采样过程提出一般改进。</p>
+<h2 id="启发-2"><a class="header" href="#启发-2">启发</a></h2>
+<h2 id="遗留问题-2"><a class="header" href="#遗留问题-2">遗留问题</a></h2>
+<h2 id="参考材料-2"><a class="header" href="#参考材料-2">参考材料</a></h2>
+<p>https://blog.csdn.net/icylling/article/details/133840948</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="score-based-generative-modeling-throughstochastic-differential-equations"><a class="header" href="#score-based-generative-modeling-throughstochastic-differential-equations">SCORE-BASED GENERATIVE MODELING THROUGHSTOCHASTIC DIFFERENTIAL EQUATIONS</a></h1>
+<h2 id="核心问题是什么-3"><a class="header" href="#核心问题是什么-3">核心问题是什么?</a></h2>
+<p>一种从数据生成噪声的方法：通过缓慢注入噪声将复杂的数据分布平滑地转换为已知的先验分布<br />
+一种从噪声生成数据的方法：SDE 通过缓慢消除噪声将先验分布转换回数据分布。其中SDE 仅取决于扰动数据分布的时间相关梯度场（也称为分数）。</p>
+<h2 id="核心贡献是什么-3"><a class="header" href="#核心贡献是什么-3">核心贡献是什么？</a></h2>
+<ol>
+<li>通过神经网络准确估计这些分数，并使用数值 SDE 求解器生成样本。</li>
+<li>引入预测校正框架来纠正离散逆时 SDE 演化中的错误</li>
+<li>导出等效的神经常微分方程，它从与 SDE 相同的分布中采样，但还可以进行精确的似然计算，并提高采样效率</li>
+<li>提供了一种使用基于分数的模型解决逆问题的新方法</li>
+</ol>
+<h2 id="大致方法是什么-3"><a class="header" href="#大致方法是什么-3">大致方法是什么？</a></h2>
+<h3 id="score-function"><a class="header" href="#score-function">Score function</a></h3>
+<p>生成模型的目标就是要得到数据的分布。现在我们有一个数据集，我们想要得到数据的概率分布p(x)。一般我们会把这个概率分布建模成这样：</p>
+<p>$$
+p_\theta(x) = \frac{e^{-f_\theta(x)}}{Z_\theta}
+$$</p>
+<p>这里f(x)可以叫做unnormalized probabilistic model或者energy-based model。Z是归一化项保证p(x)是概率。\(\theta\)是他们的参数。
+我们一般可以通过最大化log-likelihood的方式来训练参数\(\theta\)</p>
+<p>$$
+\max_\theta \sum_{i=1}^N \log p_\theta(x_i)
+$$</p>
+<p>即让数据集里的数据（即真实数据分布的采样）log-likelihood最大。</p>
+<p>但是因为Z是intractable的，我们无法求出\(\log p_\theta(x_i)\)，自然也就无法优化参数。
+<strong>为了解决归一化项无法计算的问题，我们引入score function</strong>。 score function的定义为</p>
+<p>$$
+s_\theta(x) = \nabla_x \log p_\theta(x) = -\nabla_x f_\theta(x) - \nabla_x \log z_\theta \\
+= -\nabla_x f_\theta(x)
+$$</p>
+<p>因此s(x)是一个与z无关的函数。</p>
+<h3 id="score-matching"><a class="header" href="#score-matching">Score matching</a></h3>
+<p>现在我们想要训练一个网络来估计出真实的score function。自然地，我们可以最小化真实的score function \(\nabla_x \log p_\theta(x)\)和网络输出的MSE\(s_\theta(x)\)。
+但是这样的一个loss我们是算不出来的，因为我们并不知道真实的p(x)是什么。而score matching方法就可以让我们在不知道真实的的情况下最小化这个loss。Score matching的推导如下：</p>
+<p><img src="./assets/2024-02-24%2019.48.45.png" alt="" /></p>
+<h3 id="score-matching-langevin-dynamics-smld"><a class="header" href="#score-matching-langevin-dynamics-smld">Score Matching Langevin Dynamics (SMLD)</a></h3>
+<p>现在我们已经通过神经网络学习到了数据分布的score function，那么如何用score function从这个数据分布中得到样本呢？答案就是朗之万动力学采样(Langevin Dynamics):</p>
+<p>$$
+x_{i+1} = x_i + \epsilon \nabla_x \log p(x) + \sqrt {2 \epsilon} z_i, z_i \in N(0, I), i = 0, 1, \dots, K 
+$$</p>
+<p>这里的采样是一个迭代的过程。\(\epsilon\)是一个很小的量。x0随机初始，通过上面的迭代式更新。当迭代次数K足够大的时候，x就收敛于该分布的一个样本。</p>
+<p>这样我们其实就得到了一个生成模型。我们可以先训练一个网络用来估计score function，然后用Langevin Dynamics和网络估计的score function采样，就可以得到原分布的样本。因为整个方法由score matching和Langevin Dynamics两部分组成，所以叫SMLD。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-8d800a528ca2304b7c7b995104a82fcd_1440w.webp" alt="" /></p>
+<h3 id="pitfall"><a class="header" href="#pitfall">Pitfall</a></h3>
+<p>现在我们得到了SMLD生成模型，但实际上这个模型由很大的问题。</p>
+<p>$$
+L = \int p(x) ||\nabla_x \log p(x) - s_\theta(x)||^2 dx
+$$</p>
+<p>观察我们用来训练神经网络的损失函数，我们可以发现这个L2项其实是被p(x)加权了。所以对于低概率的区域，估计出来的score function就很不准确。如果我们采样的初始点在低概率区域的话，因为估计出的score function不准确，很有可能生成不出真实分布的样本。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-03f132b0faeef0878ffd1397e72234f3_1440w.webp" alt="" /></p>
+<h3 id="fix-it-with-multiple-noise-perturbations"><a class="header" href="#fix-it-with-multiple-noise-perturbations">Fix it with multiple noise perturbations</a></h3>
+<p>那怎么样才能解决上面的问题呢？
+其实可以通过给数据增加噪声扰动的方式扩大高概率区域的面积。给原始分布加上高斯噪声，原始分布的方差会变大。这样相当于高概率区域的面积就增大了，更多区域的score function可以被准确地估计出来。</p>
+<p>但是噪声扰动的强度如何控制是个问题：</p>
+<ul>
+<li>强度太小起不到效果，高概率区域的面积还是太小</li>
+<li>强度太大会破坏数据的原始分布，估计出来的score function就和原分布关系不大了</li>
+</ul>
+<p>这里作者给出的解决方法是加不同程度的噪声，让网络可以学到加了不同噪声的原始分布的score function。</p>
+<p>我们定义序列\(\sigma_i\)_{i=1}^L，代表从小到大的噪声强度。这样我们可以定义经过噪声扰动之后的数据样本，服从一个经过噪声扰动之后的分布，</p>
+<p>$$
+x + \sigma_iz \in p_{\sigma_i}(x) = \int p(y)N(x|y, \sigma_i^2I)dy
+$$</p>
+<p>我们用神经网络来估计经过噪声扰动过的分布的score function。采样方式也要做出相应的变化，我们对于不同的噪声强度L做Langevin采样，上一个scale的结果作为这一次的初始化。这种采样方式也叫做Annealed Langevin dynamics，伪代码如下图所示。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-5127dadec5ea6d4b472aed0325f1c2fe_1440w.webp" alt="" /></p>
+<h2 id="有效-3"><a class="header" href="#有效-3">有效</a></h2>
+<h2 id="缺陷-3"><a class="header" href="#缺陷-3">缺陷</a></h2>
+<h2 id="验证-3"><a class="header" href="#验证-3">验证</a></h2>
+<h2 id="启发-3"><a class="header" href="#启发-3">启发</a></h2>
+<h3 id="connection-with-ddpm"><a class="header" href="#connection-with-ddpm">Connection with DDPM</a></h3>
+<p>如果我们把SMLD和DDPM的优化目标都写出来的话可以发现他们的形式都是一样的。</p>
+<h2 id="遗留问题-3"><a class="header" href="#遗留问题-3">遗留问题</a></h2>
+<h2 id="参考材料-3"><a class="header" href="#参考材料-3">参考材料</a></h2>
+<p>https://zhuanlan.zhihu.com/p/583666759</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="consistency-models"><a class="header" href="#consistency-models">Consistency Models</a></h1>
+<p>https://arxiv.org/pdf/2303.01469.pdf</p>
+<p>https://github.com/openai/consistency_models </p>
+<p>https://readpaper.com/pdf-annotate/note?pdfId=4761865581863370753&amp;noteId=2187834810264506624</p>
+<h2 id="核心问题是什么-4"><a class="header" href="#核心问题是什么-4">核心问题是什么?</a></h2>
+<p>扩散模型在图像、音频和视频生成方面取得了重大突破，但它们依赖于迭代生成过程，导致采样速度较慢，限制了其实时应用的潜力。<br />
+现有的快速采样方法包括更快的数值ODE求解器和蒸馏技术。ODE求解器仍然需要超过10个评估步骤来生成有竞争力的样本。大多数蒸馏方法，依赖于在蒸馏之前从扩散模型中收集大量的样本数据集，这本身就是计算成本很高的。据我们所知，唯一不受这一缺点影响的蒸馏方法是渐进蒸馏(PD)。</p>
+<h2 id="核心贡献是什么-4"><a class="header" href="#核心贡献是什么-4">核心贡献是什么？</a></h2>
+<ol>
+<li>一致性模型在设计上支持快速的一步生成，同时仍然允许少步采样以换取样本质量的计算。</li>
+<li>一种新的生成模型家族，可以在没有对抗性训练的情况下实现高样本质量</li>
+<li>支持zero-shot数据编辑，如图像修补、着色和超分辨率，而不需要对这些任务进行明确的训练。</li>
+<li>一致性模型既可以作为提取预训练扩散模型的一种方式训练，也可以作为独立的生成模型训练。</li>
+</ol>
+<h2 id="大致方法是什么-4"><a class="header" href="#大致方法是什么-4">大致方法是什么？</a></h2>
+<p>我们建立在连续时间扩散模型中的概率流(PF)常微分方程(ODE)之上（简单来说，就是图像前向传播的无参加噪过程），其轨迹平滑地将数据分布转换为可处理的噪声分布。而CM可将任何时间步骤的任何分布点映射到轨迹的起点。CM模型的一个显著特性是自一致性:同一轨迹上的点映射到相同的起始点。因此，我们把这样的模型称为一致性模型。</p>
+<p><img src="./assets/367ac711d276005e48b55de2b5bb5176_0_Figure_1_-730704248.png" alt="" /></p>
+<h3 id="一致性模型的定义"><a class="header" href="#一致性模型的定义">一致性模型的定义</a></h3>
+<p>假设存在一个函数f，对于同一条PF ODE轨迹上的任意点都有相同的输出:</p>
+<p>$$
+\boldsymbol{f} ( x_t , t ) = \boldsymbol{f} ( x_{t^{\prime}} , t^{\prime} )  \text { for all }  t , t ^{\prime} \in [ \epsilon , T ]
+$$</p>
+<p><img src="./assets/367ac711d276005e48b55de2b5bb5176_2_Figure_2_-1638748072.png" alt="" /></p>
+<p>consistency model的目标是从数据中估计一致性函数f，来迫使self-consistency性质</p>
+<h3 id="一致性模型参数化"><a class="header" href="#一致性模型参数化">一致性模型参数化</a></h3>
+<p>要拟合的一致性函数 \( f(\cdot, \cdot) \)要满足两个条件：①同一个轨迹上的点输出一致；②在起始点f为一个对于x的恒等函数</p>
+<p>第一种做法简单地参数化consistency models</p>
+<p><img src="./assets/3365b5ea5a7840f4a17fbb9f9acb11d5.png" alt="" /></p>
+<p>第二种做法使用跳跃连接（作者和许多其他的都用这个）</p>
+<p><img src="./assets/77f22f9854ff47018daf22ae3e93b5e6.png" alt="" /></p>
+<p>其中 \(c_{skip}\)和 \(c_{out}\)为可微函数，满足 \(c_{skip}(\epsilon) = 1, c_{out}(\epsilon) = 0\). \(F_{\theta}\)为深度神经网络，可使用一致性损失来学习，输出维度同 x.</p>
+<h3 id="一致性模型采样"><a class="header" href="#一致性模型采样">一致性模型采样</a></h3>
+<p>观察 f 的性质，显然， \(f(x_T,T) = x_{\epsilon}\)可以得到我们想要的生成结果。但一般认为，这样的生成误差会比较大。所以我们每次从\(x_{\tau_n}\) 预测出初始的 \(x_\)后，回退一步来预测\(x_{\tau_{n-1}}\) 来减小误差。因此有如下多步采样的算法。</p>
+<p><img src="./assets/7-1.PNG" alt="" /></p>
+<p>实际中，采用贪心算法来寻找时间点，通过三值搜索每次确定一个时间点。</p>
+<h3 id="consistency-models-的训练方式"><a class="header" href="#consistency-models-的训练方式">Consistency Models 的训练方式</a></h3>
+<p>考虑到 Consistency Models 的性质，对采样轨迹上的不同点，f应该有一个相同的输出，自然我们需要找到采样的轨迹。</p>
+<h4 id="training-consistency-models-via-distillation"><a class="header" href="#training-consistency-models-via-distillation">Training Consistency Models via Distillation</a></h4>
+<p>如果我们有预训练的diffusion model，自然可以构建轨迹。</p>
+<p>假设采样轨迹的时间序列为</p>
+<p>$$
+t_{1}=\epsilon&lt;t_{2}&lt;\cdots&lt;t_{N}=T
+$$</p>
+<p>通过运行数值ODE求解器的一个离散化步骤从 \(\mathbf{x}<em>{t</em>{n+1}}\) ​​得到 \( \mathbf{x}<em>{t</em>{n}}\)</p>
+<p><img src="./assets/a385bac7483c40668d3f499481522185.png" alt="" /></p>
+<p>其中Φ(...;ϕ)为ODE solver，可以是任意ODE Solver，一般来说阶数越高的 Solver 求解精度越高。​​</p>
+<p>例如使用Euler solver </p>
+<p>$$
+\frac{\mathrm{dx}}{\mathrm{d} t}=-t s_{\phi}\left(\mathrm{x}_{t}, t\right)\\
+\Phi(\mathrm{x}, t ; \phi)=-t s _{\phi}(\mathrm{x}, t)
+$$</p>
+<p>带入上式得到</p>
+<p><img src="./assets/cd1c0710b39042a4bafafadb69e5ee71.png" alt="" /></p>
+<p>对于处于同一轨道的 \((x_{t_{n-1}},t_{n-1}),(\hat x_{t_{n}}^\phi,t_{n})\)，f应该有相同的输出，我们用距离函数 d 来衡量输出是否相同。因而有如下训练损失</p>
+<p><img src="./assets/a8f8dcdab9834bb8ab6d7163728e3bfb.png" alt="" /></p>
+<p>其中 \(\lambda\)用来对不同时间步赋予不同重要性，\(\theta^-\)为 EMA 版本的权重。采用EMA来更新模型会提高训练的稳定性，并且性能会更好。</p>
+<p>综合上述过程，蒸馏（Consistency Distillation）的算法为</p>
+<p><img src="./assets/f4c9a023d6464bb5844aa91497f86585.png" alt="" /></p>
+<h4 id="training-consistency-models-in-isolation"><a class="header" href="#training-consistency-models-in-isolation">Training Consistency Models in Isolation</a></h4>
+<p>Consistency models也可以单独进行训练，而不依赖于预训练好的扩散模型。在蒸馏的过程中，我们实际上用预训练模型来估计得分\(\nabla \log p_t(x)\) 。 如果从头训练，需要找一个不依赖于预训练模型的估计方法。<br />
+作者在论文中证明了一种新得分函数的估计
+<img src="./assets/7-2.png" alt="" /></p>
+<p>利用该得分估计，作者为从 Isolation Training 构建了一个新的训练损失，</p>
+<p><img src="https://pic3.zhimg.com/80/v2-923bd500918ddd9e26e443315dc8de26_1440w.webp" alt="" /></p>
+<p>并且证明了该 Loss 和 Distillation Loss 在最大间隔趋于0时相等。即</p>
+<p><img src="https://pic4.zhimg.com/80/v2-2d6a51584facd4925093f4c0e11a41c7_1440w.webp" alt="" /></p>
+<p>从而可以利用上述 loss 训练一个 Consistency Models，并且不依赖于已有 Diffusion Model。具体算法如下</p>
+<p><img src="https://pic3.zhimg.com/80/v2-244085aecd3c9cc32a41799f44fa223e_1440w.webp" alt="" /></p>
+<h2 id="有效-4"><a class="header" href="#有效-4">有效</a></h2>
+<h2 id="缺陷-4"><a class="header" href="#缺陷-4">缺陷</a></h2>
+<h2 id="验证-4"><a class="header" href="#验证-4">验证</a></h2>
+<h2 id="启发-4"><a class="header" href="#启发-4">启发</a></h2>
+<h2 id="遗留问题-4"><a class="header" href="#遗留问题-4">遗留问题</a></h2>
+<h2 id="参考材料-4"><a class="header" href="#参考材料-4">参考材料</a></h2>
+<p>[1] https://zhuanlan.zhihu.com/p/621673283
+[2] https://blog.csdn.net/singxsy/article/details/130243343
+[3] https://blog.csdn.net/WiSirius/article/details/134670307
+[4] https://www.jianshu.com/p/3b712cbe6d0d</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="classifier-free-diffusion-guidance"><a class="header" href="#classifier-free-diffusion-guidance">Classifier-Free Diffusion Guidance</a></h1>
+<p>https://readpaper.com/pdf-annotate/note?pdfId=4650228075519295489</p>
+<h2 id="核心问题是什么-5"><a class="header" href="#核心问题是什么-5">核心问题是什么?</a></h2>
+<p>类别引导的方法就是使用额外训练的分类器来提升扩散模型生成样本的质量。<br />
+在使用类别引导扩散模型生成之前，扩散模型很难生成类似于 BigGAN 或 Glow 生成的那种 low temperature（和训练数据的分布非常接近的样本，更清晰且逼真） 的样本。<br />
+分类器引导是一种混合了扩散模型分数估计与分类器概率输入梯度的方法。通过改变分类器梯度的强度，可以在 Inception 得分和 FID 得分（两种评价生成模型性能的指标）之间进行权衡，就像调整 BigGAN 中截断参数一样。</p>
+<p>然而，作者想要探索是否可以在不使用任何分类器的情况下实现类似效果。因为，使用分类器引导会使扩散模型训练流程复杂化，它需要额外训练一个用于处理噪声数据的分类器，并且在采样过程中将分数估计与该分类器梯度混合。</p>
+<p>所以作者提出了无需任何依赖于特定目标或者任务设定的 classifier-free guidance 方法。</p>
+<h2 id="核心贡献是什么-5"><a class="header" href="#核心贡献是什么-5">核心贡献是什么？</a></h2>
+<h3 id="classifier-guidance"><a class="header" href="#classifier-guidance">Classifier Guidance</a></h3>
+<p><img src="https://caterpillarstudygroup.github.io/ImportantArticles/assets/D1-72.png" alt="" /></p>
+<p>从上式可以看到，Classifier Guidance 条件生成只需额外添加一个classifier的梯度来引导。从成本上看，Classifier Guidance 需要训练噪声数据版本的classifier网络，推理时每一步都需要额外计算classifier的梯度。</p>
+<h3 id="classifier-guidance-的问题"><a class="header" href="#classifier-guidance-的问题">Classifier Guidance 的问题</a></h3>
+<ol>
+<li>需要额外训练一个噪声版本的图像分类器</li>
+<li>分类器的质量会影响按类别生成的效果</li>
+<li>通过梯度更新图像会导致对抗攻击效应，生成图像可能会通过人眼不可察觉的细节欺骗分类器，实际上并没有按条件生成。</li>
+</ol>
+<h3 id="classifier-free-guidance"><a class="header" href="#classifier-free-guidance">classifier-free guidance</a></h3>
+<p>目标：训练一个diffusion 模型，不需要训练分类模型，不受限于类别，直接用条件控制即可</p>
+<blockquote>
+<p>假设有一个训好的无条件diffusion model，Classifier Guidance只需要在此基础上再训练一个噪声版本的图像分类器。但classifier-free guidance则需要完全重训diffsion model，已有的diffusion model用不上。</p>
+</blockquote>
+<p>OPENAI 提出了 可以通过调节引导权重，控制生成图像的逼真性和多样性的平衡的 classifier-free guidance，思想是通过一个隐式分类器来替代显示分类器，而无需直接计算显式分类器及其梯度。</p>
+<h2 id="大致方法是什么-5"><a class="header" href="#大致方法是什么-5">大致方法是什么？</a></h2>
+<p>“无分类器引导”（Classifier-free guidance）可以在不需要分类器的情况下提供与分类器引导相同的效果。它通过一个隐式分类器来替代显示分类器，而无需直接计算显式分类器及其梯度。</p>
+<p>分类器的梯度如下:<br />
+<img src="https://caterpillarstudygroup.github.io/ImportantArticles/assets/D1-74-1.png" alt="" /></p>
+<p>把这个分类器带入 classifier guidance 梯度中，得到如下：
+<img src="https://caterpillarstudygroup.github.io/ImportantArticles/assets/D1-74-2.png" alt="" /></p>
+<blockquote>
+<p>当 w=-1 为无条件模型；当 w=0 为标准的条件概率模型。当 w&gt;0 时，是classifier-free guidance。</p>
+</blockquote>
+<p>Classifier-Free Guidance需要训练两个模型，一个是无条件生成模型，另一个是条件生成模型。这两个模型都同一个模型表示，用同一神经网络进行参数化，并且同时训练。训练时只需要以一定概率将条件置空即可。</p>
+<blockquote>
+<p>虽然也可以选择独立训练每个单独的模型，但联合训练更简单、不会复杂化训练流程，并且不会增加总体参数数量。</p>
+</blockquote>
+<p>推理时，最终结果可以由条件生成和无条件生成的线性外推获得，生成效果可以引导系数可以调节，控制生成样本的逼真性和多样性的平衡。</p>
+<h2 id="有效-5"><a class="header" href="#有效-5">有效</a></h2>
+<p>为什么这比 classifier guidance 好得多？主要原因是我们从生成模型构造了“分类器”，而标准分类器可以走捷径：忽视输入 x 依然可以获得有竞争力的分类结果，而生成模型不容易被糊弄，这使得得到的梯度更加稳健。</p>
+<h2 id="缺陷-5"><a class="header" href="#缺陷-5">缺陷</a></h2>
+<h2 id="验证-5"><a class="header" href="#验证-5">验证</a></h2>
+<p><img src="https://caterpillarstudygroup.github.io/ImportantArticles/assets/D1-75.png" alt="" /></p>
+<h2 id="启发-5"><a class="header" href="#启发-5">启发</a></h2>
+<h2 id="遗留问题-5"><a class="header" href="#遗留问题-5">遗留问题</a></h2>
+<h2 id="参考材料-5"><a class="header" href="#参考材料-5">参考材料</a></h2>
+<p>[1] https://blog.csdn.net/jiaoyangwm/article/details/135101303</p>
+<p>[2] https://sunlin-ai.github.io/2022/06/01/Classifier-Free-Diffusion.html</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cascaded-diffusion-models-for-high-fidelity-image-generation"><a class="header" href="#cascaded-diffusion-models-for-high-fidelity-image-generation">Cascaded Diffusion Models for High Fidelity Image Generation</a></h1>
+<h2 id="核心问题是什么-6"><a class="header" href="#核心问题是什么-6">核心问题是什么?</a></h2>
+<p>没有强大条件信息的大型高保真数据集上提升扩散模型的样本质量。<br />
+级联扩散模型能够生成高保真图像，而无需辅助图像分类器的任何帮助来提高样本质量。<br />
+级联扩散模型的生成质量主要依赖于条件增强，这是我们提出的超分辨率模型的低分辨率条件输入的数据增强方法。我们的实验表明，条件增强可以防止级联模型中采样过程中的复合误差，这有助于我们训练级联pipeline。</p>
+<h2 id="核心贡献是什么-6"><a class="header" href="#核心贡献是什么-6">核心贡献是什么？</a></h2>
+<p>贡献1：使用级联扩散模型 (CDM)（不需要与任何分类器结合的纯生成模型） 产生的高保真度样本。
+贡献2：为超分辨率模型super-resolution models引入了条件增强（这对于实现高样本保真度至关重要），并提出了超分辨率模型低分辨率条件输入的数据增强方法。
+贡献3：我们对增强策略进行了深入探索，发现高斯增强是低分辨率上采样的关键因素，而高斯模糊是高分辨率上采样的关键因素。我们还展示了如何有效地训练在不同水平的条件增强上摊销的模型，以实现训练后超参数搜索以获得最佳样本质量。</p>
+<h2 id="大致方法是什么-6"><a class="header" href="#大致方法是什么-6">大致方法是什么？</a></h2>
+<p><img src="./assets/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202024-03-07%2007.05.42.png" alt="" /></p>
+<p><img src="./assets/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202024-03-07%2007.10.43.png" alt="" /></p>
+<h2 id="有效-6"><a class="header" href="#有效-6">有效</a></h2>
+<p>条件增强可防止级联模型采样期间的复合误差。</p>
+<h2 id="缺陷-6"><a class="header" href="#缺陷-6">缺陷</a></h2>
+<h2 id="验证-6"><a class="header" href="#验证-6">验证</a></h2>
+<h2 id="启发-6"><a class="header" href="#启发-6">启发</a></h2>
+<h2 id="遗留问题-6"><a class="header" href="#遗留问题-6">遗留问题</a></h2>
+<h2 id="参考材料-6"><a class="header" href="#参考材料-6">参考材料</a></h2>
+<p>https://blog.csdn.net/qq_43800752/article/details/130153729</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="learning-energy-based-models-by-diffusionrecovery-likelihood"><a class="header" href="#learning-energy-based-models-by-diffusionrecovery-likelihood">LEARNING ENERGY-BASED MODELS BY DIFFUSIONRECOVERY LIKELIHOOD</a></h1>
+<p>https://readpaper.com/pdf-annotate/note?pdfId=4557039050691715073&amp;noteId=2184260463570356480</p>
+<h2 id="核心问题是什么-7"><a class="header" href="#核心问题是什么-7">核心问题是什么?</a></h2>
+<p>虽然基于能量的模型 (EBM) 在高维数据集上表现出许多理想的属性，但在高维数据集上进行训练和采样仍然具有挑战性。</p>
+<h2 id="核心贡献是什么-7"><a class="header" href="#核心贡献是什么-7">核心贡献是什么？</a></h2>
+<p>我们提出了一种diffusion recovery likelihood方法，在数据集的越来越嘈杂的版本上训练的一系列 EBM ，并从中训练和采样。</p>
+<h2 id="大致方法是什么-7"><a class="header" href="#大致方法是什么-7">大致方法是什么？</a></h2>
+<p>每个 EBM 都使用recovery likelihood进行训练，这使得：给定数据集在较高噪声水平下的噪声版本，数据在特定噪声水平下的条件概率最大化。<br />
+优化recovery likelihood比marginal likelihood更容易处理，因为从条件分布中采样比从边际分布中采样容易得多。训练后，可以通过采样过程生成合成图像，该采样过程从高斯白噪声分布初始化，并以逐渐降低的噪声水平逐步对条件分布进行采样。</p>
+<h2 id="有效-7"><a class="header" href="#有效-7">有效</a></h2>
+<p>After training, synthesized images can be generated by the sampling process that initializes from Gaussian white noise distribution and progressively samples the conditional distributions at decreasingly lower noise levels.<br />
+Our method generates high fidelity samples on various image datasets.</p>
+<h2 id="缺陷-7"><a class="header" href="#缺陷-7">缺陷</a></h2>
+<h2 id="验证-7"><a class="header" href="#验证-7">验证</a></h2>
+<h2 id="启发-7"><a class="header" href="#启发-7">启发</a></h2>
+<h2 id="遗留问题-7"><a class="header" href="#遗留问题-7">遗留问题</a></h2>
+<h2 id="参考材料-7"><a class="header" href="#参考材料-7">参考材料</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="on-distillation-of-guided-diffusion-models"><a class="header" href="#on-distillation-of-guided-diffusion-models">On Distillation of Guided Diffusion Models</a></h1>
+<h2 id="核心问题是什么-8"><a class="header" href="#核心问题是什么-8">核心问题是什么?</a></h2>
+<p>无分类器引导扩散模型的缺点是，它们在推理时的计算成本很高，因为它们需要评估两个扩散模型（一个类条件模型和一个无条件模型）数十到数百次。<br />
+而现有的加速方法不适用于classifier-free guided diffusion models。</p>
+<h2 id="核心贡献是什么-8"><a class="header" href="#核心贡献是什么-8">核心贡献是什么？</a></h2>
+<p>使用两步蒸馏法提升classifier-free guided diffusion models的采样效率。<br />
+给定一个预先训练的无分类器引导模型，我们首先学习一个模型来匹配两个教师模型（条件模型和无条件模型）的组合输出，然后我们逐步将该模型提炼为需要更少采样步骤的扩散模型。</p>
+<h2 id="大致方法是什么-8"><a class="header" href="#大致方法是什么-8">大致方法是什么？</a></h2>
+<h3 id="第一阶段"><a class="header" href="#第一阶段">第一阶段</a></h3>
+<p>引入单个学生模型来匹配两个老师扩散模型（条件模型和无条件模型）的组合输出。</p>
+<p>classifier-free guidance使用w来权衡条件模型（质量）和无条件模型（多样性）。因此蒸馏模型也应该能够保持这一特性。<br />
+给定我们感兴趣的指导强度范围 [wmin, wmax]，使用以下目标优化学生模型</p>
+<p><img src="./assets/3-3.PNG" alt="" /></p>
+<p>其中\(\hat x_{\theta}^w(z_t)\)是由两个老师扩散模型提供的GT。\(\hat x_{\eta 1}(z_t, w)\)是要学习的学生模型。</p>
+<ol>
+<li>对 w 应用傅里叶嵌入，然后将其合并到扩散模型主干中，其方式类似于将时间步。</li>
+<li>学生模型与老师模型相同，且使用老师模型来初始化学习模型。</li>
+</ol>
+<h3 id="第二阶段"><a class="header" href="#第二阶段">第二阶段</a></h3>
+<p>逐步将第一阶段学习的模型提炼为少步模型，见<a href="https://caterpillarstudygroup.github.io/ReadPapers/1.html">PROGRESSIVE DISTILLATION FOR FAST SAMPLING OF DIFFUSION MODELS</a>.</p>
+<h2 id="有效-8"><a class="header" href="#有效-8">有效</a></h2>
+<ol>
+<li>对于在<strong>像素空间</strong>上训练的标准扩散模型，我们的方法能够在 ImageNet 64x64 和 CIFAR-10 上使用短短 4 个采样步骤生成视觉上与原始模型相当的图像，实现与原始模型相当的 FID/IS 分数原始模型的采样速度提高了 256 倍。</li>
+<li>对于在<strong>隐空间</strong>上训练的扩散模型（例如稳定扩散），我们的方法能够使用少至 1 到 4 个去噪步骤生成高保真图像，与 ImageNet 上的现有方法相比，推理速度至少提高 10 倍256x256 和 LAION 数据集。
+<img src="./assets/7065d96e4d7898643bd368640e73ff89_3_Figure_4_-11883325.png" alt="" /></li>
+<li>在<strong>文本引导图像编辑和修复</strong>方面，我们的蒸馏模型能够使用少至 2-4 个去噪步骤生成高质量的结果。
+For standard diffusion models trained on the pixel-space, our approach is able to generate images visually comparable to that of the original model using as few as 4 sampling steps on ImageNet 64x64 and CIFAR-10, achieving FID/IS scores comparable to that of the original model while being up to 256 times faster to sample from.</li>
+</ol>
+<h2 id="缺陷-8"><a class="header" href="#缺陷-8">缺陷</a></h2>
+<h2 id="验证-8"><a class="header" href="#验证-8">验证</a></h2>
+<h2 id="启发-8"><a class="header" href="#启发-8">启发</a></h2>
+<h2 id="参考材料-8"><a class="header" href="#参考材料-8">参考材料</a></h2>
+<ol>
+<li>https://blog.csdn.net/zjc910997316/article/details/131812691</li>
+<li>https://caterpillarstudygroup.github.io/ImportantArticles/diffusion-tutorial-part/diffusiontutorialpart1.html</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="denoising-diffusion-implicit-models"><a class="header" href="#denoising-diffusion-implicit-models">Denoising Diffusion Implicit Models</a></h1>
+<h2 id="核心问题是什么-9"><a class="header" href="#核心问题是什么-9">核心问题是什么？</a></h2>
+<p>DDPM的生成速度太慢，其本质原因是：在对\(p_{\theta}(x_{t-1}|x_t)\)的推导中，DDPM用到了一阶马尔可夫假设，使得\(p(x_t|x_{t-1},x_0)=p(x_t|x_{t-1})\) 。<br />
+在DDPM中往往需要较大的T才能得到较好的结果(论文中 )，这导致需要T次采样步长。因此重建的步长非常长，导致速度慢。</p>
+<h2 id="核心贡献是什么-9"><a class="header" href="#核心贡献是什么-9">核心贡献是什么？</a></h2>
+<h3 id="ddpm为什么这么慢"><a class="header" href="#ddpm为什么这么慢">DDPM为什么这么慢</a></h3>
+<p>DDPM速度慢的本质原因是对马尔可夫假设的依赖，导致重建需要较多的步长。那么不用一阶马尔可夫假设，有没有另一种方法推导出\(p(x_{t-1}|x_{t},x_0)\) 。<br />
+前面我们提到，DDPM的前向过程主要是用于构造数据集，来训练噪声预测模型。在实际优化过程中，其实并没有用到前向过程的马尔可夫假设，只用到了推理分布 \(q(x_t|x_0)\) ，因此如果DDIM也能满足这个推理分布的话，那么直接就可以复用DDPM的噪声预测模型了</p>
+<blockquote>
+<p>✅ 马尔可夫假设认为，\(x_{t}\)只与\(x_{t-1}\)有关。但前向过程中\(x_{t}\)由\(x_0\)得到，而不是由\(x_{t-1}\)得到，因此不依赖马尔可夫假设。<br />
+✅ 而反向过程中，\(x_{t-1}\)需要\(x_{t}\)，因此是依赖马尔可夫假设。<br />
+✅ 如果找到一种方法，不需要计算通过\(x_{t}\)的分布来计算\(x_{t-1}\)的分布，那么就是不依赖于马尔可夫假设。</p>
+</blockquote>
+<h3 id="ddim如何不依赖马尔科夫假设"><a class="header" href="#ddim如何不依赖马尔科夫假设">DDIM如何不依赖马尔科夫假设</a></h3>
+<p>归纳一下DDIM想要做的</p>
+<ul>
+<li>DDIM希望构建一个采样分布\(p(x_{t-1}|x_{t},x_0)\)，这个采样分布不依赖一阶马尔科夫假设</li>
+<li>DDIM希望维持这个前向推理分布\(q(x_t|x_0) = \mathcal{N} (x_t;\sqrt{{\alpha_t}}x_0,(1-{\alpha_t})I)\)</li>
+</ul>
+<h3 id="ddpm中的px_t-1x_tx_0"><a class="header" href="#ddpm中的px_t-1x_tx_0">DDPM中的\(p(x_{t-1}|x_{t},x_0)\)</a></h3>
+<p><img src="https://caterpillarstudygroup.github.io/ImportantArticles/assets/lhy3-26.png" alt="" /></p>
+<p>根据DDPM的结果参考，采样分布\(p(x_{t-1}|x_{t},x_0)\)是一个高斯分布，并且均值是\(x_{0}, x_t\)的线性函数，方差是一个与时间步有关的函数。</p>
+<h3 id="ddim中的px_t-1x_tx_0"><a class="header" href="#ddim中的px_t-1x_tx_0">DDIM中的\(p(x_{t-1}|x_{t},x_0)\)</a></h3>
+<p>DDIM也假设\(p(x_{t-1}|x_{t},x_0)\)是一个高斯分布，并且均值也是\(x_{0}, x_t\)的线性函数，方差是时间步t的函数，即:</p>
+<p>$$
+p(x_{t-1}|x_{t},x_0) = \mathcal{N}(x_{t-1};\lambda x_0 + k x_t, \sigma^2_t I)
+$$</p>
+<p>这个采样分布有3个自由变量\(\lambda, k, \sigma_t\)，理论上有无穷多个解。但DDIM想要维持与DDPM一致的推理分布\(q(x_t|x_0) = \mathcal{N} (x_t;\sqrt{{\alpha_t}}x_0,(1-{\alpha_t})I)\) 。这样问题就转化成，找到一组解\(\lambda^{ * }, k^{ * }, \sigma_t^{ * }\) ，使得DDIM的推理分布满足\(q(x_t|x_0) = \mathcal{N} (x_t;\sqrt{{\alpha_t}}x_0,(1-{\alpha_t})I)\) 。</p>
+<h3 id="求解ddim中的未知量"><a class="header" href="#求解ddim中的未知量">求解DDIM中的未知量</a></h3>
+<p>根据\(q(x_t|x_0)\)条件，列出方程组并求解未知量\(\lambda, k, \sigma_t\)：</p>
+<p>$$
+p(x_{t-1}|x_{t},x_0) = \mathcal{N}(x_{t-1};\lambda x_0 + k x_t, \sigma^2_t I)\\
+q(x_{t-1}|x_0) = \mathcal{N} (x_{t-1};\sqrt{{\alpha_{t-1}}}x_0,(1-{\alpha_{t-1}})I)
+$$</p>
+<p>两个方程，三个未知量。因此把\(\sigma_t\)把看作是控制生成过程的超参，只解\(\lambda, k\)。</p>
+<p>解方程过程省略，见参考材料[1]。解得：</p>
+<p><img src="./assets/2-10.PNG" alt="" /></p>
+<h3 id="ddim采样分布的使用"><a class="header" href="#ddim采样分布的使用">DDIM采样分布的使用</a></h3>
+<p>解出(\lambda, k\)，得到DDIM的采样分布：</p>
+<p><img src="./assets/2-11.PNG" alt="" /></p>
+<p>不同的\(\sigma_t\)对应不同生成过程。由于前向过程没变，故可以直接用DDPM训练的噪声预测模型。其采样过程如下：</p>
+<p><img src="./assets/2-12.PNG" alt="" /></p>
+<h3 id="两个特殊的case"><a class="header" href="#两个特殊的case">两个特殊的case</a></h3>
+<ol>
+<li>当 \(\sigma_t = \sqrt{\frac{1-\alpha_{t-1}}{1-\alpha_{t}}}\sqrt{\frac{1-\alpha_{t}}{\alpha_{t-1}}}\)时，此时的生成过程与DDPM一致。</li>
+<li>当\(\sigma_t = 0\)时，此时采样过程中添加的随机噪声项为0，当给定初始噪声z时，采样过程是确定的，此时的生成模型是一个隐概率模型(implicit probabilstic model)[1]。作者将此时diffusion model称之为denoising diffusion implicit model（DDIM）。此时的采样递推公式</li>
+</ol>
+<p><img src="./assets/2-15.PNG" alt="" /></p>
+<p>DDIM，快速地生成且生成结果是确定的。由于生成结果是确定的，可用于latent space插值、编辑等任务。</p>
+<h2 id="大致方法"><a class="header" href="#大致方法">大致方法</a></h2>
+<p>DDIM加速采样的思路很简单，假定原本的生成序列为\(L=[T,T-1,\dots,1]\) ,其长度为\(\dim(L)=T\) ,我们可以从生成序列 中构建一个子序列\(\tau=[\tau_s,\tau_{s-1},\dots,\tau_1]\) ，其长度\(\dim(\tau)=S,S\ll T\) 。在生成过程，按照构造序列\(\tau\)进行采样。此时的采样递推序列为</p>
+<p><img src="./assets/2-16.PNG" alt="" /></p>
+<h2 id="有效性"><a class="header" href="#有效性">有效性</a></h2>
+<ol>
+<li>论文给出了不同的采样步长的生成效果。可以看到DDIM在较小采样步长时就能达到较好的生成效果。如CIFAR10 S=50就达到了S=1000的90%的效果，与之相对DDPM只能达到10%左右的FID效果。可见DDPM在推导采样分布中用了马尔可夫假设的确限制了它的采样间隔。</li>
+<li>DDIM将\(\sigma_t\) 设置为0，这让采样过程是确定的，只受\(x_T\)影响。作者发现，当给定\(x_T\) ，不同的的采样时间序列\(\tau\) 所生成图片都很相近，\(x_T\)似乎可以视作生成图片的隐编码信息。</li>
+</ol>
+<h2 id="启发-9"><a class="header" href="#启发-9">启发</a></h2>
+<ol>
+<li>有个小trick，我们在实际的生成中可以先设置较小的采样步长进行生成，若生成的图片是我们想要的，则用较大的步长重新生成高质量的图片。</li>
+<li>\(x_T\)可能是生成图片的隐空间编码，且它具备其它隐概率模型(如GAN[2])所观察到的语义插值效应。
+<img src="./assets/f7352d1fecdef31d79b3049fb36e7b35_7_Figure_6.png" alt="" /></li>
+</ol>
+<h2 id="遗留问题-8"><a class="header" href="#遗留问题-8">遗留问题</a></h2>
+<h3 id="不按推理步骤按序预测噪声会不会有问题"><a class="header" href="#不按推理步骤按序预测噪声会不会有问题">不按推理步骤按序预测噪声会不会有问题。</a></h3>
+<p>答案是不会。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-bfc81d9cac819a5f0a7c584cae42275f_720w.webp" alt="" /><br />
+从上图可以看到，在训练时，是从时间序列\([1,2,\dots,T]\)进行采样时间步，再从高斯分布采样噪声，直接从\(x_0\) 出发计算\(x_t\) ，随后传入模型，根据预测噪声与实际噪声计算损失迭代模型。我们可以看到在这个训练pipeline中并没有限制时序信息。<strong>当噪声预测模型充分训练时DDIM的采样序列 也是在训练过程中被充分训练的。</strong>（论文附录C.1给出了更为详尽的解释推导，感兴趣的同学可以看论文）。</p>
+<h2 id="缺陷-9"><a class="header" href="#缺陷-9">缺陷</a></h2>
+<h2 id="验证方法"><a class="header" href="#验证方法">验证方法</a></h2>
+<h2 id="参考材料-9"><a class="header" href="#参考材料-9">参考材料</a></h2>
+<p>[1] https://zhuanlan.zhihu.com/p/639540034</p>
+<hr />
+<blockquote>
+<p>本文出自CaterpillarStudyGroup，转载请注明出处。<br />
+https://caterpillarstudygroup.github.io/ReadPapers/</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="progressive-distillation-for-fast-sampling-of-diffusion-models"><a class="header" href="#progressive-distillation-for-fast-sampling-of-diffusion-models">PROGRESSIVE DISTILLATION FOR FAST SAMPLING OF DIFFUSION MODELS</a></h1>
+<p>https://readpaper.com/pdf-annotate/note?pdfId=4667185955594059777</p>
+<h2 id="核心问题是什么-10"><a class="header" href="#核心问题是什么-10">核心问题是什么？</a></h2>
+<p>DDPM的生成需要T次采样，T通常很大，生成速度太慢。</p>
+<h2 id="相关工作chapter-6"><a class="header" href="#相关工作chapter-6">相关工作(Chapter 6)</a></h2>
+<p><strong>perform distillation of DDIM teacher models into one-step student models</strong></p>
+<ul>
+<li>Eric Luhman and Troy Luhman. Knowledge distillation in iterative generative models for improved sampling speed. arXiv preprint arXiv:2101.02388, 2021.</li>
+</ul>
+<p><strong>few-step sampling, as was the probability flow sampler</strong></p>
+<ul>
+<li>DDIM (Song et al., 2021a) was originally shown to be effective for few-step sampling, as was the probability flow sampler (Song et al., 2021c). </li>
+<li>Jolicoeur-Martineau et al. (2021) study fast SDE integrators for reverse diffusion processes</li>
+<li>Tzen &amp; Raginsky (2019b) study unbiased samplers which may be useful for fast, high quality sampling as well.</li>
+</ul>
+<p><strong>Other work on fast sampling can be viewed as manual or automated methods to adjust samplers or diffusion processes for fast generation.</strong> </p>
+<ul>
+<li>Nichol &amp; Dhariwal (2021); Kong &amp; Ping (2021) describe methods to adjust a discrete time diffusion model trained on many timesteps into models that can sample in few timesteps. </li>
+<li>Watson et al. (2021) describe a dynamic programming algorithm to reduce the number of timesteps for a diffusion model in a way that is optimal for log likelihood. </li>
+<li>Chen et al. (2021); Saharia et al. (2021); Ho et al. (2021) train diffusion models over continuous noise levels and tune samplers post training by adjusting the noise levels of a few-step discrete time reverse diffusion process. </li>
+<li>Their method is effective in highly conditioned settings such as text-to-speech and image super-resolution. San-Roman et al. (2021) train a new network to estimate the noise level of noisy data and show how to use this estimate to speed up sampling.</li>
+</ul>
+<p><strong>Alternative specifications of the diffusion model can also lend themselves to fast sampling,</strong> </p>
+<ul>
+<li>modified forward and reverse processes (Nachmani et al., 2021; Lam et al., 2021) </li>
+<li> training diffusion models in latent space (Vahdat et al., 2021).</li>
+</ul>
+<h2 id="核心贡献是什么-10"><a class="header" href="#核心贡献是什么-10">核心贡献是什么？</a></h2>
+<p>加速DDPM的生成过程。</p>
+<ol>
+<li>提出了新的扩散模型参数化方式，在使用少量采样步骤时可以提供更高的稳定性。</li>
+<li>提出了一种知识蒸馏的方法，可以把更高的迭代次数优化为更低的迭代次数。</li>
+</ol>
+<h2 id="大致方法是什么-9"><a class="header" href="#大致方法是什么-9">大致方法是什么？</a></h2>
+<p><img src="https://s.readpaper.com/T/2bF23cWDain" alt="d2a026851eebdc98f0b12efdc0b53a2c_1_Figure_1.png" /></p>
+<ol>
+<li>Distill a deterministic ODE sampler to the same model architecture.</li>
+<li>At each stage, a “student” model is learned to distill two adjacent sampling steps of the “teacher” model to one sampling step.</li>
+<li>At next stage, the “student” model from previous stage will serve as the new “teacher” model.</li>
+</ol>
+<blockquote>
+<p>✅ 假设有一个 solver，可以根据$x_t$ 预测$x_{t-1}$．<br />
+✅ 调用两次 solver，可以从 $x_t$ 得到$x_{t-2}$，学习这个过程，可以直接得到 2 step 的 solver.<br />
+✅ 前一个 solver 称为 teacher，后一个称为 student.<br />
+✅ student 成为新的 teacher，训练新的 student.</p>
+</blockquote>
+<h2 id="有效性-1"><a class="header" href="#有效性-1">有效性</a></h2>
+<p>On standard image generation benchmarks like CIFAR-10, ImageNet, and LSUN, we start out with state-of-the-art samplers taking as many as 8192 steps, and are able to distill down to models taking as few as 4 steps without losing much perceptual quality; achieving, for example, a FID of 3.0 on CIFAR-10 in 4 steps.</p>
+<h2 id="缺陷-10"><a class="header" href="#缺陷-10">缺陷</a></h2>
+<table><thead><tr><th align="left">局限</th><th align="left">改进点</th></tr></thead><tbody>
+<tr><td align="left">In the current work we limited ourselves to setups where the student model has the same architecture and number of parameters as the teacher model:</td><td align="left">in future work we hope to relax this constraint and explore settings where the student model is smaller, potentially enabling further gains in test time computational requirements.</td></tr>
+<tr><td align="left"></td><td align="left">In addition, we hope to move past the generation of images and also explore progressive distillation of diffusion models for different data modalities such as e.g. audio (Chen et al., 2021).</td></tr>
+<tr><td align="left"></td><td align="left">In addition to the proposed distillation procedure, some of our progress was realized through different parameterizations of the diffusion model and its training loss. We expect to see more progress in this direction as the community further explores this model class.</td></tr>
+</tbody></table>
+<h2 id="验证-9"><a class="header" href="#验证-9">验证</a></h2>
+<h2 id="启发-10"><a class="header" href="#启发-10">启发</a></h2>
+<ol>
+<li>The resulting target value $\tilde x(z_t)$ is fully determined given the teacher model and starting point $z_t$, which allows the student model to make a sharp prediction when evaluated at$z_t$. In contrast, the original data point x is not fully determined given $z_t$, since multiple different data points x can produce the same noisy data $z_t$: this means that the original denoising model is predicting a weighted average of possible x values, which produces a blurry prediction. </li>
+<li>对噪声求L2 loss可以看作是加权平均的重建L2 loss，推导过程见公式9。但在distillation过程中，不适合预测噪声，而应该重建。</li>
+<li>In practice, the choice of loss weighting also has to take into account how αt, σt are sampled during training, as this sampling distribution strongly determines the weight the expected loss gives to each signal-to-noise ratio.</li>
+</ol>
+<h2 id="遗留问题-9"><a class="header" href="#遗留问题-9">遗留问题</a></h2>
+<ol>
+<li>很多细节看不懂。比如预测x与预测噪声的关系。怎么定义weight?parameterizations of the denoising diffusion model?DDIM?</li>
+<li>https://caterpillarstudygroup.github.io/ImportantArticles/diffusion-tutorial-part/diffusiontutorialpart1.html</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="theme/pagetoc.js"></script>
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+    </body>
+</html>
