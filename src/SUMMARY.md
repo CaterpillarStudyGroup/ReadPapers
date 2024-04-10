@@ -3,6 +3,8 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Global-to-Local Modeling for Video-based 3D Human Pose and Shape Estimation](12.md)
+- [WHAM: Reconstructing World-grounded Humans with Accurate 3D Motion](11.md)
 - [Tackling the Generative Learning Trilemma with Denoising Diffusion GANs](10.md)
 - [Elucidating the Design Space of Diffusion-Based Generative Models](9.md)
 - [SCORE-BASED GENERATIVE MODELING THROUGHSTOCHASTIC DIFFERENTIAL EQUATIONS](8.md)
