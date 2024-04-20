@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [HMP: Hand Motion Priors for Pose and Shape Estimation from Video](15.md)
 - [HuMoR: 3D Human Motion Model for Robust Pose Estimation](14.md)
 - [Co-Evolution of Pose and Mesh for 3D Human Body Estimation from Video](13.md)
 - [Global-to-Local Modeling for Video-based 3D Human Pose and Shape Estimation](12.md)
