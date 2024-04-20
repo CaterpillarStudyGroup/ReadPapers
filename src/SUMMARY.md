@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Decoupling Human and Camera Motion from Videos in the Wild](16.md)
 - [HMP: Hand Motion Priors for Pose and Shape Estimation from Video](15.md)
 - [HuMoR: 3D Human Motion Model for Robust Pose Estimation](14.md)
 - [Co-Evolution of Pose and Mesh for 3D Human Body Estimation from Video](13.md)
