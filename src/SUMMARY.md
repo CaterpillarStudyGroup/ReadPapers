@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [WANDR: Intention-guided Human Motion Generation](19.md)
 - [TRAM: Global Trajectory and Motion of 3D Humans from in-the-wild Videos](18.md)
 - [3D Gaussian Splatting for Real-Time Radiance Field Rendering](17.md)
 - [Decoupling Human and Camera Motion from Videos in the Wild](16.md)
