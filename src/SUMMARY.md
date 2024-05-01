@@ -3,6 +3,8 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+-[InstructPix2Pix: Learning to Follow Image Editing Instructions](21.md)
+- [Prompt-to-Prompt Image Editing with Cross-Attention Control](20.md)
 - [WANDR: Intention-guided Human Motion Generation](19.md)
 - [TRAM: Global Trajectory and Motion of 3D Humans from in-the-wild Videos](18.md)
 - [3D Gaussian Splatting for Real-Time Radiance Field Rendering](17.md)
