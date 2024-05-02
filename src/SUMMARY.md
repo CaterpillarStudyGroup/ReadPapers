@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Learning Human Motion from Monocular Videos via Cross-Modal Manifold Alignment](27.md)
 - [PhysPT: Physics-aware Pretrained Transformer for Estimating Human Dynamics from Monocular Videos](26.md)
 - [Imagic: Text-Based Real Image Editing with Diffusion Models](25.md)
 - [DiffEdit: Diffusion-based semantic image editing with mask guidance](24.md)
