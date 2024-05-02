@@ -3,6 +3,10 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Imagic: Text-Based Real Image Editing with Diffusion Models](25.md)
+- [DiffEdit: Diffusion-based semantic image editing with mask guidance](24.md)
+- [Dual diffusion implicit bridges for image-to-image translation](23.md)
+- [SDEdit: Guided Image Synthesis and Editing with Stochastic Differential Equations](22.md)
 -[InstructPix2Pix: Learning to Follow Image Editing Instructions](21.md)
 - [Prompt-to-Prompt Image Editing with Cross-Attention Control](20.md)
 - [WANDR: Intention-guided Human Motion Generation](19.md)
