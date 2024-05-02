@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [PhysPT: Physics-aware Pretrained Transformer for Estimating Human Dynamics from Monocular Videos](26.md)
 - [Imagic: Text-Based Real Image Editing with Diffusion Models](25.md)
 - [DiffEdit: Diffusion-based semantic image editing with mask guidance](24.md)
 - [Dual diffusion implicit bridges for image-to-image translation](23.md)
