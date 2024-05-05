@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [PACER+: On-Demand Pedestrian Animation Controller in Driving Scenarios](29.md)
 - [Humans in 4D: Reconstructing and Tracking Humans with Transformers](28.md)
 - [Learning Human Motion from Monocular Videos via Cross-Modal Manifold Alignment](27.md)
 - [PhysPT: Physics-aware Pretrained Transformer for Estimating Human Dynamics from Monocular Videos](26.md)
