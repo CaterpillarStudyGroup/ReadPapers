@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [SMPLer: Taming Transformers for Monocular 3D Human Shape and Pose Estimation](31.md)
 - [CAT3D: Create Anything in 3D with Multi-View Diffusion Models](30.md)
 - [PACER+: On-Demand Pedestrian Animation Controller in Driving Scenarios](29.md)
 - [Humans in 4D: Reconstructing and Tracking Humans with Transformers](28.md)
