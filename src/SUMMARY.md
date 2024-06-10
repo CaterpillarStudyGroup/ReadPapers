@@ -3,6 +3,8 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [数据集：Dynamic Furry Animal Dataset](33.md)
+- [Artemis: Articulated Neural Pets with Appearance and Motion Synthesis](32.md)
 - [SMPLer: Taming Transformers for Monocular 3D Human Shape and Pose Estimation](31.md)
 - [CAT3D: Create Anything in 3D with Multi-View Diffusion Models](30.md)
 - [PACER+: On-Demand Pedestrian Animation Controller in Driving Scenarios](29.md)
