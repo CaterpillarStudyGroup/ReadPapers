@@ -26,7 +26,7 @@ https://www.zhihu.com/people/wo-ai-chi-ha-mi-gua-93
 
 ## 有效
 
-## 缺陷
+## 局限性
 
 ## 启发
 
