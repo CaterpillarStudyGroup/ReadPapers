@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>MagicPony: Learning Articulated 3D Animals in the Wild - ReadPapers</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The note of Papers">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/pagetoc.css">
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><div>ReadPapers</div></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="35.html" class="active"><strong aria-hidden="true">2.</strong> MagicPony: Learning Articulated 3D Animals in the Wild</a></li><li class="chapter-item expanded "><a href="34.html"><strong aria-hidden="true">3.</strong> Splatter a Video: Video Gaussian Representation for Versatile Processing</a></li><li class="chapter-item expanded "><a href="33.html"><strong aria-hidden="true">4.</strong> 数据集：Dynamic Furry Animal Dataset</a></li><li class="chapter-item expanded "><a href="32.html"><strong aria-hidden="true">5.</strong> Artemis: Articulated Neural Pets with Appearance and Motion Synthesis</a></li><li class="chapter-item expanded "><a href="31.html"><strong aria-hidden="true">6.</strong> SMPLer: Taming Transformers for Monocular 3D Human Shape and Pose Estimation</a></li><li class="chapter-item expanded "><a href="30.html"><strong aria-hidden="true">7.</strong> CAT3D: Create Anything in 3D with Multi-View Diffusion Models</a></li><li class="chapter-item expanded "><a href="29.html"><strong aria-hidden="true">8.</strong> PACER+: On-Demand Pedestrian Animation Controller in Driving Scenarios</a></li><li class="chapter-item expanded "><a href="28.html"><strong aria-hidden="true">9.</strong> Humans in 4D: Reconstructing and Tracking Humans with Transformers</a></li><li class="chapter-item expanded "><a href="27.html"><strong aria-hidden="true">10.</strong> Learning Human Motion from Monocular Videos via Cross-Modal Manifold Alignment</a></li><li class="chapter-item expanded "><a href="26.html"><strong aria-hidden="true">11.</strong> PhysPT: Physics-aware Pretrained Transformer for Estimating Human Dynamics from Monocular Videos</a></li><li class="chapter-item expanded "><a href="25.html"><strong aria-hidden="true">12.</strong> Imagic: Text-Based Real Image Editing with Diffusion Models</a></li><li class="chapter-item expanded "><a href="24.html"><strong aria-hidden="true">13.</strong> DiffEdit: Diffusion-based semantic image editing with mask guidance</a></li><li class="chapter-item expanded "><a href="23.html"><strong aria-hidden="true">14.</strong> Dual diffusion implicit bridges for image-to-image translation</a></li><li class="chapter-item expanded "><a href="22.html"><strong aria-hidden="true">15.</strong> SDEdit: Guided Image Synthesis and Editing with Stochastic Differential Equations</a></li><li class="chapter-item expanded "><a href="20.html"><strong aria-hidden="true">16.</strong> Prompt-to-Prompt Image Editing with Cross-Attention Control</a></li><li class="chapter-item expanded "><a href="19.html"><strong aria-hidden="true">17.</strong> WANDR: Intention-guided Human Motion Generation</a></li><li class="chapter-item expanded "><a href="18.html"><strong aria-hidden="true">18.</strong> TRAM: Global Trajectory and Motion of 3D Humans from in-the-wild Videos</a></li><li class="chapter-item expanded "><a href="17.html"><strong aria-hidden="true">19.</strong> 3D Gaussian Splatting for Real-Time Radiance Field Rendering</a></li><li class="chapter-item expanded "><a href="16.html"><strong aria-hidden="true">20.</strong> Decoupling Human and Camera Motion from Videos in the Wild</a></li><li class="chapter-item expanded "><a href="15.html"><strong aria-hidden="true">21.</strong> HMP: Hand Motion Priors for Pose and Shape Estimation from Video</a></li><li class="chapter-item expanded "><a href="14.html"><strong aria-hidden="true">22.</strong> HuMoR: 3D Human Motion Model for Robust Pose Estimation</a></li><li class="chapter-item expanded "><a href="13.html"><strong aria-hidden="true">23.</strong> Co-Evolution of Pose and Mesh for 3D Human Body Estimation from Video</a></li><li class="chapter-item expanded "><a href="12.html"><strong aria-hidden="true">24.</strong> Global-to-Local Modeling for Video-based 3D Human Pose and Shape Estimation</a></li><li class="chapter-item expanded "><a href="11.html"><strong aria-hidden="true">25.</strong> WHAM: Reconstructing World-grounded Humans with Accurate 3D Motion</a></li><li class="chapter-item expanded "><a href="10.html"><strong aria-hidden="true">26.</strong> Tackling the Generative Learning Trilemma with Denoising Diffusion GANs</a></li><li class="chapter-item expanded "><a href="9.html"><strong aria-hidden="true">27.</strong> Elucidating the Design Space of Diffusion-Based Generative Models</a></li><li class="chapter-item expanded "><a href="8.html"><strong aria-hidden="true">28.</strong> SCORE-BASED GENERATIVE MODELING THROUGHSTOCHASTIC DIFFERENTIAL EQUATIONS</a></li><li class="chapter-item expanded "><a href="7.html"><strong aria-hidden="true">29.</strong> Consistency Models</a></li><li class="chapter-item expanded "><a href="6.html"><strong aria-hidden="true">30.</strong> Classifier-Free Diffusion Guidance</a></li><li class="chapter-item expanded "><a href="5.html"><strong aria-hidden="true">31.</strong> Cascaded Diffusion Models for High Fidelity Image Generation</a></li><li class="chapter-item expanded "><a href="4.html"><strong aria-hidden="true">32.</strong> LEARNING ENERGY-BASED MODELS BY DIFFUSIONRECOVERY LIKELIHOOD</a></li><li class="chapter-item expanded "><a href="3.html"><strong aria-hidden="true">33.</strong> On Distillation of Guided Diffusion Models</a></li><li class="chapter-item expanded "><a href="2.html"><strong aria-hidden="true">34.</strong> Denoising Diffusion Implicit Models</a></li><li class="chapter-item expanded "><a href="1.html"><strong aria-hidden="true">35.</strong> PROGRESSIVE DISTILLATION FOR FAST SAMPLING OF DIFFUSION MODELS</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ReadPapers</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/CaterpillarStudyGroup/ReadPapers" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main><div class="sidetoc"><nav class="pagetoc"></nav></div>
+                        <h1 id="magicpony-learning-articulated-3d-animals-in-the-wild"><a class="header" href="#magicpony-learning-articulated-3d-animals-in-the-wild">MagicPony: Learning Articulated 3D Animals in the Wild</a></h1>
+<h2 id="核心问题是什么"><a class="header" href="#核心问题是什么">核心问题是什么?</a></h2>
+<p>在给定单个测试图像作为输入的情况下，预测马等有关节动物的 3D 形状、关节、视点、纹理和光照。</p>
+<h3 id="本文方法"><a class="header" href="#本文方法">本文方法</a></h3>
+<p>我们提出了一种名为 MagicPony 的新方法，该方法仅从特定类别对象的野外单视图图像中学习，并且对变形拓扑的假设最少。<br />
+其核心是<strong>铰接形状</strong>和<strong>外观的隐式-显式表示</strong>，结合了神经场和网格的优点。<br />
+为了帮助模型理解物体的形状和姿势，我们提炼了已有的自监督<strong>ViT</strong>，并将其融合到 3D 模型中。<br />
+为了克服视点估计中的局部最优，我们进一步引入了一种新的<strong>视点采样</strong>方案，无需额外的训练成本。 </p>
+<h3 id="效果"><a class="header" href="#效果">效果</a></h3>
+<p>MagicPony 在这项具有挑战性的任务上表现优于之前的工作。尽管它仅在真实图像上进行训练，但在重建艺术方面表现出出色的泛化能力。</p>
+<h2 id="核心贡献是什么"><a class="header" href="#核心贡献是什么">核心贡献是什么？</a></h2>
+<ol>
+<li>
+<p><strong>隐式-显式表示（Implicit-Explicit Representation）</strong>：MagicPony结合了神经场和网格的优势，使用隐式表示来定义形状和外观，并通过Differentiable Marching Tetrahedra（DMTet）方法即时转换为显式网格，以便进行姿态调整和渲染。</p>
+</li>
+<li>
+<p><strong>自监督知识蒸馏</strong>：为了帮助模型理解对象的形状和姿态，论文提出了一种机制，将现成的自监督视觉变换器（如DINO-ViT）捕获的知识融合到3D模型中。</p>
+</li>
+<li>
+<p><strong>多假设视角预测方案</strong>：为了避免在视角估计中陷入局部最优，论文引入了一种新的视角采样方案，该方案在每次迭代中只采样单一假设，且几乎不需要额外的训练成本。</p>
+</li>
+<li>
+<p><strong>层次化形状表示</strong>：从通用模板到具体实例的层次化形状表示方法，允许模型学习类别特定的模板形状，并预测实例特定的变形。</p>
+</li>
+<li>
+<p><strong>外观和着色分解</strong>：将对象的外观分解为反照率和漫反射着色，假设了一种兰伯特照明模型，并使用可微分的延迟网格渲染技术。</p>
+</li>
+<li>
+<p><strong>训练目标和损失函数</strong>：论文详细描述了训练过程中使用的损失函数，包括重建损失、特征损失、掩码损失、正则化项和视角假设损失。</p>
+</li>
+<li>
+<p><strong>少监督学习</strong>：MagicPony在几乎没有关于变形拓扑的假设下，仅使用对象的2D分割掩码和3D骨架拓扑的描述进行训练，展示了在少监督情况下学习3D模型的能力。</p>
+</li>
+</ol>
+<h2 id="大致方法是什么"><a class="header" href="#大致方法是什么">大致方法是什么？</a></h2>
+<p><img src="./assets/15ce34e23c43fbfa3c5fe19891b315ea_3_Figure_2_-1265732209.png" alt="" /></p>
+<p>左：给定特定类别动物的单视图图像集合，我们的模型使用“隐式-显式”表示来学习特定于类别的先验形状，以及可以用于自监督特征渲染损失的特征字段。<br />
+中：根据从训练图像中提取的特征，对先前的形状进行变形、铰接和着色。<br />
+中右：为了克服视点预测中的局部最小值，我们引入了一种有效的方案，该方案可以探索多种假设，而基本上不需要额外的成本。<br />
+右：除了fix Image Encoder之外，整个管道都经过端到端的重建损失训练。</p>
+<h3 id="implicit-explicit-3d-shape-representation"><a class="header" href="#implicit-explicit-3d-shape-representation">Implicit-Explicit 3D Shape Representation</a></h3>
+<h4 id="隐式"><a class="header" href="#隐式">隐式</a></h4>
+<p>目的：用于优化出一个通用的Mesh。
+方法：SDF。定义隐式Mesh函数为</p>
+<p>S = {x ∈ R3|s(x) = 0}</p>
+<h4 id="显式"><a class="header" href="#显式">显式</a></h4>
+<p>目的：方便后面的deformation<br />
+方法：DMTet</p>
+<h4 id="优化过程"><a class="header" href="#优化过程">优化过程</a></h4>
+<ol>
+<li>初始时，SDF为一个椭圆</li>
+<li>空间采样，使用DMTet生成Mesh</li>
+<li>通过deformed mesh与GT的重建Loss，优化SDF。</li>
+</ol>
+<p>得到此类别所有对象共用的template。</p>
+<h3 id="articulated-shape-modelling-and-prediction"><a class="header" href="#articulated-shape-modelling-and-prediction">Articulated Shape Modelling and Prediction</a></h3>
+<table><thead><tr><th>输入</th><th>输出</th><th>方法</th></tr></thead><tbody>
+<tr><td>image</td><td>Image Mask</td><td>PointRend</td></tr>
+<tr><td>image, mask</td><td>a set of key and output tokens</td><td>DINO-ViT</td></tr>
+<tr><td>local keys token \(\Phi_k \in R^{D\times H_p \times W_p}\)</td><td>deformation</td><td></td></tr>
+<tr><td>local outputs token \(\Phi_o \in R^{D\times H_p \times W_p}\)</td><td>appreance</td><td></td></tr>
+<tr><td>global keys token φk</td><td>local keys token Φk</td><td>small convolutional network</td></tr>
+<tr><td>global output token φo</td><td>local output token Φo</td><td>small convolutional network</td></tr>
+<tr><td>template shape \(V_{pr,i}\)<br>global keys token φk</td><td>mesh displacement ∆Vi</td><td>MLP<br>许多对象是双边对称的，因此通过镜像来强制先前的 Vpr 和 ∆V 对称</td></tr>
+<tr><td>\(V_{pr,i}\)<br>∆Vi</td><td>Vins</td><td></td></tr>
+<tr><td>ξ1，Vpr</td><td>bone在图像上的像素 ub</td><td>根据ξ1把每个rest状态下的bone投影到图像上</td></tr>
+<tr><td>patch key feature map Φk(ub)<br>ub</td><td>local feature</td><td>从投影像素位置 ub 处的 Φk(ub) 中采样局部特征。</td></tr>
+<tr><td>image features Φk and φk</td><td>local rotation ξ2:B</td><td>The viewpoint ξ1 ∈ SE(3) is predicted separately</td></tr>
+<tr><td>Vins<br>动作参数ξ<br>a set of rest-pose joint locations Jb（启发式方法）<br>skinning weights（relative proximity to each bone）</td><td>Vi</td><td>LBS</td></tr>
+</tbody></table>
+<h3 id="appearance-and-shading"><a class="header" href="#appearance-and-shading">Appearance and Shading</a></h3>
+<table><thead><tr><th>输入</th><th>输出</th><th>方法</th></tr></thead><tbody>
+<tr><td>x, global output token φo</td><td>albedo</td><td>MLP fa</td></tr>
+<tr><td>global output token φo</td><td>主光源方向l<br>环境和漫射强度ks, kd</td><td>MLP</td></tr>
+<tr><td>3D coordinates Mesh V<br>all pixels u</td><td>V中投影到u上的顶点x(u)</td><td></td></tr>
+<tr><td>x(u)，fa</td><td>像素u对应的颜色 a</td><td></td></tr>
+<tr><td>ks, kd, l, n, 像素u对应的颜色 a</td><td>像素u最终的颜色</td><td></td></tr>
+<tr><td>ks, kd, l, n, 像素u对应的颜色 a</td><td>像素u的MASK</td><td></td></tr>
+</tbody></table>
+<h3 id="viewpoint-prediction"><a class="header" href="#viewpoint-prediction">Viewpoint Prediction</a></h3>
+<p>我们提供了一种稳健且高效的方法，该方法利用多假设预测管道中的自我监督对应关系。</p>
+<p><strong>这一段没看懂，参考Neural Feature Fusion Fields: 3D Distillation of Self-Supervised 2D Image Representations</strong></p>
+<p>难点：学习对象视点的一个主要挑战是重建目标中存在多个局部最优。<br />
+解决方法：我们提出了一种统计探索多个观点的方案，但在每次迭代时仅采样一个观点，因此没有额外成本。</p>
+<table><thead><tr><th>输入</th><th>输出</th><th>方法</th></tr></thead><tbody>
+<tr><td>global keys token φk</td><td>4个假设的viewpoint rotation<br>score σk，第k个假设的可能性</td><td>MLP</td></tr>
+</tbody></table>
+<p>学习 σk 的简单方法是对多个假设进行采样并比较它们的重建损失以确定哪一个更好。然而，这很昂贵，因为它需要使用所有假设来渲染模型。相反，我们建议为每次训练迭代采样一个假设，并通过最小化目标来简单地训练 σk 来预测预期重建损失 Lk</p>
+<h2 id="训练与验证"><a class="header" href="#训练与验证">训练与验证</a></h2>
+<h3 id="数据集"><a class="header" href="#数据集">数据集</a></h3>
+<p>DOVE<br />
+Weizmann Horse Database [4], PASCAL [10] and Horse-10 Dataset<br />
+Microsoft COCO Dataset<br />
+CUB</p>
+<h3 id="loss"><a class="header" href="#loss">loss</a></h3>
+<h3 id="训练策略"><a class="header" href="#训练策略">训练策略</a></h3>
+<ol>
+<li>首先对视点假设k进行采样，计算重建损失</li>
+<li>然后，将正则化项和视点假设损失相加，得到最终目标.<br />
+每次梯度评估仅采用一个视点样本 k。为了进一步提高采样效率，我们根据学习到的概率分布pk4对视点进行采样：为了提高训练效率，我们在 80% 的时间对视点 k* = argmaxk pk 进行采样，并在 20% 的时间均匀随机采样。</li>
+</ol>
+<h2 id="有效"><a class="header" href="#有效">有效</a></h2>
+<ol start="7">
+<li>
+<p><strong>广泛的实验验证</strong>：在动物类别上进行了广泛的实验，包括马、长颈鹿、斑马、奶牛和鸟类，并与先前的工作进行了定性和定量比较。</p>
+</li>
+<li>
+<p><strong>泛化能力</strong>：尽管MagicPony仅在真实图像上训练，但它展示了对绘画和抽象绘画的出色泛化能力。</p>
+</li>
+</ol>
+<h2 id="局限性"><a class="header" href="#局限性">局限性</a></h2>
+<h2 id="启发"><a class="header" href="#启发">启发</a></h2>
+<h2 id="遗留问题"><a class="header" href="#遗留问题">遗留问题</a></h2>
+<h2 id="参考材料"><a class="header" href="#参考材料">参考材料</a></h2>
+<ol>
+<li>项目页面: https://3dmagicpony.github.io/</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="34.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="34.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="theme/pagetoc.js"></script>
+    </body>
+</html>

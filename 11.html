@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>WHAM: Reconstructing World-grounded Humans with Accurate 3D Motion - ReadPapers</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The note of Papers">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/pagetoc.css">
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><div>ReadPapers</div></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="35.html"><strong aria-hidden="true">2.</strong> MagicPony: Learning Articulated 3D Animals in the Wild</a></li><li class="chapter-item expanded "><a href="34.html"><strong aria-hidden="true">3.</strong> Splatter a Video: Video Gaussian Representation for Versatile Processing</a></li><li class="chapter-item expanded "><a href="33.html"><strong aria-hidden="true">4.</strong> 数据集：Dynamic Furry Animal Dataset</a></li><li class="chapter-item expanded "><a href="32.html"><strong aria-hidden="true">5.</strong> Artemis: Articulated Neural Pets with Appearance and Motion Synthesis</a></li><li class="chapter-item expanded "><a href="31.html"><strong aria-hidden="true">6.</strong> SMPLer: Taming Transformers for Monocular 3D Human Shape and Pose Estimation</a></li><li class="chapter-item expanded "><a href="30.html"><strong aria-hidden="true">7.</strong> CAT3D: Create Anything in 3D with Multi-View Diffusion Models</a></li><li class="chapter-item expanded "><a href="29.html"><strong aria-hidden="true">8.</strong> PACER+: On-Demand Pedestrian Animation Controller in Driving Scenarios</a></li><li class="chapter-item expanded "><a href="28.html"><strong aria-hidden="true">9.</strong> Humans in 4D: Reconstructing and Tracking Humans with Transformers</a></li><li class="chapter-item expanded "><a href="27.html"><strong aria-hidden="true">10.</strong> Learning Human Motion from Monocular Videos via Cross-Modal Manifold Alignment</a></li><li class="chapter-item expanded "><a href="26.html"><strong aria-hidden="true">11.</strong> PhysPT: Physics-aware Pretrained Transformer for Estimating Human Dynamics from Monocular Videos</a></li><li class="chapter-item expanded "><a href="25.html"><strong aria-hidden="true">12.</strong> Imagic: Text-Based Real Image Editing with Diffusion Models</a></li><li class="chapter-item expanded "><a href="24.html"><strong aria-hidden="true">13.</strong> DiffEdit: Diffusion-based semantic image editing with mask guidance</a></li><li class="chapter-item expanded "><a href="23.html"><strong aria-hidden="true">14.</strong> Dual diffusion implicit bridges for image-to-image translation</a></li><li class="chapter-item expanded "><a href="22.html"><strong aria-hidden="true">15.</strong> SDEdit: Guided Image Synthesis and Editing with Stochastic Differential Equations</a></li><li class="chapter-item expanded "><a href="20.html"><strong aria-hidden="true">16.</strong> Prompt-to-Prompt Image Editing with Cross-Attention Control</a></li><li class="chapter-item expanded "><a href="19.html"><strong aria-hidden="true">17.</strong> WANDR: Intention-guided Human Motion Generation</a></li><li class="chapter-item expanded "><a href="18.html"><strong aria-hidden="true">18.</strong> TRAM: Global Trajectory and Motion of 3D Humans from in-the-wild Videos</a></li><li class="chapter-item expanded "><a href="17.html"><strong aria-hidden="true">19.</strong> 3D Gaussian Splatting for Real-Time Radiance Field Rendering</a></li><li class="chapter-item expanded "><a href="16.html"><strong aria-hidden="true">20.</strong> Decoupling Human and Camera Motion from Videos in the Wild</a></li><li class="chapter-item expanded "><a href="15.html"><strong aria-hidden="true">21.</strong> HMP: Hand Motion Priors for Pose and Shape Estimation from Video</a></li><li class="chapter-item expanded "><a href="14.html"><strong aria-hidden="true">22.</strong> HuMoR: 3D Human Motion Model for Robust Pose Estimation</a></li><li class="chapter-item expanded "><a href="13.html"><strong aria-hidden="true">23.</strong> Co-Evolution of Pose and Mesh for 3D Human Body Estimation from Video</a></li><li class="chapter-item expanded "><a href="12.html"><strong aria-hidden="true">24.</strong> Global-to-Local Modeling for Video-based 3D Human Pose and Shape Estimation</a></li><li class="chapter-item expanded "><a href="11.html" class="active"><strong aria-hidden="true">25.</strong> WHAM: Reconstructing World-grounded Humans with Accurate 3D Motion</a></li><li class="chapter-item expanded "><a href="10.html"><strong aria-hidden="true">26.</strong> Tackling the Generative Learning Trilemma with Denoising Diffusion GANs</a></li><li class="chapter-item expanded "><a href="9.html"><strong aria-hidden="true">27.</strong> Elucidating the Design Space of Diffusion-Based Generative Models</a></li><li class="chapter-item expanded "><a href="8.html"><strong aria-hidden="true">28.</strong> SCORE-BASED GENERATIVE MODELING THROUGHSTOCHASTIC DIFFERENTIAL EQUATIONS</a></li><li class="chapter-item expanded "><a href="7.html"><strong aria-hidden="true">29.</strong> Consistency Models</a></li><li class="chapter-item expanded "><a href="6.html"><strong aria-hidden="true">30.</strong> Classifier-Free Diffusion Guidance</a></li><li class="chapter-item expanded "><a href="5.html"><strong aria-hidden="true">31.</strong> Cascaded Diffusion Models for High Fidelity Image Generation</a></li><li class="chapter-item expanded "><a href="4.html"><strong aria-hidden="true">32.</strong> LEARNING ENERGY-BASED MODELS BY DIFFUSIONRECOVERY LIKELIHOOD</a></li><li class="chapter-item expanded "><a href="3.html"><strong aria-hidden="true">33.</strong> On Distillation of Guided Diffusion Models</a></li><li class="chapter-item expanded "><a href="2.html"><strong aria-hidden="true">34.</strong> Denoising Diffusion Implicit Models</a></li><li class="chapter-item expanded "><a href="1.html"><strong aria-hidden="true">35.</strong> PROGRESSIVE DISTILLATION FOR FAST SAMPLING OF DIFFUSION MODELS</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ReadPapers</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/CaterpillarStudyGroup/ReadPapers" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main><div class="sidetoc"><nav class="pagetoc"></nav></div>
+                        <h1 id="wham-reconstructing-world-grounded-humans-with-accurate-3d-motion"><a class="header" href="#wham-reconstructing-world-grounded-humans-with-accurate-3d-motion">WHAM: Reconstructing World-grounded Humans with Accurate 3D Motion</a></h1>
+<h2 id="核心问题是什么"><a class="header" href="#核心问题是什么">核心问题是什么?</a></h2>
+<p>视频动捕，3D人体运动重建。
+单目，复杂背景，运动背景，单人</p>
+<h2 id="核心贡献是什么"><a class="header" href="#核心贡献是什么">核心贡献是什么？</a></h2>
+<ol>
+<li>
+<p>WHAM（World-grounded Humans with Accurate Motion）方法成功结合3D人体运动和视频背景，实现精准的全球坐标下3D人体运动重建。</p>
+</li>
+<li>
+<p>该方法通过模型自由和基于模型的方法，利用深度学习技术，有效地从单眼视频中准确估计3D人体姿态和形状。</p>
+</li>
+<li>
+<p>WHAM在全球坐标系下取得了令人瞩目的成果，通过融合运动上下文和足地接触信息，最小化足滑动，提高国际协调性。</p>
+</li>
+</ol>
+<h2 id="大致方法是什么"><a class="header" href="#大致方法是什么">大致方法是什么？</a></h2>
+<p><img src="./assets/4694242fcb88a4a2fa123c45d7b76ed7_3_Figure_2_859951882.png" alt="" /></p>
+<p>Feature Integrator：由于2D信息不充分或者识别不可靠等原因，导致2D到3D的lifing可能存在错误。此模块提取了图像信息来弥补2D信息的不足。通过使用此模型与不使用此模型的效果对比，结果如下：<br />
+（自）遮挡场景：有效<br />
+2D关键点位置出错，置信度低：有效<br />
+深度歧义：部分有效<br />
+2D关键点识别错误（例如左腿识别成右腿）：无效</p>
+<h3 id="3d动作估计"><a class="header" href="#3d动作估计">3D动作估计</a></h3>
+<table><thead><tr><th>模块</th><th>先验知识</th><th>输入数据</th><th>预测信息</th></tr></thead><tbody>
+<tr><td>2D Detection</td><td>已有的2D关键点检测技术</td><td>图像</td><td>2D关键点。</td></tr>
+<tr><td>HmrRegressor</td><td>SMPL参数化模型</td><td>图像</td><td>初始的SMPL的shape参数和rotation参数。</td></tr>
+<tr><td>MotionEncoder</td><td>采用单向RNN，学习人体运动数据的时序关系</td><td>上一帧的RNN状态，2D关键点</td><td>结合上下文进行在线推断SMPL参数、足地接触概率、<strong>运动特征</strong>。</td></tr>
+<tr><td>FeatureIntegrator</td><td>图像特征、运动特征</td><td>捕捉和整合图像特征与运动特征</td><td>新的运动特征。</td></tr>
+<tr><td>MotionDecoder</td><td>采用单向RNN，学习人体运动数据的时序关系</td><td>运动特征</td><td>当前帧相机坐标系下的SMPL参数，上一帧的RNN状态</td></tr>
+</tbody></table>
+<p>没有使用额外的传感器，如惯性传感器，因为它们可能会产生侵扰。</p>
+<h3 id="相机标定"><a class="header" href="#相机标定">相机标定</a></h3>
+<table><thead><tr><th>模块</th><th>先验知识</th><th>输入数据</th><th>预测信息</th></tr></thead><tbody>
+<tr><td>TrajectoryDecoder</td><td>人运动时身体保持基本向上的特点</td><td>相机视角下人体动作</td><td>世界坐标系下的人的全局旋转。</td></tr>
+<tr><td>坐标系对齐</td><td>坐标系变换</td><td>通过相机视角下的人物的全局旋转与世界坐标系下的人物全局旋转的对齐</td><td>计算出相机坐标系与世界坐标系的投影关系。</td></tr>
+</tbody></table>
+<h3 id="运动轨迹与滑步的一致性"><a class="header" href="#运动轨迹与滑步的一致性">运动轨迹与滑步的一致性</a></h3>
+<table><thead><tr><th>模块</th><th>先验知识</th><th>输入信息</th><th>预测信息</th></tr></thead><tbody>
+<tr><td>TrajectoryDecoder</td><td>从人体运动数据中运动轨迹与动作之间关系</td><td>相机坐标系下的人体动作</td><td>人在世界坐标系下的运动轨迹</td></tr>
+<tr><td></td><td>脚步触地时不应该出现滑步</td><td>当前帧的触地概率，上一帧脚步在世界坐标系的位置，当前帧脚步在世界坐标系的概率</td><td>如果触地，通过调整运动轨迹，消除脚步移动</td></tr>
+<tr><td>TrajectoryRefiner</td><td>人体运动数据</td><td>世界坐系下的人体动作，世界坐标系下运动轨迹，通过相机标定，根据相机坐标系下的脚步位置换算出的世界坐标系下的脚步位置</td><td>最终的人体动作、运动轨迹</td></tr>
+</tbody></table>
+<h2 id="有效"><a class="header" href="#有效">有效</a></h2>
+<p>WHAM超越了当前的最先进方法，在逐帧和基于视频的3D人体姿势和形状估计中表现出卓越的准确性。通过利用运动上下文和足地接触信息实现了精确的全球轨迹估计，最小化了足滑动，并提高了国际协调性。该方法整合了2D关键点和像素的特征，提高了3D人体运动重建的准确性。在野外基准测试中，WHAM在MPJPE、PA-MPJPE和PVE等指标上展现出卓越的性能。轨迹细化技术进一步提升了全局轨迹估计，并通过改善的误差指标证明了减少足滑动的效果。</p>
+<h2 id="缺陷"><a class="header" href="#缺陷">缺陷</a></h2>
+<table><thead><tr><th>现象</th><th>可能的原因</th></tr></thead><tbody>
+<tr><td>做快速运动时，捕出来的动作跟不上</td><td>1. Motion Encoder &amp; Decoder没有很好地对动作编解码 2. 使用RNN网络，导致输出结果跟输入相比有延迟</td></tr>
+<tr><td>TrajectoryDecoder预测的世界坐标系下的人的全局旋转不准</td><td>单纯从动作不足以预测人的全局旋转。人在轻微歪斜的动作下也能保持平衡</td></tr>
+<tr><td>TrajectoryDecoder预测的世界坐标系下的人的全局轨迹不准</td><td>单纯从动作不足以预测人的全局轨迹。因为原地踏步或向前走或上楼梯，可能表现出的动作是一样的。还应该结合背影信息。</td></tr>
+<tr><td>部分动作不能较好地恢复</td><td>HmrRegressor估计smpl参数不准</td></tr>
+<tr><td>人的全局位置会移动</td><td>没有真正地学到地面的信息，而只是强制在遇到触地标签时把脚的位置锁住</td></tr>
+</tbody></table>
+<h2 id="验证"><a class="header" href="#验证">验证</a></h2>
+<p>数据集：AMASS运动捕捉和视频数据集</p>
+<h3 id="3d动作估计-1"><a class="header" href="#3d动作估计-1">3D动作估计</a></h3>
+<p>Hmr2.0直接可以提取出相机坐标系下的SMPL参数，为什么只用于提取第一帧的参数和后续的图像特征，然后通过2D点来liftting出SMPL参数？<br />
+答：1. Hmr2.0是逐帧的，需要扩展到视频上。2. 使用2D-to-3D可以充分利用纯3D数据，可以提升decoder的泛化性。3. 下面的轨迹分支需要基于2D的运动特征。<br />
+虽然WHAM本身没有直接与HMR2.0进行相机坐标系下的pose准确性对比，但在TRAM([link])</p>
+<h2 id="启发"><a class="header" href="#启发">启发</a></h2>
+<ol>
+<li>人物动作与人物轨迹解耦</li>
+<li>相机坐标系与世界坐标系解耦</li>
+<li>利用运动先验信息代替相机标定</li>
+<li>利用上下文信息来解决2D到3D的歧义性</li>
+</ol>
+<h2 id="遗留问题"><a class="header" href="#遗留问题">遗留问题</a></h2>
+<h2 id="参考材料"><a class="header" href="#参考材料">参考材料</a></h2>
+<ul>
+<li>https://arxiv.org/pdf/2312.07531.pdf</li>
+<li>http://wham.is.tue.mpg.de/</li>
+<li>https://arxiv.org/abs/2312.07531</li>
+<li>https://ar5iv.labs.arxiv.org/html/2312.07531</li>
+<li>https://accesspath.com/ai/5891344/</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="12.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="10.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="12.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="10.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="theme/pagetoc.js"></script>
+    </body>
+</html>
