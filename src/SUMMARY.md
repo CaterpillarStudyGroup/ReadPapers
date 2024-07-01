@@ -3,6 +3,8 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [MagicPony: Learning Articulated 3D Animals in the Wild](35.md)
+- [Splatter a Video: Video Gaussian Representation for Versatile Processing](34.md)
 - [数据集：Dynamic Furry Animal Dataset](33.md)
 - [Artemis: Articulated Neural Pets with Appearance and Motion Synthesis](32.md)
 - [SMPLer: Taming Transformers for Monocular 3D Human Shape and Pose Estimation](31.md)
