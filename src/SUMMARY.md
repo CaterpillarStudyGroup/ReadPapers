@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Splatter a Video: Video Gaussian Representation for Versatile Processing](36.md)
 - [MagicPony: Learning Articulated 3D Animals in the Wild](35.md)
 - [Splatter a Video: Video Gaussian Representation for Versatile Processing](34.md)
 - [数据集：Dynamic Furry Animal Dataset](33.md)
