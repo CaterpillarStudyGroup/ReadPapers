@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [TCAN: Animating Human Images with Temporally Consistent Pose Guidance using Diffusion Models](37.md)
 - [GaussianAvatar: Towards Realistic Human Avatar Modeling from a Single Video via Animatable 3D Gaussians](36.md)
 - [MagicPony: Learning Articulated 3D Animals in the Wild](35.md)
 - [Splatter a Video: Video Gaussian Representation for Versatile Processing](34.md)
