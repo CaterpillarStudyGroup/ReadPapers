@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [LORA: LOW-RANK ADAPTATION OF LARGE LAN-GUAGE MODELS](38.md)
 - [TCAN: Animating Human Images with Temporally Consistent Pose Guidance using Diffusion Models](37.md)
 - [GaussianAvatar: Towards Realistic Human Avatar Modeling from a Single Video via Animatable 3D Gaussians](36.md)
 - [MagicPony: Learning Articulated 3D Animals in the Wild](35.md)
