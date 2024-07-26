@@ -3,6 +3,8 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [数据集：Zoo-300K]
+- [A Comprehensive Survey on Human Video Generation: Challenges, Methods, and Insights](39.md)
 - [LORA: LOW-RANK ADAPTATION OF LARGE LAN-GUAGE MODELS](38.md)
 - [TCAN: Animating Human Images with Temporally Consistent Pose Guidance using Diffusion Models](37.md)
 - [GaussianAvatar: Towards Realistic Human Avatar Modeling from a Single Video via Animatable 3D Gaussians](36.md)
