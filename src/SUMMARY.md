@@ -3,7 +3,8 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
-- [数据集：Zoo-300K]
+- [HumanVid: Demystifying Training Data for Camera-controllable Human Image Animation](41.md)
+- [数据集：Zoo-300K](40.md)
 - [A Comprehensive Survey on Human Video Generation: Challenges, Methods, and Insights](39.md)
 - [LORA: LOW-RANK ADAPTATION OF LARGE LAN-GUAGE MODELS](38.md)
 - [TCAN: Animating Human Images with Temporally Consistent Pose Guidance using Diffusion Models](37.md)
