@@ -3,9 +3,10 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
-- [HumanVid: Demystifying Training Data for Camera-controllable Human Image Animation](41.md)
+- [HumanVid: Demystifying Training Data for Camera-controllable Human Image Animation](42.md)
+- [STORYDIFFUSION: CONSISTENT SELF-ATTENTION FOR LONG-RANGE IMAGE AND VIDEO GENERATION](41.md)
 - [数据集：Zoo-300K](40.md)
-- [A Comprehensive Survey on Human Video Generation: Challenges, Methods, and Insights](39.md)
+- [Motion Avatar: Generate Human and Animal Avatars with Arbitrary Motion](39.md)
 - [LORA: LOW-RANK ADAPTATION OF LARGE LAN-GUAGE MODELS](38.md)
 - [TCAN: Animating Human Images with Temporally Consistent Pose Guidance using Diffusion Models](37.md)
 - [GaussianAvatar: Towards Realistic Human Avatar Modeling from a Single Video via Animatable 3D Gaussians](36.md)
