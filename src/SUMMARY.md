@@ -3,8 +3,9 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [数据集：HumanVid](43.md)
 - [HumanVid: Demystifying Training Data for Camera-controllable Human Image Animation](42.md)
-- [STORYDIFFUSION: CONSISTENT SELF-ATTENTION FOR LONG-RANGE IMAGE AND VIDEO GENERATION](41.md)
+- [StoryDiffusion: Consistent Self-Attention for Long-Range Image and Video Generation](41.md)
 - [数据集：Zoo-300K](40.md)
 - [Motion Avatar: Generate Human and Animal Avatars with Arbitrary Motion](39.md)
 - [LORA: LOW-RANK ADAPTATION OF LARGE LAN-GUAGE MODELS](38.md)
