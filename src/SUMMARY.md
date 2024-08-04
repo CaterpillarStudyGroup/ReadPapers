@@ -3,6 +3,8 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [High-Resolution Image Synthesis with Latent Diffusion Models](45.md)
+- [Motion-I2V: Consistent and Controllable Image-to-Video Generation with Explicit Motion Modeling](44.md)
 - [数据集：HumanVid](43.md)
 - [HumanVid: Demystifying Training Data for Camera-controllable Human Image Animation](42.md)
 - [StoryDiffusion: Consistent Self-Attention for Long-Range Image and Video Generation](41.md)
