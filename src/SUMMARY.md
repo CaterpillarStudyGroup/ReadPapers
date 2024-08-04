@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [A Recipe for Scaling up Text-to-Video Generation](46.md)
 - [High-Resolution Image Synthesis with Latent Diffusion Models](45.md)
 - [Motion-I2V: Consistent and Controllable Image-to-Video Generation with Explicit Motion Modeling](44.md)
 - [数据集：HumanVid](43.md)
