@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Puppet-Master: Scaling Interactive Video Generation as a Motion Prior for Part-Level Dynamics](47.md)
 - [A Recipe for Scaling up Text-to-Video Generation](46.md)
 - [High-Resolution Image Synthesis with Latent Diffusion Models](45.md)
 - [Motion-I2V: Consistent and Controllable Image-to-Video Generation with Explicit Motion Modeling](44.md)
