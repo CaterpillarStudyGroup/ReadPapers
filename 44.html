@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Motion-I2V: Consistent and Controllable Image-to-Video Generation with Explicit Motion Modeling - ReadPapers</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The note of Papers">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/pagetoc.css">
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><div>ReadPapers</div></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="47.html"><strong aria-hidden="true">2.</strong> Puppet-Master: Scaling Interactive Video Generation as a Motion Prior for Part-Level Dynamics</a></li><li class="chapter-item expanded "><a href="46.html"><strong aria-hidden="true">3.</strong> A Recipe for Scaling up Text-to-Video Generation</a></li><li class="chapter-item expanded "><a href="45.html"><strong aria-hidden="true">4.</strong> High-Resolution Image Synthesis with Latent Diffusion Models</a></li><li class="chapter-item expanded "><a href="44.html" class="active"><strong aria-hidden="true">5.</strong> Motion-I2V: Consistent and Controllable Image-to-Video Generation with Explicit Motion Modeling</a></li><li class="chapter-item expanded "><a href="43.html"><strong aria-hidden="true">6.</strong> 数据集：HumanVid</a></li><li class="chapter-item expanded "><a href="42.html"><strong aria-hidden="true">7.</strong> HumanVid: Demystifying Training Data for Camera-controllable Human Image Animation</a></li><li class="chapter-item expanded "><a href="41.html"><strong aria-hidden="true">8.</strong> StoryDiffusion: Consistent Self-Attention for Long-Range Image and Video Generation</a></li><li class="chapter-item expanded "><a href="40.html"><strong aria-hidden="true">9.</strong> 数据集：Zoo-300K</a></li><li class="chapter-item expanded "><a href="39.html"><strong aria-hidden="true">10.</strong> Motion Avatar: Generate Human and Animal Avatars with Arbitrary Motion</a></li><li class="chapter-item expanded "><a href="38.html"><strong aria-hidden="true">11.</strong> LORA: LOW-RANK ADAPTATION OF LARGE LAN-GUAGE MODELS</a></li><li class="chapter-item expanded "><a href="37.html"><strong aria-hidden="true">12.</strong> TCAN: Animating Human Images with Temporally Consistent Pose Guidance using Diffusion Models</a></li><li class="chapter-item expanded "><a href="36.html"><strong aria-hidden="true">13.</strong> GaussianAvatar: Towards Realistic Human Avatar Modeling from a Single Video via Animatable 3D Gaussians</a></li><li class="chapter-item expanded "><a href="35.html"><strong aria-hidden="true">14.</strong> MagicPony: Learning Articulated 3D Animals in the Wild</a></li><li class="chapter-item expanded "><a href="34.html"><strong aria-hidden="true">15.</strong> Splatter a Video: Video Gaussian Representation for Versatile Processing</a></li><li class="chapter-item expanded "><a href="33.html"><strong aria-hidden="true">16.</strong> 数据集：Dynamic Furry Animal Dataset</a></li><li class="chapter-item expanded "><a href="32.html"><strong aria-hidden="true">17.</strong> Artemis: Articulated Neural Pets with Appearance and Motion Synthesis</a></li><li class="chapter-item expanded "><a href="31.html"><strong aria-hidden="true">18.</strong> SMPLer: Taming Transformers for Monocular 3D Human Shape and Pose Estimation</a></li><li class="chapter-item expanded "><a href="30.html"><strong aria-hidden="true">19.</strong> CAT3D: Create Anything in 3D with Multi-View Diffusion Models</a></li><li class="chapter-item expanded "><a href="29.html"><strong aria-hidden="true">20.</strong> PACER+: On-Demand Pedestrian Animation Controller in Driving Scenarios</a></li><li class="chapter-item expanded "><a href="28.html"><strong aria-hidden="true">21.</strong> Humans in 4D: Reconstructing and Tracking Humans with Transformers</a></li><li class="chapter-item expanded "><a href="27.html"><strong aria-hidden="true">22.</strong> Learning Human Motion from Monocular Videos via Cross-Modal Manifold Alignment</a></li><li class="chapter-item expanded "><a href="26.html"><strong aria-hidden="true">23.</strong> PhysPT: Physics-aware Pretrained Transformer for Estimating Human Dynamics from Monocular Videos</a></li><li class="chapter-item expanded "><a href="25.html"><strong aria-hidden="true">24.</strong> Imagic: Text-Based Real Image Editing with Diffusion Models</a></li><li class="chapter-item expanded "><a href="24.html"><strong aria-hidden="true">25.</strong> DiffEdit: Diffusion-based semantic image editing with mask guidance</a></li><li class="chapter-item expanded "><a href="23.html"><strong aria-hidden="true">26.</strong> Dual diffusion implicit bridges for image-to-image translation</a></li><li class="chapter-item expanded "><a href="22.html"><strong aria-hidden="true">27.</strong> SDEdit: Guided Image Synthesis and Editing with Stochastic Differential Equations</a></li><li class="chapter-item expanded "><a href="20.html"><strong aria-hidden="true">28.</strong> Prompt-to-Prompt Image Editing with Cross-Attention Control</a></li><li class="chapter-item expanded "><a href="19.html"><strong aria-hidden="true">29.</strong> WANDR: Intention-guided Human Motion Generation</a></li><li class="chapter-item expanded "><a href="18.html"><strong aria-hidden="true">30.</strong> TRAM: Global Trajectory and Motion of 3D Humans from in-the-wild Videos</a></li><li class="chapter-item expanded "><a href="17.html"><strong aria-hidden="true">31.</strong> 3D Gaussian Splatting for Real-Time Radiance Field Rendering</a></li><li class="chapter-item expanded "><a href="16.html"><strong aria-hidden="true">32.</strong> Decoupling Human and Camera Motion from Videos in the Wild</a></li><li class="chapter-item expanded "><a href="15.html"><strong aria-hidden="true">33.</strong> HMP: Hand Motion Priors for Pose and Shape Estimation from Video</a></li><li class="chapter-item expanded "><a href="14.html"><strong aria-hidden="true">34.</strong> HuMoR: 3D Human Motion Model for Robust Pose Estimation</a></li><li class="chapter-item expanded "><a href="13.html"><strong aria-hidden="true">35.</strong> Co-Evolution of Pose and Mesh for 3D Human Body Estimation from Video</a></li><li class="chapter-item expanded "><a href="12.html"><strong aria-hidden="true">36.</strong> Global-to-Local Modeling for Video-based 3D Human Pose and Shape Estimation</a></li><li class="chapter-item expanded "><a href="11.html"><strong aria-hidden="true">37.</strong> WHAM: Reconstructing World-grounded Humans with Accurate 3D Motion</a></li><li class="chapter-item expanded "><a href="10.html"><strong aria-hidden="true">38.</strong> Tackling the Generative Learning Trilemma with Denoising Diffusion GANs</a></li><li class="chapter-item expanded "><a href="9.html"><strong aria-hidden="true">39.</strong> Elucidating the Design Space of Diffusion-Based Generative Models</a></li><li class="chapter-item expanded "><a href="8.html"><strong aria-hidden="true">40.</strong> SCORE-BASED GENERATIVE MODELING THROUGHSTOCHASTIC DIFFERENTIAL EQUATIONS</a></li><li class="chapter-item expanded "><a href="7.html"><strong aria-hidden="true">41.</strong> Consistency Models</a></li><li class="chapter-item expanded "><a href="6.html"><strong aria-hidden="true">42.</strong> Classifier-Free Diffusion Guidance</a></li><li class="chapter-item expanded "><a href="5.html"><strong aria-hidden="true">43.</strong> Cascaded Diffusion Models for High Fidelity Image Generation</a></li><li class="chapter-item expanded "><a href="4.html"><strong aria-hidden="true">44.</strong> LEARNING ENERGY-BASED MODELS BY DIFFUSIONRECOVERY LIKELIHOOD</a></li><li class="chapter-item expanded "><a href="3.html"><strong aria-hidden="true">45.</strong> On Distillation of Guided Diffusion Models</a></li><li class="chapter-item expanded "><a href="2.html"><strong aria-hidden="true">46.</strong> Denoising Diffusion Implicit Models</a></li><li class="chapter-item expanded "><a href="1.html"><strong aria-hidden="true">47.</strong> PROGRESSIVE DISTILLATION FOR FAST SAMPLING OF DIFFUSION MODELS</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ReadPapers</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/CaterpillarStudyGroup/ReadPapers" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main><div class="sidetoc"><nav class="pagetoc"></nav></div>
+                        <h1 id="motion-i2v-consistent-and-controllable-image-to-video-generation-with-explicit-motion-modeling"><a class="header" href="#motion-i2v-consistent-and-controllable-image-to-video-generation-with-explicit-motion-modeling">Motion-I2V: Consistent and Controllable Image-to-Video Generation with Explicit Motion Modeling</a></h1>
+<h2 id="核心问题是什么"><a class="header" href="#核心问题是什么">核心问题是什么?</a></h2>
+<h3 id="目的"><a class="header" href="#目的">目的</a></h3>
+<p>图像到视频合成 (I2V)</p>
+<p>输入：参考图像 I0 和文本提示 c
+输出：生成一系列后续视频帧，且确保生成的视频剪辑不仅表现出合理的运动，而且忠实地保留了参考图像的视觉外观。</p>
+<h3 id="现有方法及存在的问题"><a class="header" href="#现有方法及存在的问题">现有方法及存在的问题</a></h3>
+<p>通过利用扩散模型强大的生成先验，最近的方法显示出有前途的开放域 I2V 泛化能力。</p>
+<ol>
+<li>现有方法很难维持时间一致性。</li>
+<li>现有方法对生成结果提供有限的控制。</li>
+</ol>
+<h3 id="本文方法"><a class="header" href="#本文方法">本文方法</a></h3>
+<p>Motion-I2V 通过显式运动建模将 I2V 分解为两个阶段。<br />
+对于第一阶段，我们提出了一种<strong>基于扩散的运动场预测器</strong>，其重点是<strong>推导参考图像像素的轨迹</strong>。<br />
+对于第二阶段，我们提出<strong>运动增强时间注意力</strong>来增强视频潜在扩散中有限的一维时间注意力。该模块可以在第一阶段预测轨迹的指导下有效地将参考图像的特征传播到合成帧。</p>
+<h3 id="效果"><a class="header" href="#效果">效果</a></h3>
+<p>与现有方法相比，即使存在较大运动和视点变化，Motion-I2V 也可以生成更一致的视频。<br />
+通过第一阶段训练稀疏轨迹ControlNet，Motion-I2V可以支持用户通过稀疏轨迹和区域注释精确控制运动轨迹和运动区域。与仅依赖文本指令相比，这为 I2V 过程提供了更多的可控性。<br />
+此外，Motion-I2V 的第二阶段自然支持零镜头视频到视频的转换。</p>
+<h2 id="核心贡献是什么"><a class="header" href="#核心贡献是什么">核心贡献是什么？</a></h2>
+<ol>
+<li>
+<p><strong>双阶段图像到视频生成</strong>：Motion-I2V将图像到视频的生成分解为两个阶段。第一阶段专注于预测像素级的运动轨迹，第二阶段则利用这些预测轨迹来指导视频帧的生成。</p>
+</li>
+<li>
+<p><strong>显式运动建模</strong>：与以往直接学习复杂图像到视频映射的方法不同，Motion-I2V通过显式建模运动来增强生成视频的一致性和可控性。</p>
+</li>
+<li>
+<p><strong>基于扩散的运动场预测</strong>：在第一阶段，提出了一种基于扩散模型的运动场预测器，该预测器接收参考图像和文本指令作为条件，并预测参考图像中所有像素的轨迹。</p>
+</li>
+<li>
+<p><strong>运动增强的时间注意力</strong>：在第二阶段，提出了一种新颖的运动增强时间注意力模块，用于增强视频潜在扩散模型中有限的一维时间注意力。</p>
+</li>
+<li>
+<p><strong>稀疏轨迹控制</strong>：Motion-I2V支持使用稀疏轨迹ControlNet进行训练，允许用户通过稀疏的轨迹和区域注释精确控制运动轨迹和运动区域。</p>
+</li>
+<li>
+<p><strong>区域特定动画（Motion Brush）</strong>：框架还支持区域特定的I2V生成，用户可以通过自定义的运动遮罩来指定要动画化的图像区域。</p>
+</li>
+<li>
+<p><strong>零样本视频到视频翻译</strong>：Motion-I2V的第二阶段自然支持零样本视频到视频翻译，可以使用源视频的运动信息来指导转换后的第一帧。</p>
+</li>
+</ol>
+<h2 id="大致方法是什么"><a class="header" href="#大致方法是什么">大致方法是什么？</a></h2>
+<p><img src="./assets/2d2b688c7c1807a86f52d8d3a3d3f3e9_2_Figure_2_1841499946.png" alt="" /></p>
+<blockquote>
+<p>Motion-I2V 概述。 Motion-I2V 的第一阶段的目标是推导能够合理地为参考图像设置动画的运动。它以参考图像和文本提示为条件，预测参考帧和所有未来帧之间的运动场图。第二阶段传播参考图像的内容以合成帧。一种新颖的运动增强时间层通过扭曲特征增强一维时间注意力。该操作扩大了时间感受野并减轻了直接学习复杂时空模式的复杂性。</p>
+</blockquote>
+<h3 id="使用vdm进行运动预测"><a class="header" href="#使用vdm进行运动预测">使用VDM进行运动预测</a></h3>
+<p>我们选择采用预先训练的稳定扩散模型进行视频运动场预测，以利用强大的生成先验。</p>
+<h4 id="运动场建模"><a class="header" href="#运动场建模">运动场建模</a></h4>
+<p>将第一阶段的预测目标（使参考图像动画化的运动场）表示为一系列 2D 位移图{\(f_{0→i}|i = 1,..., N \)}，其中每个 f0→i 是参考帧与时间步 i 处未来帧之间的光流。通过这样的运动场表示，对于参考图像 I0 的每个源像素 p ∈ I2，我们可以轻松地确定其在时间步 i 处目标图像 Ii 上对应的坐标 p′i = p + f0→i(p)。</p>
+<h4 id="训练运动场预测器"><a class="header" href="#训练运动场预测器">训练运动场预测器</a></h4>
+<ol>
+<li>调整预训练的 LDM 来预测以参考图像和文本提示为条件的单个位移场。</li>
+<li>冻结调整后的 LDM 参数，并集成vanilla 时间模块以创建用于训练的 VLDM。</li>
+<li>继续微调整个 VLDM 模型以获得最终的运动场预测器。</li>
+</ol>
+<h4 id="编码运动场和条件图像"><a class="header" href="#编码运动场和条件图像">编码运动场和条件图像</a></h4>
+<p>考虑到扩散模型的计算效率时，我们使用optical flow encoder 把 motion field map 编码为 latent representation。optical flow encoder 的结构与 LDM 的图像自动编码器相同，不同之处在于它接收和输出2通道光流图而不是3通道RGB图像。</p>
+<p>为了引入reference image condition，我们沿着通道维度把reference image latent representation 与 noise concat到一起。</p>
+<p>使用 SD 1.5 预训练模型初始化的 LDM 权重，并将新添加的 4 个输入通道的权重设置为零。<br />
+帧步长 i 使用两层 M LP 进行嵌入，并添加到时间嵌入中，作为运动强度条件。</p>
+<h3 id="运动预测和视频渲染"><a class="header" href="#运动预测和视频渲染">运动预测和视频渲染</a></h3>
+<h4 id="运动增强的时间注意力"><a class="header" href="#运动增强的时间注意力">运动增强的时间注意力</a></h4>
+<p>通过<strong>motion-augmented temporal attention</strong>，增强了 vanilla VLDM 的1-D temporal attention的同时，保持其他模块不变。</p>
+<p>定义z为第 l 个时间层的 latent feature。简化batch size的情况下，z的维度为  (1+N )×Cl ×hl ×wl，其中 cl、hl、wl 分别表示特征的通道维度、高度和宽度。其中 z[0] 为参考帧对应的特征图，用 z[1 : N ]为后续帧。<br />
+根据第一阶段预测的运动场 {f0→i|i = 1, ..., N } （假设调整大小以对齐空间形状）对z[0]作warp，得到z[i]'</p>
+<p>$$
+z[i]' = \mathcal W(z[0], f_{i\rightarrow 0})
+$$</p>
+<p>z[i]'与z[i]在时间维度上交错，得到</p>
+<p>$$
+z_{aug} = [[z[0], z[1]', z[1], ..., z[N]', z[N]]
+$$</p>
+<p>调整z和\(z_{aug}\)的维度，使得在后面做时间维度上的attention。<br />
+时间维度上的attention为cross attention，其中K和V来自\(z_{aug}\),Q来自z。</p>
+<blockquote>
+<p>该操作通过引入第一阶段的预测运动场引导，扩大了的时间模块的感受野。</p>
+</blockquote>
+<h4 id="选择性噪声"><a class="header" href="#选择性噪声">选择性噪声</a></h4>
+<p>在去噪过程的每个时间步 t，总是将reference image latent code与noise latent code在时间维度上concat，以保证reference image的内容在生成过程中被忠实地保留。</p>
+<h3 id="motion-i2v生成的细粒度控制"><a class="header" href="#motion-i2v生成的细粒度控制">Motion-I2V生成的细粒度控制</a></h3>
+<h4 id="稀疏轨迹控制"><a class="header" href="#稀疏轨迹控制">稀疏轨迹控制</a></h4>
+<p><img src="./assets/2d2b688c7c1807a86f52d8d3a3d3f3e9_5_Figure_3_-1172802212.png" alt="" /></p>
+<p>第一阶段中，通过ControlNet把人工绘制的轨迹图作为控制信号进行motion field map的生成。<br />
+第二阶段不变。</p>
+<h4 id="区域控制"><a class="header" href="#区域控制">区域控制</a></h4>
+<p>第一阶段中，通过ControlNet把人工绘制的区域图作为控制信号进行motion field map的生成。<br />
+第二阶段不变。</p>
+<h4 id="视频风格转换"><a class="header" href="#视频风格转换">视频风格转换</a></h4>
+<ol>
+<li>使用 image-to-image 第一帧进行图像风格转换</li>
+<li>使用dense point tracker 计算dispacement space。</li>
+<li>使用2和1计算motion field</li>
+<li>使用motion field驱动1</li>
+</ol>
+<h2 id="训练与验证"><a class="header" href="#训练与验证">训练与验证</a></h2>
+<h3 id="预训练模型"><a class="header" href="#预训练模型">预训练模型</a></h3>
+<p>第一阶段：Stable Diffusion v1.5<br />
+第二阶段：AnimateDiff v2</p>
+<h3 id="数据集"><a class="header" href="#数据集">数据集</a></h3>
+<p>WebVid-10M [1], a large scale text-video dataset</p>
+<h3 id="loss"><a class="header" href="#loss">loss</a></h3>
+<h3 id="训练策略"><a class="header" href="#训练策略">训练策略</a></h3>
+<h2 id="有效"><a class="header" href="#有效">有效</a></h2>
+<ol start="8">
+<li>
+<p><strong>一致性和可控性的比较优势</strong>：通过定量和定性比较，Motion-I2V在一致性和可控性方面优于现有方法，尤其是在存在大运动和视角变化的情况下。</p>
+</li>
+<li>
+<p><strong>实验和评估</strong>：论文中详细描述了实验设置、评估方法以及与现有方法的比较，证明了Motion-I2V在多个指标上的优势。</p>
+</li>
+</ol>
+<h2 id="局限性"><a class="header" href="#局限性">局限性</a></h2>
+<ol start="10">
+<li><strong>局限性和结论</strong>：论文讨论了方法的一些局限性，例如生成视频的亮度倾向于中等水平，并提出了可能的改进方向。</li>
+</ol>
+<h2 id="启发"><a class="header" href="#启发">启发</a></h2>
+<h2 id="遗留问题"><a class="header" href="#遗留问题">遗留问题</a></h2>
+<h2 id="参考材料"><a class="header" href="#参考材料">参考材料</a></h2>
+<ol>
+<li>项目页面：https://xiaoyushi97.github.io/Motion-I2V/</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="45.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="43.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="45.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="43.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="theme/pagetoc.js"></script>
+    </body>
+</html>
