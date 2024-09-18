@@ -16,7 +16,7 @@ https://www.zhihu.com/people/wo-ai-chi-ha-mi-gua-93
 
 ## 大致方法是什么？
 
-## 训练与验证
+## 训练
 
 ### 数据集
 
