@@ -1,7 +1,5 @@
 # Introduction
 
-参考材料：  
-https://www.zhihu.com/people/wo-ai-chi-ha-mi-gua-93
 
 # Template
 
