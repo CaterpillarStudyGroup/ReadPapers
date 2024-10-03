@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Stable Video Diffusion: Scaling Latent Video Diffusion Models to Large Datasets](50.md)
 - [UniAnimate: Taming Unified Video Diffusion Models for Consistent Human Image Animation](49.md)
 - [Align your Latents: High-Resolution Video Synthesis with Latent Diffusion Models](48.md)
 - [Puppet-Master: Scaling Interactive Video Generation as a Motion Prior for Part-Level Dynamics](47.md)
