@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>TCAN: Animating Human Images with Temporally Consistent Pose Guidance using Diffusion Models - ReadPapers</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The note of Papers">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/pagetoc.css">
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><div>ReadPapers</div></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="51.html"><strong aria-hidden="true">2.</strong> Motion-Conditioned Diffusion Model for Controllable Video Synthesis</a></li><li class="chapter-item expanded "><a href="50.html"><strong aria-hidden="true">3.</strong> Stable Video Diffusion: Scaling Latent Video Diffusion Models to Large Datasets</a></li><li class="chapter-item expanded "><a href="49.html"><strong aria-hidden="true">4.</strong> UniAnimate: Taming Unified Video Diffusion Models for Consistent Human Image Animation</a></li><li class="chapter-item expanded "><a href="48.html"><strong aria-hidden="true">5.</strong> Align your Latents: High-Resolution Video Synthesis with Latent Diffusion Models</a></li><li class="chapter-item expanded "><a href="47.html"><strong aria-hidden="true">6.</strong> Puppet-Master: Scaling Interactive Video Generation as a Motion Prior for Part-Level Dynamics</a></li><li class="chapter-item expanded "><a href="46.html"><strong aria-hidden="true">7.</strong> A Recipe for Scaling up Text-to-Video Generation</a></li><li class="chapter-item expanded "><a href="45.html"><strong aria-hidden="true">8.</strong> High-Resolution Image Synthesis with Latent Diffusion Models</a></li><li class="chapter-item expanded "><a href="44.html"><strong aria-hidden="true">9.</strong> Motion-I2V: Consistent and Controllable Image-to-Video Generation with Explicit Motion Modeling</a></li><li class="chapter-item expanded "><a href="43.html"><strong aria-hidden="true">10.</strong> 数据集：HumanVid</a></li><li class="chapter-item expanded "><a href="42.html"><strong aria-hidden="true">11.</strong> HumanVid: Demystifying Training Data for Camera-controllable Human Image Animation</a></li><li class="chapter-item expanded "><a href="41.html"><strong aria-hidden="true">12.</strong> StoryDiffusion: Consistent Self-Attention for Long-Range Image and Video Generation</a></li><li class="chapter-item expanded "><a href="40.html"><strong aria-hidden="true">13.</strong> 数据集：Zoo-300K</a></li><li class="chapter-item expanded "><a href="39.html"><strong aria-hidden="true">14.</strong> Motion Avatar: Generate Human and Animal Avatars with Arbitrary Motion</a></li><li class="chapter-item expanded "><a href="38.html"><strong aria-hidden="true">15.</strong> LORA: LOW-RANK ADAPTATION OF LARGE LAN-GUAGE MODELS</a></li><li class="chapter-item expanded "><a href="37.html" class="active"><strong aria-hidden="true">16.</strong> TCAN: Animating Human Images with Temporally Consistent Pose Guidance using Diffusion Models</a></li><li class="chapter-item expanded "><a href="36.html"><strong aria-hidden="true">17.</strong> GaussianAvatar: Towards Realistic Human Avatar Modeling from a Single Video via Animatable 3D Gaussians</a></li><li class="chapter-item expanded "><a href="35.html"><strong aria-hidden="true">18.</strong> MagicPony: Learning Articulated 3D Animals in the Wild</a></li><li class="chapter-item expanded "><a href="34.html"><strong aria-hidden="true">19.</strong> Splatter a Video: Video Gaussian Representation for Versatile Processing</a></li><li class="chapter-item expanded "><a href="33.html"><strong aria-hidden="true">20.</strong> 数据集：Dynamic Furry Animal Dataset</a></li><li class="chapter-item expanded "><a href="32.html"><strong aria-hidden="true">21.</strong> Artemis: Articulated Neural Pets with Appearance and Motion Synthesis</a></li><li class="chapter-item expanded "><a href="31.html"><strong aria-hidden="true">22.</strong> SMPLer: Taming Transformers for Monocular 3D Human Shape and Pose Estimation</a></li><li class="chapter-item expanded "><a href="30.html"><strong aria-hidden="true">23.</strong> CAT3D: Create Anything in 3D with Multi-View Diffusion Models</a></li><li class="chapter-item expanded "><a href="29.html"><strong aria-hidden="true">24.</strong> PACER+: On-Demand Pedestrian Animation Controller in Driving Scenarios</a></li><li class="chapter-item expanded "><a href="28.html"><strong aria-hidden="true">25.</strong> Humans in 4D: Reconstructing and Tracking Humans with Transformers</a></li><li class="chapter-item expanded "><a href="27.html"><strong aria-hidden="true">26.</strong> Learning Human Motion from Monocular Videos via Cross-Modal Manifold Alignment</a></li><li class="chapter-item expanded "><a href="26.html"><strong aria-hidden="true">27.</strong> PhysPT: Physics-aware Pretrained Transformer for Estimating Human Dynamics from Monocular Videos</a></li><li class="chapter-item expanded "><a href="25.html"><strong aria-hidden="true">28.</strong> Imagic: Text-Based Real Image Editing with Diffusion Models</a></li><li class="chapter-item expanded "><a href="24.html"><strong aria-hidden="true">29.</strong> DiffEdit: Diffusion-based semantic image editing with mask guidance</a></li><li class="chapter-item expanded "><a href="23.html"><strong aria-hidden="true">30.</strong> Dual diffusion implicit bridges for image-to-image translation</a></li><li class="chapter-item expanded "><a href="22.html"><strong aria-hidden="true">31.</strong> SDEdit: Guided Image Synthesis and Editing with Stochastic Differential Equations</a></li><li class="chapter-item expanded "><a href="20.html"><strong aria-hidden="true">32.</strong> Prompt-to-Prompt Image Editing with Cross-Attention Control</a></li><li class="chapter-item expanded "><a href="19.html"><strong aria-hidden="true">33.</strong> WANDR: Intention-guided Human Motion Generation</a></li><li class="chapter-item expanded "><a href="18.html"><strong aria-hidden="true">34.</strong> TRAM: Global Trajectory and Motion of 3D Humans from in-the-wild Videos</a></li><li class="chapter-item expanded "><a href="17.html"><strong aria-hidden="true">35.</strong> 3D Gaussian Splatting for Real-Time Radiance Field Rendering</a></li><li class="chapter-item expanded "><a href="16.html"><strong aria-hidden="true">36.</strong> Decoupling Human and Camera Motion from Videos in the Wild</a></li><li class="chapter-item expanded "><a href="15.html"><strong aria-hidden="true">37.</strong> HMP: Hand Motion Priors for Pose and Shape Estimation from Video</a></li><li class="chapter-item expanded "><a href="14.html"><strong aria-hidden="true">38.</strong> HuMoR: 3D Human Motion Model for Robust Pose Estimation</a></li><li class="chapter-item expanded "><a href="13.html"><strong aria-hidden="true">39.</strong> Co-Evolution of Pose and Mesh for 3D Human Body Estimation from Video</a></li><li class="chapter-item expanded "><a href="12.html"><strong aria-hidden="true">40.</strong> Global-to-Local Modeling for Video-based 3D Human Pose and Shape Estimation</a></li><li class="chapter-item expanded "><a href="11.html"><strong aria-hidden="true">41.</strong> WHAM: Reconstructing World-grounded Humans with Accurate 3D Motion</a></li><li class="chapter-item expanded "><a href="10.html"><strong aria-hidden="true">42.</strong> Tackling the Generative Learning Trilemma with Denoising Diffusion GANs</a></li><li class="chapter-item expanded "><a href="9.html"><strong aria-hidden="true">43.</strong> Elucidating the Design Space of Diffusion-Based Generative Models</a></li><li class="chapter-item expanded "><a href="8.html"><strong aria-hidden="true">44.</strong> SCORE-BASED GENERATIVE MODELING THROUGHSTOCHASTIC DIFFERENTIAL EQUATIONS</a></li><li class="chapter-item expanded "><a href="7.html"><strong aria-hidden="true">45.</strong> Consistency Models</a></li><li class="chapter-item expanded "><a href="6.html"><strong aria-hidden="true">46.</strong> Classifier-Free Diffusion Guidance</a></li><li class="chapter-item expanded "><a href="5.html"><strong aria-hidden="true">47.</strong> Cascaded Diffusion Models for High Fidelity Image Generation</a></li><li class="chapter-item expanded "><a href="4.html"><strong aria-hidden="true">48.</strong> LEARNING ENERGY-BASED MODELS BY DIFFUSIONRECOVERY LIKELIHOOD</a></li><li class="chapter-item expanded "><a href="3.html"><strong aria-hidden="true">49.</strong> On Distillation of Guided Diffusion Models</a></li><li class="chapter-item expanded "><a href="2.html"><strong aria-hidden="true">50.</strong> Denoising Diffusion Implicit Models</a></li><li class="chapter-item expanded "><a href="1.html"><strong aria-hidden="true">51.</strong> PROGRESSIVE DISTILLATION FOR FAST SAMPLING OF DIFFUSION MODELS</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ReadPapers</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/CaterpillarStudyGroup/ReadPapers" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main><div class="sidetoc"><nav class="pagetoc"></nav></div>
+                        <h1 id="tcan-animating-human-images-with-temporally-consistent-pose-guidance-using-diffusion-models"><a class="header" href="#tcan-animating-human-images-with-temporally-consistent-pose-guidance-using-diffusion-models">TCAN: Animating Human Images with Temporally Consistent Pose Guidance using Diffusion Models</a></h1>
+<table><thead><tr><th>缩写</th><th>英文</th><th>中文</th></tr></thead><tbody>
+<tr><td>APPA</td><td>APpearance-Pose Adaptation layer</td><td></td></tr>
+</tbody></table>
+<p>2024</p>
+<h2 id="核心问题是什么"><a class="header" href="#核心问题是什么">核心问题是什么?</a></h2>
+<p>基于diffusion model的pose驱动人体图像的视频生成，能够生成逼真的人体视频，但在时间一致性和对pose控制信号的鲁棒性方面仍然存在挑战。</p>
+<h3 id="本文方法"><a class="header" href="#本文方法">本文方法</a></h3>
+<p>我们提出了 TCAN，一种姿势驱动的人体图像动画合成方法，它对错误姿势具有鲁棒性，并且随着时间的推移保持一致。</p>
+<ol>
+<li>利用预先训练的 ControlNet，但不进行微调，利用其“文本+动作 -&gt; 图像”的能力。</li>
+<li>保持 ControlNet 冻结，将 LoRA 适配到 UNet 层中，使网络能够在姿势空间和外观空间之间的对齐。</li>
+<li>通过向 ControlNet 引入额外的时间层，增强了针对异常姿态的鲁棒性。</li>
+<li>通过分析时间轴上的注意力图，设计了一种利用姿势信息的新型温度图，从而实现更静态的背景。</li>
+</ol>
+<h3 id="效果"><a class="header" href="#效果">效果</a></h3>
+<p>大量实验表明，所提出的方法可以在包含各种姿势（例如《赤壁》）的视频合成任务中取得有希望的结果。</p>
+<h2 id="核心贡献是什么"><a class="header" href="#核心贡献是什么">核心贡献是什么？</a></h2>
+<ol>
+<li>
+<p><strong>时间一致性</strong>：TCAN专注于生成在时间上连贯的动画，即使输入的姿势检测有误差，也能保持动画的稳定性。</p>
+</li>
+<li>
+<p><strong>使用预训练的ControlNet</strong>：与以往方法不同，TCAN使用预训练的ControlNet而不进行微调，利用其从大量姿势-图像-标题对中获得的知识。</p>
+</li>
+<li>
+<p><strong>LoRA适应</strong>：为了在保持ControlNet冻结的同时对齐姿势和外观特征，TCAN采用了LoRA（Low-Rank Adaptation）适应UNet层。</p>
+</li>
+<li>
+<p><strong>时间层的引入</strong>：通过在ControlNet中引入额外的时间层，增强了对姿势检测器异常值的鲁棒性。</p>
+</li>
+<li>
+<p><strong>注意力图分析</strong>：通过分析时间轴上的注意力图，设计了一种利用姿势信息的新颖温度图，允许更静态的背景。</p>
+</li>
+<li>
+<p><strong>扩展到不同领域</strong>：TCAN不仅在TikTok数据集上训练，还能够泛化到未见过的领域，如动画角色。</p>
+</li>
+<li>
+<p><strong>姿势重定向方法</strong>：提出了一种姿势重定向方法，以适应源图像中的对象与实际人体不同的身体比例。</p>
+</li>
+</ol>
+<h2 id="大致方法是什么"><a class="header" href="#大致方法是什么">大致方法是什么？</a></h2>
+<p><img src="./assets/0c2a00d281ded060cccb02f34f47a088_4_Figure_2_-187497170.png" alt="" /></p>
+<p>方法涉及两阶段训练策略。我们从训练视频中随机选择两个图像，分别用作source图像和driving图像。<br />
+第一阶段是以多张image为条件的图像生成任务，appreance UNet 和 APPA 层在source图像上进行condition训练，同时 ControlNet 被freeze。<br />
+在第二阶段，训练 UNet 和 ControlNet 中的时间层。</p>
+<table><thead><tr><th>输入</th><th>输出</th><th>方法</th></tr></thead><tbody>
+<tr><td>driving frame</td><td>pose information</td><td>OpenPose</td></tr>
+<tr><td>pose information</td><td>pose information</td><td>ControlNet(fix)<br>为什么要强调fix？</td></tr>
+<tr><td>pose information, noise</td><td>encoder feature z</td><td>UNet Encoder</td></tr>
+<tr><td>reference image</td><td>appearance information za</td><td>UNet</td></tr>
+<tr><td>encoder feature z<br>appearance information za</td><td>denoised image</td><td>UNet Decoder</td></tr>
+<tr><td>intermediate feature maps of the appearance</td><td>attention mechanism</td><td></td></tr>
+</tbody></table>
+<h3 id="reference图像注入"><a class="header" href="#reference图像注入">reference图像注入</a></h3>
+<h4 id="zencoder-feature与zaappearance-information结合"><a class="header" href="#zencoder-feature与zaappearance-information结合">z（encoder feature）与za（appearance information）结合</a></h4>
+<p>以attention的方式结合z和za，仅应用于UNet Decoder部分</p>
+<p><img src="./assets/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202024-07-21%2008.10.08.png" alt="" /></p>
+<h4 id="appa层"><a class="header" href="#appa层">APPA层</a></h4>
+<p>在UNet的所有attention层中引入APPA layer（类似LoRA）<br />
+没有APPA的UNet能生成与driving pose相似的动作，但不是保持reference image中的外观。引入APPA层有以下三个作用：</p>
+<ol>
+<li>解决frozen ControlNet引入的artifacts</li>
+<li>防止对training domain过拟合</li>
+<li>appearance与pose解耦</li>
+</ol>
+<h3 id="对错误动作的鲁棒性"><a class="header" href="#对错误动作的鲁棒性">对错误动作的鲁棒性</a></h3>
+<p>在UNet的所有层后面加入时序层，仅在第二阶段的训练启用时序层。</p>
+<p>Temporal层用于解决pose不正确引入的artifacts。pose层的实现类似AnimateDiff。</p>
+<h3 id="背影闪烁问题"><a class="header" href="#背影闪烁问题">背影闪烁问题</a></h3>
+<p>引入Pose-driven Temperature Map。</p>
+<p>把image resize到和attention map相同的大小，发现前景像素对应的attention的对角值更高。<br />
+<img src="./assets/0c2a00d281ded060cccb02f34f47a088_6_Figure_4_570431845.png" alt="" />
+<strong>与前景相比，背景在时间轴上的焦点往往不太具体</strong>，因此可以通过attention map，仅对背景部分进行平滑。</p>
+<table><thead><tr><th>输入</th><th>输出</th><th>方法</th></tr></thead><tbody>
+<tr><td>pose image</td><td>binary mask B</td><td>画了骨架的地方标记为1，否则为0</td></tr>
+<tr><td>binary mask B</td><td>distance map D</td><td>计算每个像素到离它最近的骨骼的距离</td></tr>
+<tr><td>distance map D</td><td>PTM \(\Tau\)</td><td>\(\Tau = \tau * D + 1\)<br>PTM代表attention的temperature</td></tr>
+<tr><td>PTM \(\Tau\)</td><td>resized PTM \(\Tau\)</td><td>把PTM \(\Tau\) resize到与attention map相同的大小</td></tr>
+</tbody></table>
+<p>以以下方式把PTM \(\Tau\)引入到UNet attention layer中：</p>
+<p><img src="./assets/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202024-07-21%2010.44.49.png" alt="" /></p>
+<h3 id="长视频推断策略"><a class="header" href="#长视频推断策略">长视频推断策略</a></h3>
+<p>MultiDiffusion [2] along the temporal axis</p>
+<h2 id="训练与验证"><a class="header" href="#训练与验证">训练与验证</a></h2>
+<h3 id="训练策略"><a class="header" href="#训练策略">训练策略</a></h3>
+<table><thead><tr><th>阶段</th><th>freeze</th><th>trainable</th><th>特有模块</th></tr></thead><tbody>
+<tr><td>第一阶段</td><td>denoising UNet with SD1.5<br>OpenPose ControlNet</td><td>appreance UNet with Realistic Vision<br>LoRA layer in APPA</td><td>无</td></tr>
+<tr><td>第二阶段</td><td>denoising UNet with SD1.5<br>OpenPose ControlNet</td><td>temporal layer in denoising UNet<br>temporal layer in ControlNet</td><td>temporal layer in denoising UNet<br>temporal layer in ControlNet</td></tr>
+</tbody></table>
+<h3 id="数据集"><a class="header" href="#数据集">数据集</a></h3>
+<h3 id="loss"><a class="header" href="#loss">loss</a></h3>
+<p>同Stable Diffusion Model</p>
+<h3 id="训练策略-1"><a class="header" href="#训练策略-1">训练策略</a></h3>
+<h2 id="有效"><a class="header" href="#有效">有效</a></h2>
+<ol start="8">
+<li>
+<p><strong>用户研究</strong>：进行了用户研究来评估TCAN在不同数据集上的表现，包括动画角色，结果显示TCAN在保持运动和身份、背景、闪烁和整体偏好方面均优于现有技术。</p>
+</li>
+<li>
+<p><strong>实验结果</strong>：TCAN在多个指标上展示了优越的性能，包括L1损失、结构相似性（SSIM）、感知损失（LPIPS）、Fréchet距离（FID）和视频质量指标（FID-VID和FVD）。</p>
+</li>
+</ol>
+<h2 id="局限性"><a class="header" href="#局限性">局限性</a></h2>
+<h2 id="启发"><a class="header" href="#启发">启发</a></h2>
+<h2 id="遗留问题"><a class="header" href="#遗留问题">遗留问题</a></h2>
+<p>TCAN（Temporally Consistent Human Image Animation）技术在实际应用中可能面临以下挑战和限制：</p>
+<ol>
+<li>
+<p><strong>姿势检测器的准确性</strong>：TCAN依赖于姿势检测器来提供输入姿势序列。如果姿势检测器出现误差，可能会影响生成动画的质量和时间一致性。</p>
+</li>
+<li>
+<p><strong>数据集的多样性</strong>：TCAN在特定数据集（如TikTok数据集）上训练时表现良好，但在处理与训练数据分布显著不同的数据时，可能需要额外的调整或训练。</p>
+</li>
+<li>
+<p><strong>计算资源</strong>：高质量的图像和视频生成通常需要大量的计算资源。TCAN作为一种基于扩散模型的技术，可能在实际部署时面临计算能力和效率的挑战。</p>
+</li>
+<li>
+<p><strong>泛化能力</strong>：尽管TCAN旨在提高对未知领域的泛化能力，但在面对与训练数据差异较大的新领域时，其性能可能会下降。</p>
+</li>
+<li>
+<p><strong>模型的复杂性</strong>：TCAN结合了多种技术，如ControlNet、LoRA和时间层，这增加了模型的复杂性，可能需要专业知识来维护和更新。</p>
+</li>
+<li>
+<p><strong>过拟合风险</strong>：在特定领域内训练时，模型可能会过拟合到该领域的特定特征，从而降低其在其他领域的适用性。</p>
+</li>
+<li>
+<p><strong>伦理和隐私问题</strong>：生成逼真的人类动画可能引发伦理和隐私问题，尤其是在创建deepfakes或未经授权使用个人图像时。</p>
+</li>
+<li>
+<p><strong>内容的可控性</strong>：虽然TCAN提供了一定程度的控制能力，但在生成特定风格或满足特定条件的内容方面可能仍有限制。</p>
+</li>
+<li>
+<p><strong>实时性能</strong>：在需要实时生成动画的应用场景中，TCAN的处理速度和响应时间可能是一个考虑因素。</p>
+</li>
+<li>
+<p><strong>模型的可解释性</strong>：深度学习模型通常被认为是“黑箱”，TCAN模型的决策过程可能不够透明，这可能限制了其在需要高度可解释性的应用中的使用。</p>
+</li>
+<li>
+<p><strong>对抗性攻击的脆弱性</strong>：像其他基于深度学习的模型一样，TCAN可能对精心设计的对抗性攻击敏感，这可能需要额外的防御措施。</p>
+</li>
+<li>
+<p><strong>长期视频生成的挑战</strong>：由于内存限制，TCAN可能难以一次性生成长期视频。虽然可以通过多扩散方法来解决这个问题，但这可能会影响视频的整体一致性。</p>
+</li>
+<li>
+<p><strong>潜在的滥用问题</strong>：论文最后指出，尽管TCAN在动画生成方面取得了进展，但这种技术可能被滥用于生成伪造视频（deepfakes），因此需要进一步研究验证模型以检测生成模型的痕迹。</p>
+</li>
+</ol>
+<p>这些挑战和限制表明，尽管TCAN在技术上具有创新性，但在将其应用于实际问题之前，需要仔细考虑和解决这些潜在的问题。</p>
+<h2 id="参考材料"><a class="header" href="#参考材料">参考材料</a></h2>
+<ol>
+<li>项目页面：https://eccv2024tcan.github.io/</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="38.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="36.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="38.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="36.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="theme/pagetoc.js"></script>
+    </body>
+</html>
