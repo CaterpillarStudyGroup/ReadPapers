@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Mix-of-Show: Decentralized Low-Rank Adaptation for Multi-Concept Customization of Diffusion Models](52.md)
 - [Motion-Conditioned Diffusion Model for Controllable Video Synthesis](51.md)
 - [Stable Video Diffusion: Scaling Latent Video Diffusion Models to Large Datasets](50.md)
 - [UniAnimate: Taming Unified Video Diffusion Models for Consistent Human Image Animation](49.md)
