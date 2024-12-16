@@ -1,4 +1,6 @@
-# Template
+# Template Implicit Warping 
+
+NVIDIA   
 
 ## 核心问题是什么?
 
@@ -59,14 +61,24 @@
 
 ## 大致方法是什么？
 
-.    
-.    
-.    
-.    
-.    
-.    
-.    
-.    
+![](./assets/51-手写公式1.png) 
+
+
+1. 找出 source和driving 的 dense correspondence     
+2. 基于 dense corresponence 的 warp，称其为 impicit warping 作者认为一个CA可以完成 1 和 2.     
+
+![](./assets/IT图2.png) 
+
+不需要显式地提取光流，Q 和 K 的相似度描述了隐式的光流。  
+
+### 构造 Q. K .V    
+
+**K**: Source keypoint feature     
+**Q**: driving keypoint feature   
+**V**: Source image feature   
+
+Q 的构造：    
+
 .    
 .    
 .    
