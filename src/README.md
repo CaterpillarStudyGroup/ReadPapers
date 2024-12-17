@@ -65,7 +65,8 @@ NVIDIA
 
 
 1. 找出 source和driving 的 dense correspondence     
-2. 基于 dense corresponence 的 warp，称其为 impicit warping 作者认为一个CA可以完成 1 和 2.     
+2. 基于 dense corresponence 的 warp，称其为 impicit warping     
+作者认为一个CA可以完成 1 和 2.     
 
 ![](./assets/IT图2.png) 
 
