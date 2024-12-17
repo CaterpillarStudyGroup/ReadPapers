@@ -116,45 +116,13 @@ $$
 $$
 
 MLP(concat(A \\(\cdot\\) concat(pixel,K),Q))    
-.    
-.    
-.    
-.    
-.    
-.    
-.    
-.    
-.    
-.    
-.    
-.    
-.    
-.    
-.    
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
+
+![](./assets/IT图3.png) 
+
+目的：除了用 A warp 3 V，在 warp 3 原图和 key，用于提取 skew, rotation 等“对 V 做加权平均”难以学到的信息，可提升生成质量和颜色一致性。    
+
+效来提升：1- D attention layer ， spatial-redution attention        
+
 .  
 .  
 .  
@@ -188,13 +156,10 @@ MLP(concat(A \\(\cdot\\) concat(pixel,K),Q))
 
 ### 数据集
 
-.  
-.  
-.  
-.  
-.  
-.  
-.  
+TalkinqHead-IkH
+VoxCeleb2TED Talk
+自评价指材
+生成图像质量 ，PSNR，Ll，LPIPS,FID运动相似度，AKD (average keypint distaneMRCmissing keypont ratio]
 .  
 .  
 .  
