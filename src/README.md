@@ -156,17 +156,17 @@ MLP(concat(A \\(\cdot\\) concat(pixel,K),Q))
 
 ### 数据集
 
-TalkinqHead-IkH
-VoxCeleb2TED Talk
-自评价指材
-生成图像质量 ，PSNR，Ll，LPIPS,FID运动相似度，AKD (average keypint distaneMRCmissing keypont ratio]
-.  
-.  
-.  
-.  
-.  
-.  
-.  
+TalkingHead-1kH      
+VoxCeleb\\(_2\\)       
+TED Talk      
+
+
+### 评价指标   
+
+生成图像质量：PSNR，L1，LPIPS,FID    
+运动相似度：AKD (average keypoint distance)    
+MKR(missing keypoint ratio)    
+ 
 .  
 .  
 .  
@@ -199,7 +199,7 @@ VoxCeleb2TED Talk
 
 ### 训练策略
 
-.  
+预训练模型：AA-PCA    
 .  
 .  
 .  
@@ -222,18 +222,14 @@ VoxCeleb2TED Talk
 
 ## 实验与结论
 
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
+实验l: 横向对比胎音P驱动L.FOMM2A- PA3.本文方法
+因为分哥用每个soutceJmdee做warpinq,并在Warp和2不支持多source Imaqejeatwre ma上被平为效果:单sourle
+@一
+3的生成质量更高月与别作一致性更好
+先论，3所使用的attention是qobal因化可以从空司上距察报远的应置发那销企但显式光流好力法，需爱借助较大的光流才能获得远处的特企
+效果:马source
+网表2
+为少于180顺的连续愤SoureeiwaGe随看S0(
 .  
 .  
 .  
