@@ -92,11 +92,23 @@ V 的构造：
 
 Q、K、V 在空间上是对应的。     
 
-CA存在的问题，所有的 key与 quey 都相们度不高时，也会可食见并不合适，或者从key中选择一个SCore最高的,但这个keu选择任何-个keu都不台适    
-.    
-解决方法:l 增如额外的V 2 使用 aret来鼓励使用额
-外的长V[?了额外团KV从师P里来了因为GwCrbpo优议应用于attetm(aer,不能应用于Con.l是有位置关示的
-crsss - modal attention，K.kxa，V:kxd'Q:qxa由于soure imane可能有为头，因此 9市p卡不一定相等K= k+PEQ工Q 十FE   
+CA 存在的问题：所有的 key 与 query 都相似度不高时，也会从 key 中选择一个 Score 最高的，但这个 key 可能并不合适，或者选择任何一个 key 都不合适。      
+  
+解决方法：   
+1. 增如额外的 KV 
+2. 使用 dropout 来鼓励使用额外的 KV      
+
+[&#x2753;] 额外的 KV 从哪里来？    
+
+dropout 仅应用于 attention layer，不能应用于 Conv. 因为conv 是有位置关系的。    
+
+### crsss - modal attention   
+
+**Q**: qxd, **K**: kxd,**V**: kxd'    
+由于 source image 可能有多张，因此 q 和 k 不一定相等。    
+
+Q=Q+PE，K=K+PE
+K= k+PEQ工Q 十FE   
 .    
 .    
 .    
