@@ -87,7 +87,7 @@ spafial keypoint 表示，[:,:,i] 为以第i个 keypoint 位置为中心，特�
 Q 和 K 的区别：UNet 的输入 concat (加权利spafial keypoint 表示，source Image)     
 优势：后面由模块与 keypoint 的个数无关。     
 
-V 的构造：
+V 的构造：    
 ![](./assets/IT手写3.png) 
 
 
