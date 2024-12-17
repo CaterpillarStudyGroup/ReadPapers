@@ -80,7 +80,7 @@ NVIDIA
 
 Q 的构造：    
 
-![](./assets/IT手写2.png) 
+![](./assets/IT手写2-1.png) 
 
 spafial keypoint 表示，[:,:,i] 为以第i个 keypoint 位置为中心，特定均值和方差的二维一通道高斯。        
    
@@ -110,8 +110,8 @@ dropout 仅应用于 attention layer，不能应用于 Conv. 因为conv 是有�
 
 $$
 \begin{matrix}
- Q=Q+PE, &K=K+PE \\
-  A=\text{Softmax} (\frac{Q- K^\tau }{C}), & qxk \\
+ Q=Q+PE, &K=K+PE \\\\
+  A=\text{Softmax} (\frac{Q- K^\tau }{C}), & qxk \\\\
 \text{output feature}  =A- V,& qxd{}'  &
 \end{matrix}
 $$
