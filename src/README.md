@@ -81,11 +81,22 @@ Q 的构造：
 
 ![](./assets/IT手写2.png) 
 
+spafial keypoint 表示，[:,:,i] 为以第i个 keypoint 位置为中心，特定均值和方差的二维一通道高斯。        
+   
+Q 和 K 的区别：UNet 的输入 concat (加权利spafial keypoint 表示，source Image)     
+优势：后面由模块与 keypoint 的个数无关。     
+
+V 的构造：
+![](./assets/IT手写3.png) 
+
+
+Q、K、V 在空间上是对应的。     
+
+CA存在的问题，所有的 key与 quey 都相们度不高时，也会可食见并不合适，或者从key中选择一个SCore最高的,但这个keu选择任何-个keu都不台适    
 .    
-.    
-.    
-.    
-.    
+解决方法:l 增如额外的V 2 使用 aret来鼓励使用额
+外的长V[?了额外团KV从师P里来了因为GwCrbpo优议应用于attetm(aer,不能应用于Con.l是有位置关示的
+crsss - modal attention，K.kxa，V:kxd'Q:qxa由于soure imane可能有为头，因此 9市p卡不一定相等K= k+PEQ工Q 十FE   
 .    
 .    
 .    
