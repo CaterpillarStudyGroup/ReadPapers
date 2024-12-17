@@ -235,11 +235,43 @@ MKR(missing keypoint ratio)
 
 ![](./assets/IT表1.png) 
 
-3的生成质量更高月与别作一致性更好
-先论，3所使用的attention是qobal因化可以从空司上距察报远的应置发那销企但显式光流好力法，需爱借助较大的光流才能获得远处的特企
-效果:马source
-网表2
-为少于180顺的连续愤SoureeiwaGe随看S0(
+3 的生成质量更高且与动作一致性更好。    
+
+**结论：**    
+3 所使用的 attention 是 global 的，因此可以从空间上距离较远的位置提取特征，但显式光流的方法，需要借助较大的光流才能获得远处的特征。    
+
+**效果：** 多 source    
+
+![](./assets/IT表2.png) 
+
+Source Image 为少于 180 帧的连续帧序列。    
+
+随着 Source image 数量的增加，3 的效果会更好，而1、2的效果会更差。    
+
+**分析：** 用同一 pose warp 不同的 image，得到的结果之间会有 misalignment. 但 1、2 不知道该选取哪个 warp 结果。而 3 使用 global attention 从所有 source 中提取信息。   
+
+**实验2：** Ablation     
+**效果：**   
+ 
+![](./assets/IT表4.png) 
+
+**结论：** 残差结构与额外的 k／V 对结果都有提升。   
+
+**实验3：** 可视化 strength    
+**效果：**    
+
+![](./assets/IT图6.png) 
+
+
+## 局限性   
+
+缺少生成能力，例如给背面生成正面，生成极端表情等。    
+
+### Loss   
+
+1. GAN Loss(参考face-vidzvid)    
+2. perceptual loss (参考 VCG-19)     
+3. equivariance loss (参考 FoMM)        
 .  
 .  
 .  
