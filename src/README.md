@@ -116,7 +116,7 @@ $$
 \end{matrix}
 $$
 
-MLP(concat(A \\(\cdot\\) concat(pixel,K),Q))    
+MLP(concat(A \\(\cdot\\) concat(pixel-K),Q))    
 
 ![](./assets/IT图3.png) 
 
