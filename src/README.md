@@ -222,9 +222,19 @@ MKR(missing keypoint ratio)
 
 ## 实验与结论
 
-实验l: 横向对比胎音P驱动L.FOMM2A- PA3.本文方法
-因为分哥用每个soutceJmdee做warpinq,并在Warp和2不支持多source Imaqejeatwre ma上被平为效果:单sourle
-@一
+**实验l:** 横向对比    
+
+脸部驱动：   
+1. FOMM    
+2. AA- PCA    
+3. 本文方法     
+
+1 和 2 不支持多 source Image 因为分别用每个 source Image 做 warping, 并在 Warp feature map 上做平均。    
+
+**效果：** 单 source    
+
+![](./assets/IT表1.png) 
+
 3的生成质量更高月与别作一致性更好
 先论，3所使用的attention是qobal因化可以从空司上距察报远的应置发那销企但显式光流好力法，需爱借助较大的光流才能获得远处的特企
 效果:马source
