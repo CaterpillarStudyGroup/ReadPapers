@@ -79,7 +79,8 @@ NVIDIA
 
 Q 的构造：    
 
-.    
+![](./assets/IT手写2.png) 
+
 .    
 .    
 .    
