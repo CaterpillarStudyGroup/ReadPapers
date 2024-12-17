@@ -223,7 +223,7 @@ MKR(missing keypoint ratio)
 
 ## 实验与结论
 
-**实验l:** 横向对比    
+**实验1:** 横向对比    
 
 脸部驱动：   
 1. FOMM    
