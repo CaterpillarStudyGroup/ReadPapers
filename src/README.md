@@ -107,8 +107,15 @@ dropout 仅应用于 attention layer，不能应用于 Conv. 因为conv 是有�
 **Q**: qxd, **K**: kxd,**V**: kxd'    
 由于 source image 可能有多张，因此 q 和 k 不一定相等。    
 
-Q=Q+PE，K=K+PE
-K= k+PEQ工Q 十FE   
+$$
+\begin{matrix}
+ Q=Q+PE, &K=K+PE \\
+  A=\text{Softmax} (\frac{Q- K^\tau }{C}), & qxk \\
+\text{output feature}  =A- V,& qxd{}'  &
+\end{matrix}
+$$
+
+MLP(concat(A \\(\cdot\\) concat(pixel,K),Q))    
 .    
 .    
 .    
