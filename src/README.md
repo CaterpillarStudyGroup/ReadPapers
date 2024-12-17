@@ -158,7 +158,7 @@ MLP(concat(A \\(\cdot\\) concat(pixel-K),Q))
 ### 数据集
 
 TalkingHead-1kH      
-VoxCeleb\\(_2\\)       
+VoxCeleb2        
 TED Talk      
 
 
