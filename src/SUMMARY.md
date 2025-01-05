@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Learning Transferable Visual Models From Natural Language Supervision](54.md)
 - [Implicit Warping for Animation with Image Sets](53.md)
 - [Mix-of-Show: Decentralized Low-Rank Adaptation for Multi-Concept Customization of Diffusion Models](52.md)
 - [Motion-Conditioned Diffusion Model for Controllable Video Synthesis](51.md)
