@@ -3,6 +3,10 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [VisorGPT: Learning Visual Prior via Generative Pre-Training](61.md)
+- [NUWA-XL: Diffusion over Diffusion for eXtremely Long Video Generation](60.md)
+- [AnimateDiff: Animate Your Personalized Text-to-Image Diffusion Models without Specific Tuning](59.md)
+- [ModelScope Text-to-Video Technical Report](58.md)
 - [Show-1: Marrying Pixel and Latent Diffusion Models for Text-to-Video Generation](57.md)
 - [Make-A-Video: Text-to-Video Generation without Text-Video Data](56.md)
 - [Video Diffusion Models](55.md)
