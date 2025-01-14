@@ -3,6 +3,12 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [GLIGEN: Open-Set Grounded Text-to-Image Generation](67.md)
+- [Adding Conditional Control to Text-to-Image Diffusion Models](66.md)
+- [T2I-Adapter: Learning Adapters to Dig out More Controllable Ability for Text-to-Image Diffusion Models](65.md)
+- [Multi-Concept Customization of Text-to-Image Diffusion](64.md)
+- [An Image is Worth One Word: Personalizing Text-to-Image Generation using Textual Inversion](63.md)
+- [DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation](62.md)
 - [VisorGPT: Learning Visual Prior via Generative Pre-Training](61.md)
 - [NUWA-XL: Diffusion over Diffusion for eXtremely Long Video Generation](60.md)
 - [AnimateDiff: Animate Your Personalized Text-to-Image Diffusion Models without Specific Tuning](59.md)
