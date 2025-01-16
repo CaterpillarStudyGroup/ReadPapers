@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [DreamFusion: Text-to-3D using 2D Diffusion](68.md)
 - [GLIGEN: Open-Set Grounded Text-to-Image Generation](67.md)
 - [Adding Conditional Control to Text-to-Image Diffusion Models](66.md)
 - [T2I-Adapter: Learning Adapters to Dig out More Controllable Ability for Text-to-Image Diffusion Models](65.md)
