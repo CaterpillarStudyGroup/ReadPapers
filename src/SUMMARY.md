@@ -3,7 +3,6 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
-- [Starting from Simple](69.md)
 - [DreamFusion: Text-to-3D using 2D Diffusion](68.md)
 - [GLIGEN: Open-Set Grounded Text-to-Image Generation](67.md)
 - [Adding Conditional Control to Text-to-Image Diffusion Models](66.md)
