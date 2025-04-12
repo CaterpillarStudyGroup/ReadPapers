@@ -3,6 +3,13 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [simple diffusion: End-to-end diffusion for high resolution images](75.md)
+- [One Transformer Fits All Distributions in Multi-Modal Diffusion at Scale](74.md)
+- [Scalable Diffusion Models with Transformers](73.md)
+- [All are Worth Words: a ViT Backbone for Score-based Diffusion Models](72.md)
+- [An image is worth 16x16 words: Transformers for image recognition at scale](71.md)
+- [eDiff-I: Text-to-Image Diffusion Models with an Ensemble of Expert Denoisers](70.md)
+- [Photorealistic text-to-image diffusion models with deep language understanding||Imagen](69.md)
 - [DreamFusion: Text-to-3D using 2D Diffusion](68.md)
 - [GLIGEN: Open-Set Grounded Text-to-Image Generation](67.md)
 - [Adding Conditional Control to Text-to-Image Diffusion Models](66.md)
