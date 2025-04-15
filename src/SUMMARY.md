@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [NULL-text Inversion for Editing Real Images Using Guided Diffusion Models](76.md)
 - [simple diffusion: End-to-end diffusion for high resolution images](75.md)
 - [One Transformer Fits All Distributions in Multi-Modal Diffusion at Scale](74.md)
 - [Scalable Diffusion Models with Transformers](73.md)
