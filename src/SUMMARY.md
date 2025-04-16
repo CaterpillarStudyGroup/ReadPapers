@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Plug-and-Play Diffusion Features for Text-Driven Image-to-Image Translation](77.md)
 - [NULL-text Inversion for Editing Real Images Using Guided Diffusion Models](76.md)
 - [simple diffusion: End-to-end diffusion for high resolution images](75.md)
 - [One Transformer Fits All Distributions in Multi-Modal Diffusion at Scale](74.md)
