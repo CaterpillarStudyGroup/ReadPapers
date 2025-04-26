@@ -3,6 +3,9 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [CogVideo: Large-scale Pretraining for Text-to-Video Generation via Transformers](81.md)
+- [One-Minute Video Generation with Test-Time Training](80.md)
+- [Key-Locked Rank One Editing for Text-to-Image Personalization](79.md)
 - [MARCHING CUBES: A HIGH RESOLUTION 3D SURFACE CONSTRUCTION ALGORITHM](78.md)
 - [Plug-and-Play Diffusion Features for Text-Driven Image-to-Image Translation](77.md)
 - [NULL-text Inversion for Editing Real Images Using Guided Diffusion Models](76.md)
