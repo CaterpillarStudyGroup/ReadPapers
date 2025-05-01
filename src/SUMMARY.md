@@ -3,6 +3,8 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Guided Motion Diffusion for Controllable Human Motion Synthesis](86.md)
+- [OmniControl: Control Any Joint at Any Time for Human Motion Generation](85.md)
 - [Learning Long-form Video Prior via Generative Pre-Training](84.md)
 - [Instant Neural Graphics Primitives with a Multiresolution Hash Encoding](83.md)
 - [Magic3D: High-Resolution Text-to-3D Content Creation](82.md)
