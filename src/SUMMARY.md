@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Learning Long-form Video Prior via Generative Pre-Training](84.md)
 - [Instant Neural Graphics Primitives with a Multiresolution Hash Encoding](83.md)
 - [Magic3D: High-Resolution Text-to-3D Content Creation](82.md)
 - [CogVideo: Large-scale Pretraining for Text-to-Video Generation via Transformers](81.md)
