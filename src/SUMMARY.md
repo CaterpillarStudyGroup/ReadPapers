@@ -3,6 +3,8 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Instant Neural Graphics Primitives with a Multiresolution Hash Encoding](83.md)
+- [Magic3D: High-Resolution Text-to-3D Content Creation](82.md)
 - [CogVideo: Large-scale Pretraining for Text-to-Video Generation via Transformers](81.md)
 - [One-Minute Video Generation with Test-Time Training](80.md)
 - [Key-Locked Rank One Editing for Text-to-Image Personalization](79.md)
