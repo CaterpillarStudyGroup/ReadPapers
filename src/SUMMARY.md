@@ -3,6 +3,8 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [T2m-gpt: Generating human motion from textual descriptions with discrete representations](88.md)
+- [Motiongpt: Finetuned llms are general-purpose motion generators](87.md)
 - [Guided Motion Diffusion for Controllable Human Motion Synthesis](86.md)
 - [OmniControl: Control Any Joint at Any Time for Human Motion Generation](85.md)
 - [Learning Long-form Video Prior via Generative Pre-Training](84.md)
