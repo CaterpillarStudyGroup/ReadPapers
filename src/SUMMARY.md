@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Deterministic-to-Stochastic Diverse Latent Feature Mapping for Human Motion Synthesis](92.md)
 - [A lip sync expert is all you need for speech to lip generation in the wild](91.md)
 - [MUSETALK: REAL-TIME HIGH QUALITY LIP SYN-CHRONIZATION WITH LATENT SPACE INPAINTING](90.md)
 - [LatentSync: Audio Conditioned Latent Diffusion Models for Lip Sync](89.md)
