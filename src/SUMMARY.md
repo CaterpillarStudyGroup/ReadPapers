@@ -3,6 +3,8 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Neural Discrete Representation Learning](94.md)
+- [TSTMotion: Training-free Scene-aware Text-to-motion Generation](93.md)
 - [Deterministic-to-Stochastic Diverse Latent Feature Mapping for Human Motion Synthesis](92.md)
 - [A lip sync expert is all you need for speech to lip generation in the wild](91.md)
 - [MUSETALK: REAL-TIME HIGH QUALITY LIP SYN-CHRONIZATION WITH LATENT SPACE INPAINTING](90.md)
