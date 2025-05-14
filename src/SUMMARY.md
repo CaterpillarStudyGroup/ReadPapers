@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [SOAP: Style-Omniscient Animatable Portraits](95.md)
 - [Neural Discrete Representation Learning](94.md)
 - [TSTMotion: Training-free Scene-aware Text-to-motion Generation](93.md)
 - [Deterministic-to-Stochastic Diverse Latent Feature Mapping for Human Motion Synthesis](92.md)
