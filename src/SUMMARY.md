@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [PhysAnimator: Physics-Guided Generative Cartoon Animation](96.md)
 - [SOAP: Style-Omniscient Animatable Portraits](95.md)
 - [Neural Discrete Representation Learning](94.md)
 - [TSTMotion: Training-free Scene-aware Text-to-motion Generation](93.md)
