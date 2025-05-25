@@ -3,6 +3,8 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [VideoSwap: Customized Video Subject Swapping with Interactive Semantic Point Correspondence](98.md)
+- [DragAnything: Motion Control for Anything using Entity Representation](97.md)
 - [PhysAnimator: Physics-Guided Generative Cartoon Animation](96.md)
 - [SOAP: Style-Omniscient Animatable Portraits](95.md)
 - [Neural Discrete Representation Learning](94.md)
