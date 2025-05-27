@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [MoCLIP: Motion-Aware Fine-Tuning and Distillation of CLIP for Human Motion Generation](100.md)
 - [FinePhys: Fine-grained Human Action Generation by Explicitly Incorporating Physical Laws for Effective Skeletal Guidance](99.md)
 - [VideoSwap: Customized Video Subject Swapping with Interactive Semantic Point Correspondence](98.md)
 - [DragAnything: Motion Control for Anything using Entity Representation](97.md)
