@@ -3,6 +3,8 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [HGM3: HIERARCHICAL GENERATIVE MASKED MOTION MODELING WITH HARD TOKEN MINING](102.md)
+- [Towards Robust and Controllable Text-to-Motion via Masked Autoregressive Diffusion](101.md)
 - [MoCLIP: Motion-Aware Fine-Tuning and Distillation of CLIP for Human Motion Generation](100.md)
 - [FinePhys: Fine-grained Human Action Generation by Explicitly Incorporating Physical Laws for Effective Skeletal Guidance](99.md)
 - [VideoSwap: Customized Video Subject Swapping with Interactive Semantic Point Correspondence](98.md)
