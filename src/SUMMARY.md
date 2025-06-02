@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [GENMO:AGENeralist Model for Human MOtion](103.md)
 - [HGM3: HIERARCHICAL GENERATIVE MASKED MOTION MODELING WITH HARD TOKEN MINING](102.md)
 - [Towards Robust and Controllable Text-to-Motion via Masked Autoregressive Diffusion](101.md)
 - [MoCLIP: Motion-Aware Fine-Tuning and Distillation of CLIP for Human Motion Generation](100.md)
