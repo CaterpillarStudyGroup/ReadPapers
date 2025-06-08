@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Think Before You Diffuse: LLMs-Guided Physics-Aware Video Generation](105.md)
 - [Generating time-consistent dynamics with discriminator-guided image diffusion models](104.md)
 - [GENMO:AGENeralist Model for Human MOtion](103.md)
 - [HGM3: HIERARCHICAL GENERATIVE MASKED MOTION MODELING WITH HARD TOKEN MINING](102.md)
