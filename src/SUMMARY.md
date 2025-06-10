@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Force Prompting: Video Generation Models Can Learn and Generalize Physics-based Control Signals](106.md)
 - [Think Before You Diffuse: LLMs-Guided Physics-Aware Video Generation](105.md)
 - [Generating time-consistent dynamics with discriminator-guided image diffusion models](104.md)
 - [GENMO:AGENeralist Model for Human MOtion](103.md)
