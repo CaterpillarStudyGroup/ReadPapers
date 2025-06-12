@@ -3,6 +3,8 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [ReVision: High-Quality, Low-Cost Video Generation with Explicit 3D Physics Modeling for Complex Motion and Interaction](108.md)
+- [Text2Video-Zero: Text-to-Image Diffusion Models are Zero-Shot Video Generators](107.md)
 - [Force Prompting: Video Generation Models Can Learn and Generalize Physics-based Control Signals](106.md)
 - [Think Before You Diffuse: LLMs-Guided Physics-Aware Video Generation](105.md)
 - [Generating time-consistent dynamics with discriminator-guided image diffusion models](104.md)
