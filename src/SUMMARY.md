@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Drive Any Mesh: 4D Latent Diffusion for Mesh Deformation from Video](110.md)
 - [AnimateAnyMesh: A Feed-Forward 4D Foundation Model for Text-Driven Universal Mesh Animation](109.md)
 - [ReVision: High-Quality, Low-Cost Video Generation with Explicit 3D Physics Modeling for Complex Motion and Interaction](108.md)
 - [Text2Video-Zero: Text-to-Image Diffusion Models are Zero-Shot Video Generators](107.md)
