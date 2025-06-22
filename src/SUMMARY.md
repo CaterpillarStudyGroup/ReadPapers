@@ -3,6 +3,8 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [PFNN: Phase-Functioned Neural Networks](113.md)
+- [POMP: Physics-constrainable Motion Generative Model through Phase Manifolds](112.md)
 - [Dreamgaussian4d: Generative 4d gaussian splatting](111.md)
 - [Drive Any Mesh: 4D Latent Diffusion for Mesh Deformation from Video](110.md)
 - [AnimateAnyMesh: A Feed-Forward 4D Foundation Model for Text-Driven Universal Mesh Animation](109.md)
