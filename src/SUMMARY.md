@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [MotionShot: Adaptive Motion Transfer across Arbitrary Objects for Text-to-Video Generation](126.md)
 - [Drop: Dynamics responses from human motion prior and projective dynamics](114.md)
 - [POMP: Physics-constrainable Motion Generative Model through Phase Manifolds](112.md)
 - [Dreamgaussian4d: Generative 4d gaussian splatting](111.md)
