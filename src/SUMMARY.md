@@ -3,6 +3,8 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [X-MoGen: Unified Motion Generation across Humans and Animals](128.md)
+- [Gaussian Variation Field Diffusion for High-fidelity Video-to-4D Synthesis](127.md)
 - [MotionShot: Adaptive Motion Transfer across Arbitrary Objects for Text-to-Video Generation](126.md)
 - [Drop: Dynamics responses from human motion prior and projective dynamics](114.md)
 - [POMP: Physics-constrainable Motion Generative Model through Phase Manifolds](112.md)
