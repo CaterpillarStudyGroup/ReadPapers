@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Multi-Object Sketch Animation with Grouping and Motion Trajectory Priors](130.md)
 - [TRACE: Learning 3D Gaussian Physical Dynamics from Multi-view Videos](129.md)
 - [X-MoGen: Unified Motion Generation across Humans and Animals](128.md)
 - [Gaussian Variation Field Diffusion for High-fidelity Video-to-4D Synthesis](127.md)
