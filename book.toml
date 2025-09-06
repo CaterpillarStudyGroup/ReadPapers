@@ -14,7 +14,7 @@ mathjax-support = true
 git-repository-url = "https://github.com/CaterpillarStudyGroup/ReadPapers"
 git-repository-icon = "fa-github"
 additional-css = ["theme/pagetoc.css"]
-additional-js  = ["theme/pagetoc.js", "mermaid.min.js", "mermaid-init.js"]
+additional-js  = ["theme/pagetoc.js", "theme/mermaid.min.js", "theme/mermaid-init.js"]
 
 [output.html.fold]
 
