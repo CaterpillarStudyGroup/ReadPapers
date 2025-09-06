@@ -6,12 +6,15 @@ multilingual = false
 src = "src"
 title = "ReadPapers"
 
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
 [output.html]
 mathjax-support = true
 git-repository-url = "https://github.com/CaterpillarStudyGroup/ReadPapers"
 git-repository-icon = "fa-github"
 additional-css = ["theme/pagetoc.css"]
-additional-js  = ["theme/pagetoc.js"]
+additional-js  = ["theme/pagetoc.js", "mermaid.min.js", "mermaid-init.js"]
 
 [output.html.fold]
 
