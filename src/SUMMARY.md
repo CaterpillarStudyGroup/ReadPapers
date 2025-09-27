@@ -3,6 +3,9 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Improving Human Motion Plausibility with Body Momentum](135.md)
+- [MoGlow: Probabilistic and controllable motion synthesis using normalising flows](134.md)
+- [Modi: Unconditional motion synthesis from diverse data](133.md)
 - [MotionDiffuse: Text-Driven Human Motion Generation with Diffusion Model](132.md)
 - [A deep learning framework for character motion synthesis and editing](131.md)
 - [Multi-Object Sketch Animation with Grouping and Motion Trajectory Priors](130.md)
