@@ -3,6 +3,10 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [NRDF: Neural Riemannian Distance Fields for Learning Articulated Pose Priors](139.md)
+- [Pose-NDF: Modeling Human Pose Manifolds with Neural Distance Fields](138.md)
+- [Geometric Neural Distance Fields for Learning Human Motion Priors](137.md)
+- [Character Controllers Using Motion VAEs](136.md)
 - [Improving Human Motion Plausibility with Body Momentum](135.md)
 - [MoGlow: Probabilistic and controllable motion synthesis using normalising flows](134.md)
 - [Modi: Unconditional motion synthesis from diverse data](133.md)
