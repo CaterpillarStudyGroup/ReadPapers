@@ -3,6 +3,9 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Incorporating Physics Principles for Precise Human Motion Prediction](142.md)
+- [PIMNet: Physics-infused Neural Network for Human Motion Prediction](141.md)
+- [PhysDiff: Physics-Guided Human Motion Diffusion Model](140.md)
 - [NRDF: Neural Riemannian Distance Fields for Learning Articulated Pose Priors](139.md)
 - [Pose-NDF: Modeling Human Pose Manifolds with Neural Distance Fields](138.md)
 - [Geometric Neural Distance Fields for Learning Human Motion Priors](137.md)
