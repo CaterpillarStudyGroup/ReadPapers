@@ -3,6 +3,10 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [AvatarGPT: All-in-One Framework for Motion Understanding, Planning, Generation and Beyond](146.md)
+- [MotionGPT: Human Motion as a Foreign Language](145.md)
+- [Action-GPT: Leveraging Large-scale Language Models for Improved and Generalized Action Generation](144.md)
+- [PoseGPT: Quantization-based 3D Human Motion Generation and Forecasting](143.md)
 - [Incorporating Physics Principles for Precise Human Motion Prediction](142.md)
 - [PIMNet: Physics-infused Neural Network for Human Motion Prediction](141.md)
 - [PhysDiff: Physics-Guided Human Motion Diffusion Model](140.md)
