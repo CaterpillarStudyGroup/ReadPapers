@@ -3,6 +3,12 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [M2D2M: Multi-Motion Generation from Text with Discrete Diffusion Models](152.md)
+- [T2LM: Long-Term 3D Human Motion Generation from Multiple Sentences](151.md)
+- [AttT2M:Text-Driven Human Motion Generation with Multi-Perspective Attention Mechanism](150.md)
+- [BAD: Bidirectional Auto-Regressive Diffusion for Text-to-Motion Generation](149.md)
+- [MMM: Generative Masked Motion Model](148.md)
+- [Priority-Centric Human Motion Generation in Discrete Latent Space](147.md)
 - [AvatarGPT: All-in-One Framework for Motion Understanding, Planning, Generation and Beyond](146.md)
 - [MotionGPT: Human Motion as a Foreign Language](145.md)
 - [Action-GPT: Leveraging Large-scale Language Models for Improved and Generalized Action Generation](144.md)
