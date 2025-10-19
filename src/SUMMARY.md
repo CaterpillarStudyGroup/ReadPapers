@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Motion Mamba: Efficient and Long Sequence Motion Generation](153.md)
 - [M2D2M: Multi-Motion Generation from Text with Discrete Diffusion Models](152.md)
 - [T2LM: Long-Term 3D Human Motion Generation from Multiple Sentences](151.md)
 - [AttT2M:Text-Driven Human Motion Generation with Multi-Perspective Attention Mechanism](150.md)
