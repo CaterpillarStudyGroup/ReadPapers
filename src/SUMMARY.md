@@ -3,6 +3,9 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Fg-T2M: Fine-Grained Text-Driven Human Motion Generation via Diffusion Model](157.md)
+- [Make-An-Animation: Large-Scale Text-conditional 3D Human Motion Generation](156.md)
+- [StableMoFusion: Towards Robust and Efficient Diffusion-based Motion Generation Framework](155.md)
 - [EMDM: Efficient Motion Diffusion Model for Fast and High-Quality Motion Generation](154.md)
 - [Motion Mamba: Efficient and Long Sequence Motion Generation](153.md)
 - [M2D2M: Multi-Motion Generation from Text with Discrete Diffusion Models](152.md)
