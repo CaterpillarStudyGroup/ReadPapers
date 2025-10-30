@@ -3,6 +3,8 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Seamless Human Motion Composition with Blended Positional Encodings](159.md)
+- [FineMoGen: Fine-Grained Spatio-Temporal Motion Generation and Editing](158.md)
 - [Fg-T2M: Fine-Grained Text-Driven Human Motion Generation via Diffusion Model](157.md)
 - [Make-An-Animation: Large-Scale Text-conditional 3D Human Motion Generation](156.md)
 - [StableMoFusion: Towards Robust and Efficient Diffusion-based Motion Generation Framework](155.md)
