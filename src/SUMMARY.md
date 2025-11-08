@@ -3,6 +3,11 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Text-driven Human Motion Generation with Motion Masked Diffusion Model](164.md)
+- [ReMoDiffuse: RetrievalAugmented Motion Diffusion Model](163.md)
+- [MotionLCM: Real-time Controllable Motion Generation via Latent Consistency Model](162.md)
+- - [ReAlign: Bilingual Text-to-Motion Generation via Step-Aware Reward-Guided Alignment](161.md)
+- [Absolute Coordinates Make Motion Generation Easy](160.md)
 - [Seamless Human Motion Composition with Blended Positional Encodings](159.md)
 - [FineMoGen: Fine-Grained Spatio-Temporal Motion Generation and Editing](158.md)
 - [Fg-T2M: Fine-Grained Text-Driven Human Motion Generation via Diffusion Model](157.md)
