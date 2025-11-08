@@ -3,6 +3,11 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- - [IKMo: Image-Keyframed Motion Generation with Trajectory-Pose Conditioned Motion Diffusion Model](169.md)
+- [UniMoGen: Universal Motion Generation](168.md)
+- [AMD: Anatomical Motion Diffusion with Interpretable Motion Decomposition and Fusion](167.md)
+- [Flame: Free-form language-based motion synthesis & editing](166.md)
+- [Human Motion Diffusion as a Generative Prior](165.md)
 - [Text-driven Human Motion Generation with Motion Masked Diffusion Model](164.md)
 - [ReMoDiffuse: RetrievalAugmented Motion Diffusion Model](163.md)
 - [MotionLCM: Real-time Controllable Motion Generation via Latent Consistency Model](162.md)
