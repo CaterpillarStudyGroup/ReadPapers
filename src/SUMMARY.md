@@ -3,7 +3,10 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
-- - [IKMo: Image-Keyframed Motion Generation with Trajectory-Pose Conditioned Motion Diffusion Model](169.md)
+- [PAMD: Plausibility-Aware Motion Diffusion Model for Long Dance Generation](172.md)
+- [PMG: Progressive Motion Generation via Sparse Anchor Postures Curriculum Learning](171.md)
+- [LengthAware Motion Synthesis via Latent Diffusion](170.md)
+- [IKMo: Image-Keyframed Motion Generation with Trajectory-Pose Conditioned Motion Diffusion Model](169.md)
 - [UniMoGen: Universal Motion Generation](168.md)
 - [AMD: Anatomical Motion Diffusion with Interpretable Motion Decomposition and Fusion](167.md)
 - [Flame: Free-form language-based motion synthesis & editing](166.md)
