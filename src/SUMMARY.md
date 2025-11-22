@@ -3,6 +3,11 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Particle-Grid Neural Dynamics for Learning Deformable Object Models from RGB-D Videos](177.md)
+- [HAIF-GS: Hierarchical and Induced Flow-Guided Gaussian Splatting for Dynamic Scene](176.md)
+- [PIG: Physically-based Multi-Material Interaction with 3D Gaussians](175.md)
+- [EnliveningGS: Active Locomotion of 3DGS](174.md)
+- [SplineGS: Learning Smooth Trajectories in Gaussian Splatting for Dynamic Scene Reconstruction](173.md)
 - [PAMD: Plausibility-Aware Motion Diffusion Model for Long Dance Generation](172.md)
 - [PMG: Progressive Motion Generation via Sparse Anchor Postures Curriculum Learning](171.md)
 - [LengthAware Motion Synthesis via Latent Diffusion](170.md)
