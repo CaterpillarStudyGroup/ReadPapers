@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Animate3d: Animating any 3d model with multi-view video diffusion](178.md)
 - [Particle-Grid Neural Dynamics for Learning Deformable Object Models from RGB-D Videos](177.md)
 - [HAIF-GS: Hierarchical and Induced Flow-Guided Gaussian Splatting for Dynamic Scene](176.md)
 - [PIG: Physically-based Multi-Material Interaction with 3D Gaussians](175.md)
