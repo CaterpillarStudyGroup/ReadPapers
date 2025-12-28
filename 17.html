@@ -1,0 +1,1126 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>3D Gaussian Splatting for Real-Time Radiance Field Rendering - ReadPapers</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The note of Papers">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/pagetoc.css">
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><div>ReadPapers</div></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="179.html"><strong aria-hidden="true">2.</strong> ParticleGS: Particle-Based Dynamics Modeling of 3D Gaussians for Prior-free Motion Extrapolation</a></li><li class="chapter-item expanded "><a href="178.html"><strong aria-hidden="true">3.</strong> Animate3d: Animating any 3d model with multi-view video diffusion</a></li><li class="chapter-item expanded "><a href="177.html"><strong aria-hidden="true">4.</strong> Particle-Grid Neural Dynamics for Learning Deformable Object Models from RGB-D Videos</a></li><li class="chapter-item expanded "><a href="176.html"><strong aria-hidden="true">5.</strong> HAIF-GS: Hierarchical and Induced Flow-Guided Gaussian Splatting for Dynamic Scene</a></li><li class="chapter-item expanded "><a href="175.html"><strong aria-hidden="true">6.</strong> PIG: Physically-based Multi-Material Interaction with 3D Gaussians</a></li><li class="chapter-item expanded "><a href="174.html"><strong aria-hidden="true">7.</strong> EnliveningGS: Active Locomotion of 3DGS</a></li><li class="chapter-item expanded "><a href="173.html"><strong aria-hidden="true">8.</strong> SplineGS: Learning Smooth Trajectories in Gaussian Splatting for Dynamic Scene Reconstruction</a></li><li class="chapter-item expanded "><a href="172.html"><strong aria-hidden="true">9.</strong> PAMD: Plausibility-Aware Motion Diffusion Model for Long Dance Generation</a></li><li class="chapter-item expanded "><a href="171.html"><strong aria-hidden="true">10.</strong> PMG: Progressive Motion Generation via Sparse Anchor Postures Curriculum Learning</a></li><li class="chapter-item expanded "><a href="170.html"><strong aria-hidden="true">11.</strong> LengthAware Motion Synthesis via Latent Diffusion</a></li><li class="chapter-item expanded "><a href="169.html"><strong aria-hidden="true">12.</strong> IKMo: Image-Keyframed Motion Generation with Trajectory-Pose Conditioned Motion Diffusion Model</a></li><li class="chapter-item expanded "><a href="168.html"><strong aria-hidden="true">13.</strong> UniMoGen: Universal Motion Generation</a></li><li class="chapter-item expanded "><a href="167.html"><strong aria-hidden="true">14.</strong> AMD: Anatomical Motion Diffusion with Interpretable Motion Decomposition and Fusion</a></li><li class="chapter-item expanded "><a href="166.html"><strong aria-hidden="true">15.</strong> Flame: Free-form language-based motion synthesis &amp; editing</a></li><li class="chapter-item expanded "><a href="165.html"><strong aria-hidden="true">16.</strong> Human Motion Diffusion as a Generative Prior</a></li><li class="chapter-item expanded "><a href="164.html"><strong aria-hidden="true">17.</strong> Text-driven Human Motion Generation with Motion Masked Diffusion Model</a></li><li class="chapter-item expanded "><a href="163.html"><strong aria-hidden="true">18.</strong> ReMoDiffuse: RetrievalAugmented Motion Diffusion Model</a></li><li class="chapter-item expanded "><a href="162.html"><strong aria-hidden="true">19.</strong> MotionLCM: Real-time Controllable Motion Generation via Latent Consistency Model</a></li><li class="chapter-item expanded "><a href="161.html"><strong aria-hidden="true">20.</strong> ReAlign: Bilingual Text-to-Motion Generation via Step-Aware Reward-Guided Alignment</a></li><li class="chapter-item expanded "><a href="160.html"><strong aria-hidden="true">21.</strong> Absolute Coordinates Make Motion Generation Easy</a></li><li class="chapter-item expanded "><a href="159.html"><strong aria-hidden="true">22.</strong> Seamless Human Motion Composition with Blended Positional Encodings</a></li><li class="chapter-item expanded "><a href="158.html"><strong aria-hidden="true">23.</strong> FineMoGen: Fine-Grained Spatio-Temporal Motion Generation and Editing</a></li><li class="chapter-item expanded "><a href="157.html"><strong aria-hidden="true">24.</strong> Fg-T2M: Fine-Grained Text-Driven Human Motion Generation via Diffusion Model</a></li><li class="chapter-item expanded "><a href="156.html"><strong aria-hidden="true">25.</strong> Make-An-Animation: Large-Scale Text-conditional 3D Human Motion Generation</a></li><li class="chapter-item expanded "><a href="155.html"><strong aria-hidden="true">26.</strong> StableMoFusion: Towards Robust and Efficient Diffusion-based Motion Generation Framework</a></li><li class="chapter-item expanded "><a href="154.html"><strong aria-hidden="true">27.</strong> EMDM: Efficient Motion Diffusion Model for Fast and High-Quality Motion Generation</a></li><li class="chapter-item expanded "><a href="153.html"><strong aria-hidden="true">28.</strong> Motion Mamba: Efficient and Long Sequence Motion Generation</a></li><li class="chapter-item expanded "><a href="152.html"><strong aria-hidden="true">29.</strong> M2D2M: Multi-Motion Generation from Text with Discrete Diffusion Models</a></li><li class="chapter-item expanded "><a href="151.html"><strong aria-hidden="true">30.</strong> T2LM: Long-Term 3D Human Motion Generation from Multiple Sentences</a></li><li class="chapter-item expanded "><a href="150.html"><strong aria-hidden="true">31.</strong> AttT2M:Text-Driven Human Motion Generation with Multi-Perspective Attention Mechanism</a></li><li class="chapter-item expanded "><a href="149.html"><strong aria-hidden="true">32.</strong> BAD: Bidirectional Auto-Regressive Diffusion for Text-to-Motion Generation</a></li><li class="chapter-item expanded "><a href="148.html"><strong aria-hidden="true">33.</strong> MMM: Generative Masked Motion Model</a></li><li class="chapter-item expanded "><a href="147.html"><strong aria-hidden="true">34.</strong> Priority-Centric Human Motion Generation in Discrete Latent Space</a></li><li class="chapter-item expanded "><a href="146.html"><strong aria-hidden="true">35.</strong> AvatarGPT: All-in-One Framework for Motion Understanding, Planning, Generation and Beyond</a></li><li class="chapter-item expanded "><a href="145.html"><strong aria-hidden="true">36.</strong> MotionGPT: Human Motion as a Foreign Language</a></li><li class="chapter-item expanded "><a href="144.html"><strong aria-hidden="true">37.</strong> Action-GPT: Leveraging Large-scale Language Models for Improved and Generalized Action Generation</a></li><li class="chapter-item expanded "><a href="143.html"><strong aria-hidden="true">38.</strong> PoseGPT: Quantization-based 3D Human Motion Generation and Forecasting</a></li><li class="chapter-item expanded "><a href="142.html"><strong aria-hidden="true">39.</strong> Incorporating Physics Principles for Precise Human Motion Prediction</a></li><li class="chapter-item expanded "><a href="141.html"><strong aria-hidden="true">40.</strong> PIMNet: Physics-infused Neural Network for Human Motion Prediction</a></li><li class="chapter-item expanded "><a href="140.html"><strong aria-hidden="true">41.</strong> PhysDiff: Physics-Guided Human Motion Diffusion Model</a></li><li class="chapter-item expanded "><a href="139.html"><strong aria-hidden="true">42.</strong> NRDF: Neural Riemannian Distance Fields for Learning Articulated Pose Priors</a></li><li class="chapter-item expanded "><a href="138.html"><strong aria-hidden="true">43.</strong> Pose-NDF: Modeling Human Pose Manifolds with Neural Distance Fields</a></li><li class="chapter-item expanded "><a href="137.html"><strong aria-hidden="true">44.</strong> Geometric Neural Distance Fields for Learning Human Motion Priors</a></li><li class="chapter-item expanded "><a href="136.html"><strong aria-hidden="true">45.</strong> Character Controllers Using Motion VAEs</a></li><li class="chapter-item expanded "><a href="135.html"><strong aria-hidden="true">46.</strong> Improving Human Motion Plausibility with Body Momentum</a></li><li class="chapter-item expanded "><a href="134.html"><strong aria-hidden="true">47.</strong> MoGlow: Probabilistic and controllable motion synthesis using normalising flows</a></li><li class="chapter-item expanded "><a href="133.html"><strong aria-hidden="true">48.</strong> Modi: Unconditional motion synthesis from diverse data</a></li><li class="chapter-item expanded "><a href="132.html"><strong aria-hidden="true">49.</strong> MotionDiffuse: Text-Driven Human Motion Generation with Diffusion Model</a></li><li class="chapter-item expanded "><a href="131.html"><strong aria-hidden="true">50.</strong> A deep learning framework for character motion synthesis and editing</a></li><li class="chapter-item expanded "><a href="130.html"><strong aria-hidden="true">51.</strong> Multi-Object Sketch Animation with Grouping and Motion Trajectory Priors</a></li><li class="chapter-item expanded "><a href="129.html"><strong aria-hidden="true">52.</strong> TRACE: Learning 3D Gaussian Physical Dynamics from Multi-view Videos</a></li><li class="chapter-item expanded "><a href="128.html"><strong aria-hidden="true">53.</strong> X-MoGen: Unified Motion Generation across Humans and Animals</a></li><li class="chapter-item expanded "><a href="127.html"><strong aria-hidden="true">54.</strong> Gaussian Variation Field Diffusion for High-fidelity Video-to-4D Synthesis</a></li><li class="chapter-item expanded "><a href="126.html"><strong aria-hidden="true">55.</strong> MotionShot: Adaptive Motion Transfer across Arbitrary Objects for Text-to-Video Generation</a></li><li class="chapter-item expanded "><a href="114.html"><strong aria-hidden="true">56.</strong> Drop: Dynamics responses from human motion prior and projective dynamics</a></li><li class="chapter-item expanded "><a href="112.html"><strong aria-hidden="true">57.</strong> POMP: Physics-constrainable Motion Generative Model through Phase Manifolds</a></li><li class="chapter-item expanded "><a href="111.html"><strong aria-hidden="true">58.</strong> Dreamgaussian4d: Generative 4d gaussian splatting</a></li><li class="chapter-item expanded "><a href="110.html"><strong aria-hidden="true">59.</strong> Drive Any Mesh: 4D Latent Diffusion for Mesh Deformation from Video</a></li><li class="chapter-item expanded "><a href="109.html"><strong aria-hidden="true">60.</strong> AnimateAnyMesh: A Feed-Forward 4D Foundation Model for Text-Driven Universal Mesh Animation</a></li><li class="chapter-item expanded "><a href="108.html"><strong aria-hidden="true">61.</strong> ReVision: High-Quality, Low-Cost Video Generation with Explicit 3D Physics Modeling for Complex Motion and Interaction</a></li><li class="chapter-item expanded "><a href="107.html"><strong aria-hidden="true">62.</strong> Text2Video-Zero: Text-to-Image Diffusion Models are Zero-Shot Video Generators</a></li><li class="chapter-item expanded "><a href="106.html"><strong aria-hidden="true">63.</strong> Force Prompting: Video Generation Models Can Learn and Generalize Physics-based Control Signals</a></li><li class="chapter-item expanded "><a href="105.html"><strong aria-hidden="true">64.</strong> Think Before You Diffuse: LLMs-Guided Physics-Aware Video Generation</a></li><li class="chapter-item expanded "><a href="104.html"><strong aria-hidden="true">65.</strong> Generating time-consistent dynamics with discriminator-guided image diffusion models</a></li><li class="chapter-item expanded "><a href="103.html"><strong aria-hidden="true">66.</strong> GENMO:AGENeralist Model for Human MOtion</a></li><li class="chapter-item expanded "><a href="102.html"><strong aria-hidden="true">67.</strong> HGM3: HIERARCHICAL GENERATIVE MASKED MOTION MODELING WITH HARD TOKEN MINING</a></li><li class="chapter-item expanded "><a href="101.html"><strong aria-hidden="true">68.</strong> Towards Robust and Controllable Text-to-Motion via Masked Autoregressive Diffusion</a></li><li class="chapter-item expanded "><a href="100.html"><strong aria-hidden="true">69.</strong> MoCLIP: Motion-Aware Fine-Tuning and Distillation of CLIP for Human Motion Generation</a></li><li class="chapter-item expanded "><a href="99.html"><strong aria-hidden="true">70.</strong> FinePhys: Fine-grained Human Action Generation by Explicitly Incorporating Physical Laws for Effective Skeletal Guidance</a></li><li class="chapter-item expanded "><a href="98.html"><strong aria-hidden="true">71.</strong> VideoSwap: Customized Video Subject Swapping with Interactive Semantic Point Correspondence</a></li><li class="chapter-item expanded "><a href="97.html"><strong aria-hidden="true">72.</strong> DragAnything: Motion Control for Anything using Entity Representation</a></li><li class="chapter-item expanded "><a href="96.html"><strong aria-hidden="true">73.</strong> PhysAnimator: Physics-Guided Generative Cartoon Animation</a></li><li class="chapter-item expanded "><a href="95.html"><strong aria-hidden="true">74.</strong> SOAP: Style-Omniscient Animatable Portraits</a></li><li class="chapter-item expanded "><a href="94.html"><strong aria-hidden="true">75.</strong> Neural Discrete Representation Learning</a></li><li class="chapter-item expanded "><a href="93.html"><strong aria-hidden="true">76.</strong> TSTMotion: Training-free Scene-aware Text-to-motion Generation</a></li><li class="chapter-item expanded "><a href="92.html"><strong aria-hidden="true">77.</strong> Deterministic-to-Stochastic Diverse Latent Feature Mapping for Human Motion Synthesis</a></li><li class="chapter-item expanded "><a href="91.html"><strong aria-hidden="true">78.</strong> A lip sync expert is all you need for speech to lip generation in the wild</a></li><li class="chapter-item expanded "><a href="90.html"><strong aria-hidden="true">79.</strong> MUSETALK: REAL-TIME HIGH QUALITY LIP SYN-CHRONIZATION WITH LATENT SPACE INPAINTING</a></li><li class="chapter-item expanded "><a href="89.html"><strong aria-hidden="true">80.</strong> LatentSync: Audio Conditioned Latent Diffusion Models for Lip Sync</a></li><li class="chapter-item expanded "><a href="88.html"><strong aria-hidden="true">81.</strong> T2m-gpt: Generating human motion from textual descriptions with discrete representations</a></li><li class="chapter-item expanded "><a href="87.html"><strong aria-hidden="true">82.</strong> Motiongpt: Finetuned llms are general-purpose motion generators</a></li><li class="chapter-item expanded "><a href="86.html"><strong aria-hidden="true">83.</strong> Guided Motion Diffusion for Controllable Human Motion Synthesis</a></li><li class="chapter-item expanded "><a href="85.html"><strong aria-hidden="true">84.</strong> OmniControl: Control Any Joint at Any Time for Human Motion Generation</a></li><li class="chapter-item expanded "><a href="84.html"><strong aria-hidden="true">85.</strong> Learning Long-form Video Prior via Generative Pre-Training</a></li><li class="chapter-item expanded "><a href="83.html"><strong aria-hidden="true">86.</strong> Instant Neural Graphics Primitives with a Multiresolution Hash Encoding</a></li><li class="chapter-item expanded "><a href="82.html"><strong aria-hidden="true">87.</strong> Magic3D: High-Resolution Text-to-3D Content Creation</a></li><li class="chapter-item expanded "><a href="81.html"><strong aria-hidden="true">88.</strong> CogVideo: Large-scale Pretraining for Text-to-Video Generation via Transformers</a></li><li class="chapter-item expanded "><a href="80.html"><strong aria-hidden="true">89.</strong> One-Minute Video Generation with Test-Time Training</a></li><li class="chapter-item expanded "><a href="79.html"><strong aria-hidden="true">90.</strong> Key-Locked Rank One Editing for Text-to-Image Personalization</a></li><li class="chapter-item expanded "><a href="78.html"><strong aria-hidden="true">91.</strong> MARCHING CUBES: A HIGH RESOLUTION 3D SURFACE CONSTRUCTION ALGORITHM</a></li><li class="chapter-item expanded "><a href="77.html"><strong aria-hidden="true">92.</strong> Plug-and-Play Diffusion Features for Text-Driven Image-to-Image Translation</a></li><li class="chapter-item expanded "><a href="76.html"><strong aria-hidden="true">93.</strong> NULL-text Inversion for Editing Real Images Using Guided Diffusion Models</a></li><li class="chapter-item expanded "><a href="75.html"><strong aria-hidden="true">94.</strong> simple diffusion: End-to-end diffusion for high resolution images</a></li><li class="chapter-item expanded "><a href="74.html"><strong aria-hidden="true">95.</strong> One Transformer Fits All Distributions in Multi-Modal Diffusion at Scale</a></li><li class="chapter-item expanded "><a href="73.html"><strong aria-hidden="true">96.</strong> Scalable Diffusion Models with Transformers</a></li><li class="chapter-item expanded "><a href="72.html"><strong aria-hidden="true">97.</strong> All are Worth Words: a ViT Backbone for Score-based Diffusion Models</a></li><li class="chapter-item expanded "><a href="71.html"><strong aria-hidden="true">98.</strong> An image is worth 16x16 words: Transformers for image recognition at scale</a></li><li class="chapter-item expanded "><a href="70.html"><strong aria-hidden="true">99.</strong> eDiff-I: Text-to-Image Diffusion Models with an Ensemble of Expert Denoisers</a></li><li class="chapter-item expanded "><a href="69.html"><strong aria-hidden="true">100.</strong> Photorealistic text-to-image diffusion models with deep language understanding||Imagen</a></li><li class="chapter-item expanded "><a href="68.html"><strong aria-hidden="true">101.</strong> DreamFusion: Text-to-3D using 2D Diffusion</a></li><li class="chapter-item expanded "><a href="67.html"><strong aria-hidden="true">102.</strong> GLIGEN: Open-Set Grounded Text-to-Image Generation</a></li><li class="chapter-item expanded "><a href="66.html"><strong aria-hidden="true">103.</strong> Adding Conditional Control to Text-to-Image Diffusion Models</a></li><li class="chapter-item expanded "><a href="65.html"><strong aria-hidden="true">104.</strong> T2I-Adapter: Learning Adapters to Dig out More Controllable Ability for Text-to-Image Diffusion Models</a></li><li class="chapter-item expanded "><a href="64.html"><strong aria-hidden="true">105.</strong> Multi-Concept Customization of Text-to-Image Diffusion</a></li><li class="chapter-item expanded "><a href="63.html"><strong aria-hidden="true">106.</strong> An Image is Worth One Word: Personalizing Text-to-Image Generation using Textual Inversion</a></li><li class="chapter-item expanded "><a href="62.html"><strong aria-hidden="true">107.</strong> DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation</a></li><li class="chapter-item expanded "><a href="61.html"><strong aria-hidden="true">108.</strong> VisorGPT: Learning Visual Prior via Generative Pre-Training</a></li><li class="chapter-item expanded "><a href="60.html"><strong aria-hidden="true">109.</strong> NUWA-XL: Diffusion over Diffusion for eXtremely Long Video Generation</a></li><li class="chapter-item expanded "><a href="59.html"><strong aria-hidden="true">110.</strong> AnimateDiff: Animate Your Personalized Text-to-Image Diffusion Models without Specific Tuning</a></li><li class="chapter-item expanded "><a href="58.html"><strong aria-hidden="true">111.</strong> ModelScope Text-to-Video Technical Report</a></li><li class="chapter-item expanded "><a href="57.html"><strong aria-hidden="true">112.</strong> Show-1: Marrying Pixel and Latent Diffusion Models for Text-to-Video Generation</a></li><li class="chapter-item expanded "><a href="56.html"><strong aria-hidden="true">113.</strong> Make-A-Video: Text-to-Video Generation without Text-Video Data</a></li><li class="chapter-item expanded "><a href="55.html"><strong aria-hidden="true">114.</strong> Video Diffusion Models</a></li><li class="chapter-item expanded "><a href="54.html"><strong aria-hidden="true">115.</strong> Learning Transferable Visual Models From Natural Language Supervision</a></li><li class="chapter-item expanded "><a href="53.html"><strong aria-hidden="true">116.</strong> Implicit Warping for Animation with Image Sets</a></li><li class="chapter-item expanded "><a href="52.html"><strong aria-hidden="true">117.</strong> Mix-of-Show: Decentralized Low-Rank Adaptation for Multi-Concept Customization of Diffusion Models</a></li><li class="chapter-item expanded "><a href="51.html"><strong aria-hidden="true">118.</strong> Motion-Conditioned Diffusion Model for Controllable Video Synthesis</a></li><li class="chapter-item expanded "><a href="50.html"><strong aria-hidden="true">119.</strong> Stable Video Diffusion: Scaling Latent Video Diffusion Models to Large Datasets</a></li><li class="chapter-item expanded "><a href="49.html"><strong aria-hidden="true">120.</strong> UniAnimate: Taming Unified Video Diffusion Models for Consistent Human Image Animation</a></li><li class="chapter-item expanded "><a href="48.html"><strong aria-hidden="true">121.</strong> Align your Latents: High-Resolution Video Synthesis with Latent Diffusion Models</a></li><li class="chapter-item expanded "><a href="47.html"><strong aria-hidden="true">122.</strong> Puppet-Master: Scaling Interactive Video Generation as a Motion Prior for Part-Level Dynamics</a></li><li class="chapter-item expanded "><a href="46.html"><strong aria-hidden="true">123.</strong> A Recipe for Scaling up Text-to-Video Generation</a></li><li class="chapter-item expanded "><a href="45.html"><strong aria-hidden="true">124.</strong> High-Resolution Image Synthesis with Latent Diffusion Models</a></li><li class="chapter-item expanded "><a href="44.html"><strong aria-hidden="true">125.</strong> Motion-I2V: Consistent and Controllable Image-to-Video Generation with Explicit Motion Modeling</a></li><li class="chapter-item expanded "><a href="43.html"><strong aria-hidden="true">126.</strong> 数据集：HumanVid</a></li><li class="chapter-item expanded "><a href="42.html"><strong aria-hidden="true">127.</strong> HumanVid: Demystifying Training Data for Camera-controllable Human Image Animation</a></li><li class="chapter-item expanded "><a href="41.html"><strong aria-hidden="true">128.</strong> StoryDiffusion: Consistent Self-Attention for Long-Range Image and Video Generation</a></li><li class="chapter-item expanded "><a href="40.html"><strong aria-hidden="true">129.</strong> 数据集：Zoo-300K</a></li><li class="chapter-item expanded "><a href="39.html"><strong aria-hidden="true">130.</strong> Motion Avatar: Generate Human and Animal Avatars with Arbitrary Motion</a></li><li class="chapter-item expanded "><a href="38.html"><strong aria-hidden="true">131.</strong> LORA: LOW-RANK ADAPTATION OF LARGE LAN-GUAGE MODELS</a></li><li class="chapter-item expanded "><a href="37.html"><strong aria-hidden="true">132.</strong> TCAN: Animating Human Images with Temporally Consistent Pose Guidance using Diffusion Models</a></li><li class="chapter-item expanded "><a href="36.html"><strong aria-hidden="true">133.</strong> GaussianAvatar: Towards Realistic Human Avatar Modeling from a Single Video via Animatable 3D Gaussians</a></li><li class="chapter-item expanded "><a href="35.html"><strong aria-hidden="true">134.</strong> MagicPony: Learning Articulated 3D Animals in the Wild</a></li><li class="chapter-item expanded "><a href="34.html"><strong aria-hidden="true">135.</strong> Splatter a Video: Video Gaussian Representation for Versatile Processing</a></li><li class="chapter-item expanded "><a href="33.html"><strong aria-hidden="true">136.</strong> 数据集：Dynamic Furry Animal Dataset</a></li><li class="chapter-item expanded "><a href="32.html"><strong aria-hidden="true">137.</strong> Artemis: Articulated Neural Pets with Appearance and Motion Synthesis</a></li><li class="chapter-item expanded "><a href="31.html"><strong aria-hidden="true">138.</strong> SMPLer: Taming Transformers for Monocular 3D Human Shape and Pose Estimation</a></li><li class="chapter-item expanded "><a href="30.html"><strong aria-hidden="true">139.</strong> CAT3D: Create Anything in 3D with Multi-View Diffusion Models</a></li><li class="chapter-item expanded "><a href="29.html"><strong aria-hidden="true">140.</strong> PACER+: On-Demand Pedestrian Animation Controller in Driving Scenarios</a></li><li class="chapter-item expanded "><a href="28.html"><strong aria-hidden="true">141.</strong> Humans in 4D: Reconstructing and Tracking Humans with Transformers</a></li><li class="chapter-item expanded "><a href="27.html"><strong aria-hidden="true">142.</strong> Learning Human Motion from Monocular Videos via Cross-Modal Manifold Alignment</a></li><li class="chapter-item expanded "><a href="26.html"><strong aria-hidden="true">143.</strong> PhysPT: Physics-aware Pretrained Transformer for Estimating Human Dynamics from Monocular Videos</a></li><li class="chapter-item expanded "><a href="25.html"><strong aria-hidden="true">144.</strong> Imagic: Text-Based Real Image Editing with Diffusion Models</a></li><li class="chapter-item expanded "><a href="24.html"><strong aria-hidden="true">145.</strong> DiffEdit: Diffusion-based semantic image editing with mask guidance</a></li><li class="chapter-item expanded "><a href="23.html"><strong aria-hidden="true">146.</strong> Dual diffusion implicit bridges for image-to-image translation</a></li><li class="chapter-item expanded "><a href="22.html"><strong aria-hidden="true">147.</strong> SDEdit: Guided Image Synthesis and Editing with Stochastic Differential Equations</a></li><li class="chapter-item expanded "><a href="20.html"><strong aria-hidden="true">148.</strong> Prompt-to-Prompt Image Editing with Cross-Attention Control</a></li><li class="chapter-item expanded "><a href="19.html"><strong aria-hidden="true">149.</strong> WANDR: Intention-guided Human Motion Generation</a></li><li class="chapter-item expanded "><a href="18.html"><strong aria-hidden="true">150.</strong> TRAM: Global Trajectory and Motion of 3D Humans from in-the-wild Videos</a></li><li class="chapter-item expanded "><a href="17.html" class="active"><strong aria-hidden="true">151.</strong> 3D Gaussian Splatting for Real-Time Radiance Field Rendering</a></li><li class="chapter-item expanded "><a href="16.html"><strong aria-hidden="true">152.</strong> Decoupling Human and Camera Motion from Videos in the Wild</a></li><li class="chapter-item expanded "><a href="15.html"><strong aria-hidden="true">153.</strong> HMP: Hand Motion Priors for Pose and Shape Estimation from Video</a></li><li class="chapter-item expanded "><a href="14.html"><strong aria-hidden="true">154.</strong> HuMoR: 3D Human Motion Model for Robust Pose Estimation</a></li><li class="chapter-item expanded "><a href="13.html"><strong aria-hidden="true">155.</strong> Co-Evolution of Pose and Mesh for 3D Human Body Estimation from Video</a></li><li class="chapter-item expanded "><a href="12.html"><strong aria-hidden="true">156.</strong> Global-to-Local Modeling for Video-based 3D Human Pose and Shape Estimation</a></li><li class="chapter-item expanded "><a href="11.html"><strong aria-hidden="true">157.</strong> WHAM: Reconstructing World-grounded Humans with Accurate 3D Motion</a></li><li class="chapter-item expanded "><a href="10.html"><strong aria-hidden="true">158.</strong> Tackling the Generative Learning Trilemma with Denoising Diffusion GANs</a></li><li class="chapter-item expanded "><a href="9.html"><strong aria-hidden="true">159.</strong> Elucidating the Design Space of Diffusion-Based Generative Models</a></li><li class="chapter-item expanded "><a href="8.html"><strong aria-hidden="true">160.</strong> SCORE-BASED GENERATIVE MODELING THROUGHSTOCHASTIC DIFFERENTIAL EQUATIONS</a></li><li class="chapter-item expanded "><a href="7.html"><strong aria-hidden="true">161.</strong> Consistency Models</a></li><li class="chapter-item expanded "><a href="6.html"><strong aria-hidden="true">162.</strong> Classifier-Free Diffusion Guidance</a></li><li class="chapter-item expanded "><a href="5.html"><strong aria-hidden="true">163.</strong> Cascaded Diffusion Models for High Fidelity Image Generation</a></li><li class="chapter-item expanded "><a href="4.html"><strong aria-hidden="true">164.</strong> LEARNING ENERGY-BASED MODELS BY DIFFUSIONRECOVERY LIKELIHOOD</a></li><li class="chapter-item expanded "><a href="3.html"><strong aria-hidden="true">165.</strong> On Distillation of Guided Diffusion Models</a></li><li class="chapter-item expanded "><a href="2.html"><strong aria-hidden="true">166.</strong> Denoising Diffusion Implicit Models</a></li><li class="chapter-item expanded "><a href="1.html"><strong aria-hidden="true">167.</strong> PROGRESSIVE DISTILLATION FOR FAST SAMPLING OF DIFFUSION MODELS</a></li><li class="chapter-item expanded "><a href="125.html"><strong aria-hidden="true">168.</strong> Instruct-NeRF2NeRF: Editing 3D Scenes with Instructions</a></li><li class="chapter-item expanded "><a href="124.html"><strong aria-hidden="true">169.</strong> ControlVideo: Training-free Controllable Text-to-Video Generation</a></li><li class="chapter-item expanded "><a href="123.html"><strong aria-hidden="true">170.</strong> Pix2Video: Video Editing using Image Diffusion</a></li><li class="chapter-item expanded "><a href="122.html"><strong aria-hidden="true">171.</strong> Structure and Content-Guided Video Synthesis with Diffusion Models</a></li><li class="chapter-item expanded "><a href="121.html"><strong aria-hidden="true">172.</strong> MagicAnimate: Temporally Consistent Human Image Animation using Diffusion Model</a></li><li class="chapter-item expanded "><a href="120.html"><strong aria-hidden="true">173.</strong> MotionDirector: Motion Customization of Text-to-Video Diffusion Models</a></li><li class="chapter-item expanded "><a href="119.html"><strong aria-hidden="true">174.</strong> Dreamix: Video Diffusion Models are General Video Editors</a></li><li class="chapter-item expanded "><a href="118.html"><strong aria-hidden="true">175.</strong> Tune-A-Video: One-Shot Tuning of Image Diffusion Models for Text-to-Video Generation</a></li><li class="chapter-item expanded "><a href="117.html"><strong aria-hidden="true">176.</strong> TokenFlow: Consistent Diffusion Features for Consistent Video Editing</a></li><li class="chapter-item expanded "><a href="116.html"><strong aria-hidden="true">177.</strong> DynVideo-E: Harnessing Dynamic NeRF for Large-Scale Motion- and View-Change Human-Centric Video Editing</a></li><li class="chapter-item expanded "><a href="115.html"><strong aria-hidden="true">178.</strong> Content Deformation Fields for Temporally Consistent Video Processing</a></li><li class="chapter-item expanded "><a href="113.html"><strong aria-hidden="true">179.</strong> PFNN: Phase-Functioned Neural Networks</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ReadPapers</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/CaterpillarStudyGroup/ReadPapers" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main><div class="sidetoc"><nav class="pagetoc"></nav></div>
+                        <h1 id="3d-gaussian-splatting-for-real-time-radiance-field-rendering"><a class="header" href="#3d-gaussian-splatting-for-real-time-radiance-field-rendering">3D Gaussian Splatting for Real-Time Radiance Field Rendering</a></h1>
+<table><thead><tr><th>缩写</th><th>英文</th><th>中文</th></tr></thead><tbody>
+<tr><td>SfM</td><td>Structure-from-Motion</td><td></td></tr>
+<tr><td>SH</td><td>spherical harmonics</td><td><a href="https://caterpillarstudygroup.github.io/mathematics_basic_for_ML/Geometry/SphericalHarmonics.html">球谐基</a></td></tr>
+<tr><td></td><td>covariance matrix</td><td>协方差矩阵</td></tr>
+<tr><td>Nerf</td><td>Neural Radiance Field</td><td>神经辐射场</td></tr>
+<tr><td>GS</td><td>Gaussian splatting</td><td>高斯溅射</td></tr>
+</tbody></table>
+<h2 id="核心问题是什么"><a class="header" href="#核心问题是什么">核心问题是什么?</a></h2>
+<h3 id="现有方法及问题"><a class="header" href="#现有方法及问题">现有方法及问题</a></h3>
+<p>Nerf方法需要训练和渲染成本高昂的神经网络，而其加速方案会牺牲质量来换取速度。对于无界且完整的场景（而不是孤立的物体）和1080p分辨率渲染，当前没有方法可以实现实时显示速率。</p>
+<h3 id="本文方法"><a class="header" href="#本文方法">本文方法</a></h3>
+<p>高斯溅射是一种表示 3D 场景和渲染新视图的方法，它被认为是 NeRF 类模型的替代品。<br />
+这项工作最出名的地方是其高渲染速度。这归功于下面将要介绍的表示本身，以及使用自定义 CUDA 内核定制实现的渲染算法。<br />
+首先，从相机校准期间产生的稀疏点开始，用 3D 高斯表示场景，保留连续体积辐射场的所需属性以进行场景优化，同时避免在空白区域中进行不必要的计算；<br />
+其次，我们对 3D 高斯进行交错优化/密度控制，特别是优化各向异性协方差以实现场景的准确表示；<br />
+第三，我们开发了一种快速可见性感知渲染算法，该算法支持各向异性泼溅，既加速训练又允许实时渲染。</p>
+<h3 id="效果"><a class="header" href="#效果">效果</a></h3>
+<p>在几个已建立的数据集上展示了最先进的视觉质量和实时渲染。</p>
+<h2 id="核心贡献是什么"><a class="header" href="#核心贡献是什么">核心贡献是什么？</a></h2>
+<ul>
+<li>引入各向异性 3D 高斯作为辐射场的高质量、非结构化表示。</li>
+<li>3D 高斯属性的优化方法，与自适应密度控制交错，为捕获的场景创建高质量表示。</li>
+<li>快速、可微的渲染方法对于可见性感知的 GPU，允许各向异性泼溅和快速反向传播，以实现高质量的新颖视图合成。</li>
+</ul>
+<h2 id="大致方法是什么"><a class="header" href="#大致方法是什么">大致方法是什么？</a></h2>
+<p><img src="./assets/90c87fe420b7f068f6ef682c1ee5ed26_4_Figure_2_-1952255684.png" alt="" /></p>
+<p>输入：一组静态场景的图像</p>
+<ol>
+<li>由 SfM 校准的相应相机，会产生稀疏点云。</li>
+<li>从SfM点云创建了一组 3D 高斯（第 4 节），由位置（均值）、协方差矩阵和不透明度 𝛼 定义这些高斯。</li>
+</ol>
+<blockquote>
+<p>这允许非常灵活的优化机制。这会产生 3D 场景的相当紧凑的表示，部分原因是高度<strong>各向异性的体积片可用于紧凑地表示精细结构</strong>。</p>
+</blockquote>
+<ol start="3">
+<li>辐射场的方向外观分量（颜色）通过球谐函数 (SH) 表示。</li>
+<li>通过 3D 高斯参数的一系列优化步骤来创建辐射场表示（第 5 节），即位置、协方差、𝛼 和 SH 系数与高斯密度自适应控制的操作交织在一起。</li>
+<li>基于图块的光栅化器（效率的关键）（第 6 节），让各向异性图块的𝛼混合，通过快速排序表示可见性顺序。</li>
+</ol>
+<blockquote>
+<p>快速光栅化器还包括通过跟踪累积的 𝛼 值进行快速向后传递，并且对可以接收梯度的高斯数量没有限制。</p>
+</blockquote>
+<h3 id="可微-3d-高斯splatting"><a class="header" href="#可微-3d-高斯splatting">可微 3D 高斯Splatting</a></h3>
+<p>输入：没有法线信息的稀疏 (SfM) 点集<br />
+输出：允许高质量新视角合成的场景表示，即一组 3D 高斯。</p>
+<h4 id="表示"><a class="header" href="#表示">表示</a></h4>
+<p>3D 世界由一组 3D 点表示，实际上有数百万个 3D 点，数量大约为 50 万到 500 万。每个点都是一个 3D 高斯，具有自己独特的参数，这些参数针对每个场景进行拟合，以便该<strong>场景的渲染与已知的数据集图像紧密匹配</strong>。</p>
+<p>每个 3D 高斯的参数如下：</p>
+<ul>
+<li>均值 μ， 可解释为位置 x、y、z；</li>
+<li>协方差 Σ；</li>
+<li>不透明度 σ(𝛼)，应用 sigmoid 函数将参数映射到 [0, 1] 区间；</li>
+<li>颜色参数，(R、G、B) 的 3 个值或球谐函数 (SH) 系数。</li>
+</ul>
+<p>选择3D高斯作为场景表示是因为：</p>
+<ol>
+<li>具有可微分体积表示的属性</li>
+<li>非结构化和显式的，以允许非常快速的渲染</li>
+<li>可以轻松投影到 2D splats，从而实现快速𝛼混合渲染</li>
+</ol>
+<blockquote>
+<p>之前的类似工作使用带法线信息的2D平面圆。但SfM有时是难以估计比较准确的法线信息，因此给这些方法带来的困难。</p>
+</blockquote>
+<p>本文使用的3D高斯，由世界坐标系下的3D协方差矩阵和中心位置来描述。不需要包含法线信息。</p>
+<h5 id="协方差矩阵"><a class="header" href="#协方差矩阵">协方差矩阵</a></h5>
+<p>协方差是各向异性的，这意味着 3D 点可以是沿空间中任意方向旋转和拉伸的椭圆体。需要用 9 个参数来表示协方差矩阵。</p>
+<blockquote>
+<p>这种各向异性协方差的表示（适合优化）允许我们优化 3D 高斯以适应捕获场景中不同形状的几何形状，从而产生相当紧凑的表示。图 3 说明了这种情况。</p>
+</blockquote>
+<p>协方差矩阵是需要被优化的参数之一，但是不能直接优化这样的协方差矩阵。<br />
+<strong>优化过程中必须保证协方差矩阵是半正定的</strong>，但梯度下降的优化方法会破坏协方差矩阵的的半正定性。因此，把协方差矩阵分解为：</p>
+<p>$$
+\Sigma = RSS^\top R^\top
+$$</p>
+<p>这种因式分解称为协方差矩阵的特征分解，其中：</p>
+<ul>
+<li>S 是一个对角缩放矩阵，具有 3 个缩放参数；</li>
+<li>R 是一个 3x3 旋转矩阵，用 4 个四元数表示。</li>
+</ul>
+<p>S和R分别存储和优化。</p>
+<pre><code class="language-python">def strip_symmetric(L):
+    uncertainty = torch.zeros((L.shape[0], 6), dtype=torch.float, device=&quot;cuda&quot;)
+
+    uncertainty[:, 0] = L[:, 0, 0]
+    uncertainty[:, 1] = L[:, 0, 1]
+    uncertainty[:, 2] = L[:, 0, 2]
+    uncertainty[:, 3] = L[:, 1, 1]
+    uncertainty[:, 4] = L[:, 1, 2]
+    uncertainty[:, 5] = L[:, 2, 2]
+    return uncertainty
+
+def build_scaling_rotation(s, r):
+    L = torch.zeros((s.shape[0], 3, 3), dtype=torch.float, device=&quot;cuda&quot;)
+    R = build_rotation(r)
+
+    L[:,0,0] = s[:,0]
+    L[:,1,1] = s[:,1]
+    L[:,2,2] = s[:,2]
+
+    L = R @ L
+    return L
+
+# scaling和rotation是优化好的S和R
+def build_covariance_from_scaling_rotation(scaling, scaling_modifier, rotation):
+    # 构造一个包含缩放scale和旋转rotation的变换矩阵
+    L = build_scaling_rotation(scaling_modifier * scaling, rotation)
+    actual_covariance = L @ L.transpose(1, 2)
+    # 由于actual_covariance是对称矩阵，只需要存一半就可以了，参数减少到6
+    symm = strip_symmetric(actual_covariance)
+    return symm
+</code></pre>
+<p>渲染时，把缩放和旋转再合成协方差矩阵：</p>
+<pre><code class="language-c++">// Forward method for converting scale and rotation properties of each
+// Gaussian to a 3D covariance matrix in world space. Also takes care
+// of quaternion normalization.
+__device__ void computeCov3D(
+	const glm::vec3 scale, // 表示缩放的三维向量
+	float mod, // 对应gaussian_renderer/__init__.py中的scaling_modifier
+	const glm::vec4 rot, // 表示旋转的四元数
+	float* cov3D) // 结果：三维协方差矩阵
+{
+	// Create scaling matrix
+	glm::mat3 S = glm::mat3(1.0f);
+	S[0][0] = mod * scale.x;
+	S[1][1] = mod * scale.y;
+	S[2][2] = mod * scale.z;
+
+	// Normalize quaternion to get valid rotation
+	glm::vec4 q = rot;// / glm::length(rot);
+	float r = q.x;
+	float x = q.y;
+	float y = q.z;
+	float z = q.w;
+
+	// Compute rotation matrix from quaternion
+	glm::mat3 R = glm::mat3(
+		1.f - 2.f * (y * y + z * z), 2.f * (x * y - r * z), 2.f * (x * z + r * y),
+		2.f * (x * y + r * z), 1.f - 2.f * (x * x + z * z), 2.f * (y * z - r * x),
+		2.f * (x * z - r * y), 2.f * (y * z + r * x), 1.f - 2.f * (x * x + y * y)
+	);
+
+	glm::mat3 M = S * R;
+
+	// Compute 3D world covariance matrix Sigma
+	glm::mat3 Sigma = glm::transpose(M) * M;
+
+	// Covariance is symmetric, only store upper right
+	cov3D[0] = Sigma[0][0];
+	cov3D[1] = Sigma[0][1];
+	cov3D[2] = Sigma[0][2];
+	cov3D[3] = Sigma[1][1];
+	cov3D[4] = Sigma[1][2];
+	cov3D[5] = Sigma[2][2];
+}
+</code></pre>
+<h5 id="颜色参数"><a class="header" href="#颜色参数">颜色参数</a></h5>
+<p>颜色参数可以用3个RGB值或一组SH系数来表示。</p>
+<p>不需要视角依赖特性时，可以进行简化，选择用 3 个 RGB 值表示颜色。</p>
+<p>视角依赖性是一种很好的特性，它可以提高渲染质量，因为它允许模型表示非朗伯效应，例如金属表面的镜面反射。</p>
+<p>视角相关的颜色参数，则需要使用SH系数表示颜色。<br />
+SH是一组定义在球表面的正交基，每个定义在球面上的函数都可以通过SH来表达。</p>
+<p><img src="./assets/1_bKNS_UyAOGcQvew-b-pciQ.webp" alt="" /></p>
+<p>定义SH基的自由度ℓ_max 内，并假设每种颜色（红色、绿色和蓝色）都是前 ℓ_max 个 SH 函数的线性组合。对于每个 3D 高斯，通过学习其正确的系数，使得当我们从某个方向看这个 3D 点时，得到最接近真实的颜色。</p>
+<pre><code class="language-python"># deg：球协基的个数
+# sh：优化出的SH系数
+# dirs：相机指向高斯球心的视线方向
+def eval_sh(deg, sh, dirs):
+    &quot;&quot;&quot;
+    Evaluate spherical harmonics at unit directions
+    using hardcoded SH polynomials.
+    Works with torch/np/jnp.
+    ... Can be 0 or more batch dimensions.
+    Args:
+        deg: int SH deg. Currently, 0-3 supported
+        sh: jnp.ndarray SH coeffs [..., C, (deg + 1) ** 2]
+        dirs: jnp.ndarray unit directions [..., 3]
+    Returns:
+        [..., C]
+    &quot;&quot;&quot;
+    assert deg &lt;= 4 and deg &gt;= 0
+    # 第l层的球协基需要2*i+1个系数，[0,l]层球协基共需要(l+1)**2个系数
+    coeff = (deg + 1) ** 2
+    assert sh.shape[-1] &gt;= coeff
+
+    # C0,C1,C2,C3,C4是提前定义好的球协基，是定值，不需要被优化
+    result = C0 * sh[..., 0]
+    if deg &gt; 0:
+        x, y, z = dirs[..., 0:1], dirs[..., 1:2], dirs[..., 2:3]
+        result = (result -
+                C1 * y * sh[..., 1] +
+                C1 * z * sh[..., 2] -
+                C1 * x * sh[..., 3])
+
+        if deg &gt; 1:
+            xx, yy, zz = x * x, y * y, z * z
+            xy, yz, xz = x * y, y * z, x * z
+            result = (result +
+                    C2[0] * xy * sh[..., 4] +
+                    C2[1] * yz * sh[..., 5] +
+                    C2[2] * (2.0 * zz - xx - yy) * sh[..., 6] +
+                    C2[3] * xz * sh[..., 7] +
+                    C2[4] * (xx - yy) * sh[..., 8])
+
+            if deg &gt; 2:
+                result = (result +
+                C3[0] * y * (3 * xx - yy) * sh[..., 9] +
+                C3[1] * xy * z * sh[..., 10] +
+                C3[2] * y * (4 * zz - xx - yy)* sh[..., 11] +
+                C3[3] * z * (2 * zz - 3 * xx - 3 * yy) * sh[..., 12] +
+                C3[4] * x * (4 * zz - xx - yy) * sh[..., 13] +
+                C3[5] * z * (xx - yy) * sh[..., 14] +
+                C3[6] * x * (xx - 3 * yy) * sh[..., 15])
+
+                if deg &gt; 3:
+                    result = (result + C4[0] * xy * (xx - yy) * sh[..., 16] +
+                            C4[1] * yz * (3 * xx - yy) * sh[..., 17] +
+                            C4[2] * xy * (7 * zz - 1) * sh[..., 18] +
+                            C4[3] * yz * (7 * zz - 3) * sh[..., 19] +
+                            C4[4] * (zz * (35 * zz - 30) + 3) * sh[..., 20] +
+                            C4[5] * xz * (7 * zz - 3) * sh[..., 21] +
+                            C4[6] * (xx - yy) * (7 * zz - 1) * sh[..., 22] +
+                            C4[7] * xz * (xx - 3 * yy) * sh[..., 23] +
+                            C4[8] * (xx * (xx - 3 * yy) - yy * (3 * xx - yy)) * sh[..., 24])
+    return result
+</code></pre>
+<h4 id="渲染"><a class="header" href="#渲染">渲染</a></h4>
+<h5 id="一个高斯球对一个像素点的影响"><a class="header" href="#一个高斯球对一个像素点的影响">一个高斯球对一个像素点的影响</a></h5>
+<p>第i个3D高斯球对3D中任意一点p的影响定义如下：</p>
+<p><img src="./assets/1_JGh_0y3ICNuA6IcnbdnvdA.gif" alt="" /></p>
+<blockquote>
+<p>这个方程和多元正态分布的概率密度函数的区别在于，没有协方差归一化项，且使用用不透明度来加权。
+高斯的妙处在于每个点都有双重影响。一方面，根据其协方差，每个点实际上代表了空间中接近其均值的有限区域。另一方面，它具有理论上无限的范围，这意味着每个高斯函数都定义在整个 3D 空间中，并且可以针对任何点进行评估。这很棒，因为在优化过程中，它允许梯度从远距离流动。⁴</p>
+</blockquote>
+<h5 id="所有高斯球对一个像素的影响"><a class="header" href="#所有高斯球对一个像素的影响">所有高斯球对一个像素的影响</a></h5>
+<p>NeRF 和高斯溅射使用相同的逐点 𝛼 混合的图像形成模型。</p>
+<table><thead><tr><th>Nerf</th><th>3D GS</th></tr></thead><tbody>
+<tr><td><img src="./assets/1_dovqzRKuf4Sf324f-_Smjg.webp" alt="" /></td><td><img src="./assets/1_op2L1Cv4fCMHlYFLnbG0tw.webp" alt="" /></td></tr>
+</tbody></table>
+<p>Nerf的公式和3D GS的公式几乎完全相同。唯一的区别在于两者之间如何计算 𝛼。在高斯溅射中，每个像素的聚合都是通过投影二维高斯的有序列表的贡献进行的。</p>
+<blockquote>
+<p>这种微小的差异在实践中变得极为重要，并导致渲染速度截然不同。事实上，这是高斯溅射实时性能的基础。</p>
+</blockquote>
+<h5 id="坐标系转换"><a class="header" href="#坐标系转换">坐标系转换</a></h5>
+<p>3D GS公式中的\(f^{2D}\) 是 f(p) 在 2D 上的投影。3D 点及其投影都是多元高斯函数，因此 “3D 高斯函数对 3D 中任意点的影响” 与 “投影的 2D 高斯函数对做任意像素点的影响” 具有相同的公式。唯一的区别是必须使用投影到 2D 中平均值 μ 和协方差 Σ ，这一步称为 EWA splatting⁵ 。</p>
+<p>定义相机内参矩阵为K，外参矩阵为W=[R|t]</p>
+<p>2D 的均值为：</p>
+<p>$$
+\mu^{2D} = K((W\mu)/(W\mu)_z)
+$$</p>
+<p>2D的协方差矩阵为：</p>
+<p>$$
+\Sigma^{2D} = JW\Sigma J^\top W^\top
+$$</p>
+<blockquote>
+<p>文中提到一种简化方法，可以把协方差矩阵从 3 * 3 简化为 2 * 2。</p>
+</blockquote>
+<pre><code class="language-c++">// Forward version of 2D covariance matrix computation
+__device__ float3 computeCov2D(
+	const float3&amp; mean, // Gaussian中心坐标
+	float focal_x, // x方向焦距
+	float focal_y, // y方向焦距
+	float tan_fovx,
+	float tan_fovy,
+	const float* cov3D, // 已经算出来的三维协方差矩阵
+	const float* viewmatrix) // W2C矩阵
+{
+	// The following models the steps outlined by equations 29
+	// and 31 in &quot;EWA Splatting&quot; (Zwicker et al., 2002). 
+	// Additionally considers aspect / scaling of viewport.
+	// Transposes used to account for row-/column-major conventions.
+	float3 t = transformPoint4x3(mean, viewmatrix);
+		// W2C矩阵乘Gaussian中心坐标得其在相机坐标系下的坐标
+
+	const float limx = 1.3f * tan_fovx;
+	const float limy = 1.3f * tan_fovy;
+	const float txtz = t.x / t.z; // Gaussian中心在像平面上的x坐标
+	const float tytz = t.y / t.z; // Gaussian中心在像平面上的y坐标
+	t.x = min(limx, max(-limx, txtz)) * t.z;
+	t.y = min(limy, max(-limy, tytz)) * t.z;
+
+	glm::mat3 J = glm::mat3(
+		focal_x / t.z, 0.0f, -(focal_x * t.x) / (t.z * t.z),
+		0.0f, focal_y / t.z, -(focal_y * t.y) / (t.z * t.z),
+		0, 0, 0); // 雅可比矩阵（用泰勒展开近似）
+
+	glm::mat3 W = glm::mat3( // W2C矩阵
+		viewmatrix[0], viewmatrix[4], viewmatrix[8],
+		viewmatrix[1], viewmatrix[5], viewmatrix[9],
+		viewmatrix[2], viewmatrix[6], viewmatrix[10]);
+
+	glm::mat3 T = W * J;
+
+	glm::mat3 Vrk = glm::mat3( // 3D协方差矩阵，是对称阵
+		cov3D[0], cov3D[1], cov3D[2],
+		cov3D[1], cov3D[3], cov3D[4],
+		cov3D[2], cov3D[4], cov3D[5]);
+
+	glm::mat3 cov = glm::transpose(T) * glm::transpose(Vrk) * T;
+		// transpose(J) @ transpose(W) @ Vrk @ W @ J
+
+	// Apply low-pass filter: every Gaussian should be at least
+	// one pixel wide/high. Discard 3rd row and column.
+	cov[0][0] += 0.3f;
+	cov[1][1] += 0.3f;
+	return { float(cov[0][0]), float(cov[0][1]), float(cov[1][1]) };
+		// 协方差矩阵是对称的，只用存储上三角，故只返回三个数
+}
+</code></pre>
+<h4 id="加速"><a class="header" href="#加速">加速</a></h4>
+<ol>
+<li>对于给定的相机，每个 3D 点的 f(p) 可以预先投影到 2D 中，然后再迭代像素。避免重复投影。</li>
+<li>没有网络，不需要对图像做逐像素的推理，2D 高斯分布直接混合到图像上。</li>
+<li>射线经过哪些 3D 点是确定的，不需选择ray sampling策略。</li>
+<li>在 GPU 上，使用可微分 CUDA 内核的自定义实现，每帧进行一次预处理排序阶段。</li>
+</ol>
+<blockquote>
+<p>使用GPU加速以及为某些操作添加自定义 CUDA 内核，加速渲染过程</p>
+</blockquote>
+<h5 id="筛选"><a class="header" href="#筛选">筛选</a></h5>
+<p>理论上，每个高斯球对所有像素都会有影响。但实际上，在渲染某个像素时，会先过滤出相关的高斯球，并对它们排序，按照深度顺序进行计算。</p>
+<p>分组：使用简单的 16x16 像素图块实现分组<br />
+排序：按深度对 3D 点进行排序</p>
+<p><img src="https://caterpillarstudygroup.github.io/ImportantArticles/assets/7b6ce0e0b104d36e8331f86fd4c9ab5a_3_Figure_3_-1437298192.png" alt="" /></p>
+<h3 id="通过-3d-高斯自适应密度控制进行优化"><a class="header" href="#通过-3d-高斯自适应密度控制进行优化">通过 3D 高斯自适应密度控制进行优化</a></h3>
+<p>优化参数：</p>
+<ul>
+<li>位置 𝑝</li>
+</ul>
+<blockquote>
+<p>对position使用类似于 Plenoxels 的标准指数衰减调度技术。</p>
+</blockquote>
+<ul>
+<li>不透明度 𝛼</li>
+</ul>
+<blockquote>
+<p>对 𝛼 使用 sigmoid 激活函数将其限制在 [0 − 1) 范围内并获得平滑梯度</p>
+</blockquote>
+<ul>
+<li>协方差 Σ</li>
+</ul>
+<blockquote>
+<p><strong>3D 高斯协方差参数的质量对于表示的紧凑性至关重要，因为可以用少量大的各向异性高斯函数捕获大的均匀区域。</strong><br />
+出于类似的原因，对协方差尺度使用指数激活函数。</p>
+</blockquote>
+<ul>
+<li>颜色 𝑐 的 SH 系数，或者颜色</li>
+</ul>
+<p><strong>这些参数的优化与控制高斯密度的步骤交织在一起</strong>，以更好地表示场景。</p>
+<h4 id="初始化"><a class="header" href="#初始化">初始化</a></h4>
+<p>初始化是指在训练开始时设置的 3D 点的参数。</p>
+<p>对于<strong>点位置（均值）</strong>，作者建议使用由 SfM（运动结构）生成的点云。因为对于任何 3D 重建，无论是使用 GS、NeRF 还是更经典的方法，都必须知道相机矩阵，因此都会需要运行 SfM 来​​获取这些矩阵。SfM 会产生稀疏点云作为副产品，为什么不将其用于初始化呢？当由于某种原因无法获得点云时，可以使用随机初始化，但可能会损失最终重建质量。<br />
+<strong>协方差</strong>被初始化为各向同性，即半径为 从球体mean开始到相邻点的平均距离，这样 3D 世界就可以被很好地覆盖，没有“洞”。</p>
+<pre><code class="language-python">def create_from_pcd(self, pcd : BasicPointCloud, spatial_lr_scale : float):
+    self.spatial_lr_scale = spatial_lr_scale
+    # 位置初始化
+    fused_point_cloud = torch.tensor(np.asarray(pcd.points)).float().cuda()
+    # 颜色初始化
+    fused_color = RGB2SH(torch.tensor(np.asarray(pcd.colors)).float().cuda())
+    features = torch.zeros((fused_color.shape[0], 3, (self.max_sh_degree + 1) ** 2)).float().cuda()
+    features[:, :3, 0 ] = fused_color
+    features[:, 3:, 1:] = 0.0
+
+    print(&quot;Number of points at initialisation : &quot;, fused_point_cloud.shape[0])
+    # 协方差scale初始化
+    dist2 = torch.clamp_min(distCUDA2(torch.from_numpy(np.asarray(pcd.points)).float().cuda()), 0.0000001)
+    scales = torch.log(torch.sqrt(dist2))[...,None].repeat(1, 3)
+    # 协方法rotation初始化
+    rots = torch.zeros((fused_point_cloud.shape[0], 4), device=&quot;cuda&quot;)
+    rots[:, 0] = 1
+    # 不透明度初始化
+    opacities = inverse_sigmoid(0.1 * torch.ones((fused_point_cloud.shape[0], 1), dtype=torch.float, device=&quot;cuda&quot;))
+
+    self._xyz = nn.Parameter(fused_point_cloud.requires_grad_(True))
+    self._features_dc = nn.Parameter(features[:,:,0:1].transpose(1, 2).contiguous().requires_grad_(True))
+    self._features_rest = nn.Parameter(features[:,:,1:].transpose(1, 2).contiguous().requires_grad_(True))
+    self._scaling = nn.Parameter(scales.requires_grad_(True))
+    self._rotation = nn.Parameter(rots.requires_grad_(True))
+    self._opacity = nn.Parameter(opacities.requires_grad_(True))
+    self.max_radii2D = torch.zeros((self.get_xyz.shape[0]), device=&quot;cuda&quot;)
+</code></pre>
+<h4 id="优化"><a class="header" href="#优化">优化</a></h4>
+<ol>
+<li>地面真实视图和当前渲染之间的 L1 Loss</li>
+</ol>
+<pre><code class="language-python">def l1_loss(network_output, gt):
+    return torch.abs((network_output - gt)).mean()
+</code></pre>
+<ol start="2">
+<li>D-SSIM：结构差异指数测量</li>
+</ol>
+<pre><code class="language-python">def _ssim(img1, img2, window, window_size, channel, size_average=True):
+    mu1 = F.conv2d(img1, window, padding=window_size // 2, groups=channel)
+    mu2 = F.conv2d(img2, window, padding=window_size // 2, groups=channel)
+
+    mu1_sq = mu1.pow(2)
+    mu2_sq = mu2.pow(2)
+    mu1_mu2 = mu1 * mu2
+
+    sigma1_sq = F.conv2d(img1 * img1, window, padding=window_size // 2, groups=channel) - mu1_sq
+    sigma2_sq = F.conv2d(img2 * img2, window, padding=window_size // 2, groups=channel) - mu2_sq
+    sigma12 = F.conv2d(img1 * img2, window, padding=window_size // 2, groups=channel) - mu1_mu2
+
+    C1 = 0.01 ** 2
+    C2 = 0.03 ** 2
+
+    ssim_map = ((2 * mu1_mu2 + C1) * (2 * sigma12 + C2)) / ((mu1_sq + mu2_sq + C1) * (sigma1_sq + sigma2_sq + C2))
+
+    if size_average:
+        return ssim_map.mean()
+    else:
+        return ssim_map.mean(1).mean(1).mean(1)
+</code></pre>
+<h4 id="高斯自适应控制"><a class="header" href="#高斯自适应控制">高斯自适应控制</a></h4>
+<p>目的：解决重建不足和过度重建的问题<br />
+原因：SGD 本身只能调整现有的点。但在完全没有点（重建不足）或点太多（过度重建）的区域中，它很难找到好的参数。这时就需要自适应致密化。<br />
+频率：在训练期间偶尔启动一次，比如每 100 个 SGD 步<br />
+方法：，分割具有大梯度的点（图 8）并删除已经收敛到非常低的 α 值的点（如果一个点是如此透明，为什么要保留它？）。</p>
+<p><img src="./assets/90c87fe420b7f068f6ef682c1ee5ed26_5_Figure_4_1909201227.png" alt="" /></p>
+<p>具体策略为：</p>
+<ol>
+<li>当检测到视图空间位置梯度较大时，增加高斯密度</li>
+</ol>
+<blockquote>
+<p>对于重建不足或过度重建，这两者都有很大的视图空间位置梯度。直观上，这可能是因为它们对应于尚未很好重建的区域，并且优化尝试移动高斯来纠正这一点。</p>
+</blockquote>
+<ol start="2">
+<li>对于重建区域中的小高斯，如果需要创建的新的几何形状，最好通过简单地创建相同大小的副本并将其沿位置梯度的方向移动来克隆高斯。</li>
+</ol>
+<pre><code class="language-python">def densify_and_clone(self, grads, grad_threshold, scene_extent):
+    # Extract points that satisfy the gradient condition
+    selected_pts_mask = torch.where(torch.norm(grads, dim=-1) &gt;= grad_threshold, True, False)
+    selected_pts_mask = torch.logical_and(selected_pts_mask,
+                                            torch.max(self.get_scaling, dim=1).values &lt;= self.percent_dense*scene_extent)
+    # 提取出大于阈值`grad_threshold`且缩放参数较小（小于self.percent_dense * scene_extent）的Gaussians，在下面进行克隆
+    
+    new_xyz = self._xyz[selected_pts_mask]
+    new_features_dc = self._features_dc[selected_pts_mask]
+    new_features_rest = self._features_rest[selected_pts_mask]
+    new_opacities = self._opacity[selected_pts_mask]
+    new_scaling = self._scaling[selected_pts_mask]
+    new_rotation = self._rotation[selected_pts_mask]
+
+    self.densification_postfix(new_xyz, new_features_dc, new_features_rest, new_opacities, new_scaling, new_rotation)
+</code></pre>
+<ol start="3">
+<li>有高方差的区域中的大高斯需要被分割成更小的高斯。我们用两个新的高斯函数替换这些高斯函数，并将它们的尺度除以我们通过实验确定的因子 𝜙 = 1.6。我们还通过使用原始 3D 高斯作为 PDF 进行采样来初始化它们的位置。</li>
+</ol>
+<blockquote>
+<p>克隆高斯与分割高斯的区别在于，前者会增加系统总体积和高斯数量，而后者在保留总体积但增加高斯数量。</p>
+</blockquote>
+<pre><code class="language-python">def densify_and_split(self, grads, grad_threshold, scene_extent, N=2):
+    n_init_points = self.get_xyz.shape[0]
+    # Extract points that satisfy the gradient condition
+    padded_grad = torch.zeros((n_init_points), device=&quot;cuda&quot;)
+    padded_grad[:grads.shape[0]] = grads.squeeze()
+    selected_pts_mask = torch.where(padded_grad &gt;= grad_threshold, True, False)
+    selected_pts_mask = torch.logical_and(selected_pts_mask,
+                                            torch.max(self.get_scaling, dim=1).values &gt; self.percent_dense*scene_extent)
+    '''
+    被分裂的Gaussians满足两个条件：
+    1. （平均）梯度过大；
+    2. 在某个方向的最大缩放大于一个阈值。
+    参照论文5.2节“On the other hand...”一段，大Gaussian被分裂成两个小Gaussians，
+    其放缩被除以φ=1.6，且位置是以原先的大Gaussian作为概率密度函数进行采样的。
+    '''
+
+    stds = self.get_scaling[selected_pts_mask].repeat(N,1)
+    means = torch.zeros((stds.size(0), 3),device=&quot;cuda&quot;)
+    samples = torch.normal(mean=means, std=stds)
+    rots = build_rotation(self._rotation[selected_pts_mask]).repeat(N,1,1)
+    new_xyz = torch.bmm(rots, samples.unsqueeze(-1)).squeeze(-1) + self.get_xyz[selected_pts_mask].repeat(N, 1)
+    # 算出随机采样出来的新坐标
+    # bmm: batch matrix-matrix product
+    new_scaling = self.scaling_inverse_activation(self.get_scaling[selected_pts_mask].repeat(N,1) / (0.8*N))
+    new_rotation = self._rotation[selected_pts_mask].repeat(N,1)
+    new_features_dc = self._features_dc[selected_pts_mask].repeat(N,1,1)
+    new_features_rest = self._features_rest[selected_pts_mask].repeat(N,1,1)
+    new_opacity = self._opacity[selected_pts_mask].repeat(N,1)
+
+    self.densification_postfix(new_xyz, new_features_dc, new_features_rest, new_opacity, new_scaling, new_rotation)
+
+    prune_filter = torch.cat((selected_pts_mask, torch.zeros(N * selected_pts_mask.sum(), device=&quot;cuda&quot;, dtype=bool)))
+    self.prune_points(prune_filter)
+</code></pre>
+<ol start="6">
+<li>与其他体积表示类似，优化结果可能被靠近摄像机的浮动体的干扰。在高斯沉浸中，这种干扰会导致高斯密度的不合理增加。<br />
+缓和高斯数量增加的有效方法是:<br />
+(1) 每隔 𝑁 = 3000 迭代将 𝛼 值设置为接近于零。然后，优化会在需要时增加高斯函数的 𝛼，同时删除 𝛼 小于 𝜖𝛼 的高斯函数，如上所述。高斯可能会缩小或增长，并且与其他高斯有相当大的重叠<br />
+(2) 定期删除透明的或者非常大的高斯。<br />
+该策略可以总体上很好地控制高斯总数。</li>
+</ol>
+<pre><code class="language-python"># 接下来移除一些Gaussians，它们满足下列要求中的一个：
+# 1. 接近透明（不透明度小于min_opacity）
+# 2. 在某个相机视野里出现过的最大2D半径大于屏幕（像平面）大小
+# 3. 在某个方向的最大缩放大于0.1 * extent（也就是说很长的长条形也是会被移除的）
+prune_mask = (self.get_opacity &lt; min_opacity).squeeze()
+if max_screen_size:
+    big_points_vs = self.max_radii2D &gt; max_screen_size # vs = view space?
+    big_points_ws = self.get_scaling.max(dim=1).values &gt; 0.1 * extent
+    prune_mask = torch.logical_or(torch.logical_or(prune_mask, big_points_vs), big_points_ws) # ws = world space?
+self.prune_points(prune_mask)
+</code></pre>
+<h3 id="高斯快速可微光栅化器"><a class="header" href="#高斯快速可微光栅化器">高斯快速可微光栅化器</a></h3>
+<p>目标：<br />
+对所有高斯进行快速整体渲染、快速排序，近似 𝛼 混合（包括各向异性 splat），而不需要限制高斯的数量。</p>
+<p>本文为高斯图设计了一个基于图块的光栅化器，其特点为：</p>
+<ol>
+<li>一次对整个图像的基元进行预排序</li>
+<li>允许在任意数量的混合高斯上进行有效的反向传播，并且（光栅化器的）附加内存消耗低，每个像素只需要恒定的开销。</li>
+<li>光栅化pipeline是完全可微分的</li>
+<li>考虑到 2D 投影（第 4 节），光栅化器可以对各向异性 splats 进行光栅化。</li>
+</ol>
+<p>具体步骤为：</p>
+<ol>
+<li>将屏幕分割成 16×16 块</li>
+<li>根据视锥体和每个块剔除 3D 高斯。具体来说，我们只保留与视锥体相交的置信区间为 99% 的高斯分布。此外，我们使用保护带来简单地拒绝极端位置处的高斯分布（即那些均值接近近平面且远离视锥体的位置），因为它们的<strong>投影 2D 协方差将不稳定</strong>。</li>
+<li>根据每个高斯重叠的图块数量来实例化它们，并为每个实例分配一个结合了视图空间深度和图块 ID 的键。</li>
+<li>使用单个快速 GPU 基数排序根据这些键对高斯进行排序 [Merrill 和 Grimshaw 2010]。请注意，<strong>没有额外的每像素点排序，混合是基于此初始排序执行的</strong>。因此， 𝛼 混合在某些情况下可能是近似的。然而，当图块接近单个像素的大小时，这些近似值变得可以忽略不计。我们发现这种方式<strong>极大地增强了训练和渲染性能，而不会在融合场景中产生可见的伪影</strong>。</li>
+<li>通过识别排序后深度最大和最小的高斯来为每个图块生成一个列表。</li>
+<li>对于光栅化，我们为每个图块启动一个线程块。每个线程：<br />
+（1）首先协作地将高斯数据包加载到共享内存中。<br />
+（2）然后对于给定的像素，通过从前到后遍历列表来累积颜色和𝛼值，从而最大化数据加载/共享和处理的并行性增益。<br />
+（3）当我们达到像素中的目标饱和度 𝛼 时，相应的线程就会停止。<br />
+每隔一段时间，就会查询图块中的线程，并且当所有像素都饱和时（即 𝛼 变为 1），整个图块的处理就会终止。</li>
+</ol>
+<blockquote>
+<p>附录 C 中给出了排序的详细信息和总体光栅化方法的高级概述。</p>
+</blockquote>
+<h2 id="实现"><a class="header" href="#实现">实现</a></h2>
+<h3 id="训练"><a class="header" href="#训练">训练</a></h3>
+<pre><code class="language-python">def training(dataset, opt, pipe, testing_iterations, saving_iterations, checkpoint_iterations, checkpoint, debug_from):
+    first_iter = 0
+    tb_writer = prepare_output_and_logger(dataset)
+    gaussians = GaussianModel(dataset.sh_degree)
+    scene = Scene(dataset, gaussians)
+    gaussians.training_setup(opt)
+    if checkpoint:
+        (model_params, first_iter) = torch.load(checkpoint)
+        gaussians.restore(model_params, opt)
+
+    bg_color = [1, 1, 1] if dataset.white_background else [0, 0, 0]
+    background = torch.tensor(bg_color, dtype=torch.float32, device=&quot;cuda&quot;)
+
+    iter_start = torch.cuda.Event(enable_timing = True)
+    iter_end = torch.cuda.Event(enable_timing = True)
+
+    viewpoint_stack = None
+    ema_loss_for_log = 0.0
+    progress_bar = tqdm(range(first_iter, opt.iterations), desc=&quot;Training progress&quot;)
+    first_iter += 1
+    for iteration in range(first_iter, opt.iterations + 1):        
+        iter_start.record()
+
+        gaussians.update_learning_rate(iteration)
+
+        # Every 1000 its we increase the levels of SH up to a maximum degree
+        if iteration % 1000 == 0:
+            gaussians.oneupSHdegree()
+
+        # Pick a random Camera
+        if not viewpoint_stack:
+            viewpoint_stack = scene.getTrainCameras().copy()
+        viewpoint_cam = viewpoint_stack.pop(randint(0, len(viewpoint_stack)-1))
+
+        # Render
+        if (iteration - 1) == debug_from:
+            pipe.debug = True
+
+        bg = torch.rand((3), device=&quot;cuda&quot;) if opt.random_background else background
+
+        render_pkg = render(viewpoint_cam, gaussians, pipe, bg)
+        image, viewspace_point_tensor, visibility_filter, radii = render_pkg[&quot;render&quot;], render_pkg[&quot;viewspace_points&quot;], render_pkg[&quot;visibility_filter&quot;], render_pkg[&quot;radii&quot;]
+
+        # Loss
+        gt_image = viewpoint_cam.original_image.cuda()
+        Ll1 = l1_loss(image, gt_image)
+        loss = (1.0 - opt.lambda_dssim) * Ll1 + opt.lambda_dssim * (1.0 - ssim(image, gt_image))
+        loss.backward()
+
+        iter_end.record()
+
+        with torch.no_grad():
+            # Log and save
+            training_report(tb_writer, iteration, Ll1, loss, l1_loss, iter_start.elapsed_time(iter_end), testing_iterations, scene, render, (pipe, background))
+            if (iteration in saving_iterations):
+                print(&quot;\n[ITER {}] Saving Gaussians&quot;.format(iteration))
+                scene.save(iteration)
+
+            # Densification
+            if iteration &lt; opt.densify_until_iter:
+                # Keep track of max radii in image-space for pruning
+                gaussians.max_radii2D[visibility_filter] = torch.max(gaussians.max_radii2D[visibility_filter], radii[visibility_filter])
+                gaussians.add_densification_stats(viewspace_point_tensor, visibility_filter)
+
+                if iteration &gt; opt.densify_from_iter and iteration % opt.densification_interval == 0:
+                    size_threshold = 20 if iteration &gt; opt.opacity_reset_interval else None
+                    gaussians.densify_and_prune(opt.densify_grad_threshold, 0.005, scene.cameras_extent, size_threshold)
+                
+                if iteration % opt.opacity_reset_interval == 0 or (dataset.white_background and iteration == opt.densify_from_iter):
+                    gaussians.reset_opacity()
+
+            # Optimizer step
+            if iteration &lt; opt.iterations:
+                gaussians.optimizer.step()
+                gaussians.optimizer.zero_grad(set_to_none = True)
+
+            if (iteration in checkpoint_iterations):
+                print(&quot;\n[ITER {}] Saving Checkpoint&quot;.format(iteration))
+                torch.save((gaussians.capture(), iteration), scene.model_path + &quot;/chkpnt&quot; + str(iteration) + &quot;.pth&quot;)
+</code></pre>
+<h3 id="推断"><a class="header" href="#推断">推断</a></h3>
+<h4 id="相机"><a class="header" href="#相机">相机</a></h4>
+<p>3D是在世界坐标系下构建的，设置好相机的内参和外参后，需要把所有世界坐标系下的数据转换到相机坐标系下，并且投影到屏幕上。</p>
+<p>以下是根据相机的内参外参计算坐标系转换矩阵和投影矩阵的过程。</p>
+<pre><code class="language-python">class Camera(nn.Module):
+    def __init__(self, colmap_id, R, T, FoVx, FoVy, image, gt_alpha_mask,
+                 image_name, uid,
+                 trans=np.array([0.0, 0.0, 0.0]), scale=1.0, data_device = &quot;cuda&quot;
+                 ):
+        super(Camera, self).__init__()
+
+        self.uid = uid
+        self.colmap_id = colmap_id
+        self.R = R # 相机在世界坐标系下的旋转矩阵
+        self.T = T # 相机在相机坐标系下的位置。（相机坐标系的原点与世界坐标系相同，只是相差了一个旋转）
+        self.FoVx = FoVx # x方向视场角
+        self.FoVy = FoVy # y方向视场角
+        self.image_name = image_name
+
+        try:
+            self.data_device = torch.device(data_device)
+        except Exception as e:
+            print(e)
+            print(f&quot;[Warning] Custom device {data_device} failed, fallback to default cuda device&quot; )
+            self.data_device = torch.device(&quot;cuda&quot;)
+
+        self.original_image = image.clamp(0.0, 1.0).to(self.data_device) # 原始图像
+        self.image_width = self.original_image.shape[2] # 图像宽度
+        self.image_height = self.original_image.shape[1] # 图像高度
+
+        if gt_alpha_mask is not None:
+            self.original_image *= gt_alpha_mask.to(self.data_device)
+        else:
+            self.original_image *= torch.ones((1, self.image_height, self.image_width), device=self.data_device)
+
+		# 距离相机平面znear和zfar之间且在视锥内的物体才会被渲染
+        self.zfar = 100.0 # 最远能看到多远
+        self.znear = 0.01 # 最近能看到多近
+
+        self.trans = trans # 相机中心的平移
+        self.scale = scale # 相机中心坐标的缩放
+
+        # world_2_camera = [[R,T],[0,1]]，world_view_transform是world_2_camera的转置
+        self.world_view_transform = torch.tensor(getWorld2View2(R, T, trans, scale)).transpose(0, 1).cuda() # 世界到相机坐标系的变换矩阵，4×4
+        # projection matrix的定义见：
+        # https://caterpillarstudygroup.github.io/GAMES101_mdbook/MVP/OrthographicProjection.html
+        # https://caterpillarstudygroup.github.io/GAMES101_mdbook/MVP/PerspectiveProjection.html
+        # 此处的projection_matrix也是真实projection matrix的转置
+        self.projection_matrix = getProjectionMatrix(znear=self.znear, zfar=self.zfar, fovX=self.FoVx, fovY=self.FoVy).transpose(0,1).cuda() # 投影矩阵
+        # 正确的计算公式为：mvp = projection * world_2_camera
+        # 但full_proj_transform是mvp的转置，所以是world_view_transform * projection_matrix
+        self.full_proj_transform = (self.world_view_transform.unsqueeze(0).bmm(self.projection_matrix.unsqueeze(0))).squeeze(0) # 从世界坐标系到图像的变换矩阵
+        # 上面的T是相机在相机坐标系下的位置，此处的camera center是相机在世界坐标系下的位置。
+        self.camera_center = self.world_view_transform.inverse()[3, :3] # 相机在世界坐标系下的坐标
+</code></pre>
+<h4 id="python渲染接口"><a class="header" href="#python渲染接口">python渲染接口</a></h4>
+<p><strong>viewmatrix和projmatrix都必须传入原始矩阵的逆矩阵，因此python的矩阵存储是行优化的，C++的矩阵存储是列优先的。所以同时的矩阵内存数据，在python里和在c++里是互逆的关系。</strong></p>
+<pre><code class="language-python">def render(viewpoint_camera, pc : GaussianModel, pipe, bg_color : torch.Tensor, scaling_modifier = 1.0, override_color = None):
+    &quot;&quot;&quot;
+    Render the scene. 
+    viewpoint_camera: FOV，画布大小、相机位置、变换矩阵
+    pc: 用于获取高斯球的属性
+    pipe：一些配置
+    Background tensor (bg_color) must be on GPU!
+    &quot;&quot;&quot;
+ 
+    # Create zero tensor. We will use it to make pytorch return gradients of the 2D (screen-space) means
+    screenspace_points = torch.zeros_like(pc.get_xyz, dtype=pc.get_xyz.dtype, requires_grad=True, device=&quot;cuda&quot;) + 0
+    try:
+        screenspace_points.retain_grad()
+    except:
+        pass
+
+    # Set up rasterization configuration
+    tanfovx = math.tan(viewpoint_camera.FoVx * 0.5)
+    tanfovy = math.tan(viewpoint_camera.FoVy * 0.5)
+
+    raster_settings = GaussianRasterizationSettings(
+        image_height=int(viewpoint_camera.image_height),
+        image_width=int(viewpoint_camera.image_width),
+        tanfovx=tanfovx,
+        tanfovy=tanfovy,
+        bg=bg_color,
+        scale_modifier=scaling_modifier,
+        viewmatrix=viewpoint_camera.world_view_transform, # world to camera
+        projmatrix=viewpoint_camera.full_proj_transform, # mvp
+        sh_degree=pc.active_sh_degree,
+        campos=viewpoint_camera.camera_center, # camera position
+        prefiltered=False,
+        debug=pipe.debug
+    )
+
+    rasterizer = GaussianRasterizer(raster_settings=raster_settings)
+
+    means3D = pc.get_xyz 
+    means2D = screenspace_points
+    opacity = pc.get_opacity
+
+    # If precomputed 3d covariance is provided, use it. If not, then it will be computed from
+    # scaling / rotation by the rasterizer.
+    scales = None
+    rotations = None
+    cov3D_precomp = None
+    if pipe.compute_cov3D_python:
+        cov3D_precomp = pc.get_covariance(scaling_modifier)
+    else:
+        scales = pc.get_scaling
+        rotations = pc.get_rotation
+
+    # If precomputed colors are provided, use them. Otherwise, if it is desired to precompute colors
+    # from SHs in Python, do it. If not, then SH -&gt; RGB conversion will be done by rasterizer.
+    shs = None
+    colors_precomp = None
+    # 没有预制的color，就计算过color
+    if override_color is None:
+        # 如果预测的是SH的系数，则根据SH计算color
+        if pipe.convert_SHs_python:
+            shs_view = pc.get_features.transpose(1, 2).view(-1, 3, (pc.max_sh_degree+1)**2)
+            dir_pp = (pc.get_xyz - viewpoint_camera.camera_center.repeat(pc.get_features.shape[0], 1))
+            dir_pp_normalized = dir_pp/dir_pp.norm(dim=1, keepdim=True)
+            sh2rgb = eval_sh(pc.active_sh_degree, shs_view, dir_pp_normalized)
+            colors_precomp = torch.clamp_min(sh2rgb + 0.5, 0.0)
+        # 或者直接预测color
+        else:
+            shs = pc.get_features
+    else:
+        colors_precomp = override_color
+
+    # Rasterize visible Gaussians to image, obtain their radii (on screen). 
+    rendered_image, radii = rasterizer(
+        means3D = means3D,
+        means2D = means2D,
+        shs = shs,
+        colors_precomp = colors_precomp,
+        opacities = opacity,
+        scales = scales,
+        rotations = rotations,
+        cov3D_precomp = cov3D_precomp)
+
+    # Those Gaussians that were frustum culled or had a radius of 0 were not visible.
+    # They will be excluded from value updates used in the splitting criteria.
+    return {&quot;render&quot;: rendered_image,
+            &quot;viewspace_points&quot;: screenspace_points,
+            &quot;visibility_filter&quot; : radii &gt; 0,
+            &quot;radii&quot;: radii}
+</code></pre>
+<h4 id="c渲染接口"><a class="header" href="#c渲染接口">C++渲染接口</a></h4>
+<p><img src="./assets/a72cc63a000e41da8c749d562dcdd030.png" alt="" /></p>
+<pre><code class="language-c++">// Forward rendering procedure for differentiable rasterization
+// of Gaussians.
+int CudaRasterizer::Rasterizer::forward(
+	std::function&lt;char* (size_t)&gt; geometryBuffer,
+	std::function&lt;char* (size_t)&gt; binningBuffer,
+	std::function&lt;char* (size_t)&gt; imageBuffer,
+	/*
+		上面的三个参数是用于分配缓冲区的函数，
+		在submodules/diff-gaussian-rasterization/rasterize_points.cu中定义
+	*/
+	const int P, // Gaussian的数量
+	int D, // 对应于GaussianModel.active_sh_degree，是球谐度数（本文参考的学习笔记在这里是错误的）
+	int M, // RGB三通道的球谐傅里叶系数个数，应等于3 × (D + 1)²（本文参考的学习笔记在这里也是错误的）
+	const float* background,
+	const int width, int height, // 图片宽高
+	const float* means3D, // Gaussians的中心坐标
+	const float* shs, // 球谐系数
+	const float* colors_precomp, // 预先计算的RGB颜色
+	const float* opacities, // 不透明度
+	const float* scales, // 缩放
+	const float scale_modifier, // 缩放的修正项
+	const float* rotations, // 旋转
+	const float* cov3D_precomp, // 预先计算的3维协方差矩阵
+	const float* viewmatrix, // W2C矩阵
+	const float* projmatrix, // 投影矩阵
+	const float* cam_pos, // 相机坐标
+	const float tan_fovx, float tan_fovy, // 视场角一半的正切值
+	const bool prefiltered,
+	float* out_color, // 输出的颜色
+	int* radii, // 各Gaussian在像平面上用3σ原则截取后的半径
+	bool debug)
+{
+	const float focal_y = height / (2.0f * tan_fovy); // y方向的焦距
+	const float focal_x = width / (2.0f * tan_fovx); // x方向的焦距
+	/*
+		注意tan_fov = tan(fov / 2) （见上面的render函数）。
+		而tan(fov / 2)就是图像宽/高的一半与焦距之比。
+		以x方向为例，tan(fovx / 2) = width / 2 / focal_x，
+		故focal_x = width / (2 * tan(fovx / 2)) = width / (2 * tan_fovx)。
+	*/
+
+	// 下面初始化一些缓冲区
+	size_t chunk_size = required&lt;GeometryState&gt;(P); // GeometryState占据空间的大小
+	char* chunkptr = geometryBuffer(chunk_size);
+	GeometryState geomState = GeometryState::fromChunk(chunkptr, P);
+
+	if (radii == nullptr)
+	{
+		radii = geomState.internal_radii;
+	}
+
+	dim3 tile_grid((width + BLOCK_X - 1) / BLOCK_X, (height + BLOCK_Y - 1) / BLOCK_Y, 1);
+		// BLOCK_X = BLOCK_Y = 16，准备分解成16×16的tiles。
+		// 之所以不能分解成更大的tiles，是因为对于同一张图片的离得较远的像素点而言
+		// Gaussian按深度排序的结果可能是不同的。
+		// （想象一下两个Gaussians离像平面很近，一个靠近图像左边缘，一个靠近右边缘）
+		// dim3是CUDA定义的含义x,y,z三个成员的三维unsigned int向量类。
+		// tile_grid就是x和y方向上tile的个数。
+	dim3 block(BLOCK_X, BLOCK_Y, 1);
+
+	// Dynamically resize image-based auxiliary buffers during training
+	size_t img_chunk_size = required&lt;ImageState&gt;(width * height);
+	char* img_chunkptr = imageBuffer(img_chunk_size);
+	ImageState imgState = ImageState::fromChunk(img_chunkptr, width * height);
+
+	if (NUM_CHANNELS != 3 &amp;&amp; colors_precomp == nullptr)
+	{
+		throw std::runtime_error(&quot;For non-RGB, provide precomputed Gaussian colors!&quot;);
+	}
+
+	// Run preprocessing per-Gaussian (transformation, bounding, conversion of SHs to RGB)
+	CHECK_CUDA(FORWARD::preprocess(
+		P, D, M,
+		means3D,
+		(glm::vec3*)scales,
+		scale_modifier,
+		(glm::vec4*)rotations,
+		opacities,
+		shs,
+		geomState.clamped,
+		cov3D_precomp,
+		colors_precomp,
+		viewmatrix, projmatrix,
+		(glm::vec3*)cam_pos,
+		width, height,
+		focal_x, focal_y,
+		tan_fovx, tan_fovy,
+		radii,
+		geomState.means2D, // Gaussian投影到像平面上的中心坐标
+		geomState.depths, // Gaussian的深度
+		geomState.cov3D, // 三维协方差矩阵
+		geomState.rgb, // 颜色
+		geomState.conic_opacity, // 椭圆二次型的矩阵和不透明度的打包向量
+		tile_grid, // 
+		geomState.tiles_touched,
+		prefiltered
+	), debug) // 预处理，主要涉及把3D的Gaussian投影到2D
+
+	// Compute prefix sum over full list of touched tile counts by Gaussians
+	// E.g., [2, 3, 0, 2, 1] -&gt; [2, 5, 5, 7, 8]
+	CHECK_CUDA(cub::DeviceScan::InclusiveSum(geomState.scanning_space, geomState.scan_size, geomState.tiles_touched, geomState.point_offsets, P), debug)
+		// 这步是为duplicateWithKeys做准备
+		// （计算出每个Gaussian对应的keys和values在数组中存储的起始位置）
+
+	// Retrieve total number of Gaussian instances to launch and resize aux buffers
+	int num_rendered;
+	CHECK_CUDA(cudaMemcpy(&amp;num_rendered, geomState.point_offsets + P - 1, sizeof(int), cudaMemcpyDeviceToHost), debug); // 东西塞到GPU里面去
+
+	size_t binning_chunk_size = required&lt;BinningState&gt;(num_rendered);
+	char* binning_chunkptr = binningBuffer(binning_chunk_size);
+	BinningState binningState = BinningState::fromChunk(binning_chunkptr, num_rendered);
+
+	// For each instance to be rendered, produce adequate [ tile | depth ] key 
+	// and corresponding dublicated Gaussian indices to be sorted
+	duplicateWithKeys &lt;&lt; &lt;(P + 255) / 256, 256 &gt;&gt; &gt; (
+		P,
+		geomState.means2D,
+		geomState.depths,
+		geomState.point_offsets,
+		binningState.point_list_keys_unsorted,
+		binningState.point_list_unsorted,
+		radii,
+		tile_grid) // 生成排序所用的keys和values
+	CHECK_CUDA(, debug)
+
+	int bit = getHigherMsb(tile_grid.x * tile_grid.y);
+
+	// Sort complete list of (duplicated) Gaussian indices by keys
+	CHECK_CUDA(cub::DeviceRadixSort::SortPairs(
+		binningState.list_sorting_space,
+		binningState.sorting_size,
+		binningState.point_list_keys_unsorted, binningState.point_list_keys,
+		binningState.point_list_unsorted, binningState.point_list,
+		num_rendered, 0, 32 + bit), debug)
+		// 进行排序，按keys排序：每个tile对应的Gaussians按深度放在一起；value是Gaussian的ID
+
+	CHECK_CUDA(cudaMemset(imgState.ranges, 0, tile_grid.x * tile_grid.y * sizeof(uint2)), debug);
+
+	// Identify start and end of per-tile workloads in sorted list
+	if (num_rendered &gt; 0)
+		identifyTileRanges &lt;&lt; &lt;(num_rendered + 255) / 256, 256 &gt;&gt; &gt; (
+			num_rendered,
+			binningState.point_list_keys,
+			imgState.ranges); // 计算每个tile对应排序过的数组中的哪一部分
+	CHECK_CUDA(, debug)
+
+	// Let each tile blend its range of Gaussians independently in parallel
+	const float* feature_ptr = colors_precomp != nullptr ? colors_precomp : geomState.rgb;
+	CHECK_CUDA(FORWARD::render(
+		tile_grid, block, // block: 每个tile的大小
+		imgState.ranges,
+		binningState.point_list,
+		width, height,
+		geomState.means2D,
+		feature_ptr,
+		geomState.conic_opacity,
+		imgState.accum_alpha,
+		imgState.n_contrib,
+		background,
+		out_color), debug) // 最后，进行渲染
+
+	return num_rendered;
+}
+
+</code></pre>
+<h2 id="有效"><a class="header" href="#有效">有效</a></h2>
+<h2 id="局限性"><a class="header" href="#局限性">局限性</a></h2>
+<ol>
+<li>在视角不可见区域有伪影。解决方法：通过规则剔除这些伪影。</li>
+<li>简单的可见性算法，可能导致高斯突然切换深度/混合顺序。解决方法：可以通过抗锯齿来解决。</li>
+<li>没有对我们的优化应用任何正则化；解决方法：加入正则化将有助于处理看不见的区域和弹出的伪影。</li>
+<li>一次只能渲染一张图像，不能批量进行。</li>
+</ol>
+<h2 id="验证"><a class="header" href="#验证">验证</a></h2>
+<h2 id="启发"><a class="header" href="#启发">启发</a></h2>
+<h2 id="遗留问题"><a class="header" href="#遗留问题">遗留问题</a></h2>
+<h2 id="参考材料"><a class="header" href="#参考材料">参考材料</a></h2>
+<ol>
+<li>https://towardsdatascience.com/a-comprehensive-overview-of-gaussian-splatting-e7d570081362</li>
+<li>https://caterpillarstudygroup.github.io/ImportantArticles/3D_Gaussian_Splatting.html</li>
+<li>源码解读：https://blog.csdn.net/qaqwqaqwq/article/details/136837906</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="18.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="16.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="18.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="16.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="theme/pagetoc.js"></script>
+        <script type="text/javascript" src="theme/mermaid.min.js"></script>
+        <script type="text/javascript" src="theme/mermaid-init.js"></script>
+    </body>
+</html>
