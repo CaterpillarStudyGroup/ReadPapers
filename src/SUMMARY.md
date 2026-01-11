@@ -3,6 +3,8 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [FreeGave: 3D Physics Learning from Dynamic Videos by Gaussian Velocity](181.md)
+- [Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations](180.md)
 - [ParticleGS: Particle-Based Dynamics Modeling of 3D Gaussians for Prior-free Motion Extrapolation](179.md)
 - [Animate3d: Animating any 3d model with multi-view video diffusion](178.md)
 - [Particle-Grid Neural Dynamics for Learning Deformable Object Models from RGB-D Videos](177.md)
