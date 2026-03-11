@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Maskedmimic: Unified physics-based character control through masked motion](183.md)
 - [Regional Time Stepping for SPH](182.md)
 - [FreeGave: 3D Physics Learning from Dynamic Videos by Gaussian Velocity](181.md)
 - [Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations](180.md)
