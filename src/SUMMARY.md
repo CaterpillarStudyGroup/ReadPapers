@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [UniPhys: Unified Planner and Controller with Diffusion for Flexible](184.md)
 - [Maskedmimic: Unified physics-based character control through masked motion](183.md)
 - [Regional Time Stepping for SPH](182.md)
 - [FreeGave: 3D Physics Learning from Dynamic Videos by Gaussian Velocity](181.md)
