@@ -3,6 +3,9 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [PARC: Physics-based Augmentation with Reinforcement Learning for Character Controllers](189.md)
+- [CLOSD: CLOSING THE LOOP BETWEEN SIMULATION AND DIFFUSION FOR MULTI-TASK CHARACTER CONTROL](188.md)
+- [MotionPersona: Characteristics-aware Locomotion Control](187.md)
 - [Diffuse-CLoC Guided Diffusion for Physics-based Character Look-ahead](186.md)
 - [Gait-Conditioned Reinforcement Learning with Multi-Phase Curriculum for Humanoid Locomotion](185.md)
 - [UniPhys: Unified Planner and Controller with Diffusion for Flexible](184.md)
