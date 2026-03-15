@@ -3,6 +3,8 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Diffuse-CLoC Guided Diffusion for Physics-based Character Look-ahead](186.md)
+- [Gait-Conditioned Reinforcement Learning with Multi-Phase Curriculum for Humanoid Locomotion](185.md)
 - [UniPhys: Unified Planner and Controller with Diffusion for Flexible](184.md)
 - [Maskedmimic: Unified physics-based character control through masked motion](183.md)
 - [Regional Time Stepping for SPH](182.md)
