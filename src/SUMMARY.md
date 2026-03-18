@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [Universal humanoid motion representations for physics-based control](191.md)
 - [DReCon: data-driven responsive control of physics-based characters](190.md)
 - [PARC: Physics-based Augmentation with Reinforcement Learning for Character Controllers](189.md)
 - [CLOSD: CLOSING THE LOOP BETWEEN SIMULATION AND DIFFUSION FOR MULTI-TASK CHARACTER CONTROL](188.md)
