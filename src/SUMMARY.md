@@ -3,6 +3,8 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [UniPhys Unified Planner and Controller with Diffusion for Flexible](193.md)
+- [Diffuse-CLoC: Guided Diffusion for Physics-based Character Look-ahead](194.md)
 - [PDP: Physics-Based Character Animation via Diffusion Policy](192.md)
 - [Universal humanoid motion representations for physics-based control](191.md)
 - [DReCon: data-driven responsive control of physics-based characters](190.md)
