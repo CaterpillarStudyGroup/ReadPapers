@@ -9,6 +9,7 @@
 - [Feature-Based Locomotion Controllers](200.md)
 - [DeepMimic: Example-Guided Deep Reinforcement Learning of Physics-Based Character Skills](201.md)
 - [ControlVAE: Model-Based Learning of Generative Controllers for Physics-Based Characters](202.md)
+- [Trace and Pace: Controllable Pedestrian Animation via Guided Trajectory Diffusion](203.md)
 - [UniPhys Unified Planner and Controller with Diffusion for Flexible](193.md)
 - [Diffuse-CLoC: Guided Diffusion for Physics-based Character Look-ahead](194.md)
 - [PDP: Physics-Based Character Animation via Diffusion Policy](192.md)
