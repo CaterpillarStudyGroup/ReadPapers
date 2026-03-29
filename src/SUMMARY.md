@@ -6,6 +6,7 @@
 - [AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control](198.md)
 - [ASE: Large-Scale Reusable Adversarial Skill Embeddings for Physically Simulated Characters](199.md)
 - [Feature-Based Locomotion Controllers](200.md)
+- [DeepMimic: Example-Guided Deep Reinforcement Learning of Physics-Based Character Skills](201.md)
 - [UniPhys Unified Planner and Controller with Diffusion for Flexible](193.md)
 - [Diffuse-CLoC: Guided Diffusion for Physics-based Character Look-ahead](194.md)
 - [PDP: Physics-Based Character Animation via Diffusion Policy](192.md)
