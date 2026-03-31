@@ -69,6 +69,7 @@
 - [PIMNet: Physics-infused Neural Network for Human Motion Prediction](141.md)
 - [PhysDiff: Physics-Guided Human Motion Diffusion Model](140.md)
 - [NRDF: Neural Riemannian Distance Fields for Learning Articulated Pose Priors](139.md)
+- [Riemannian Motion Generation: A Unified Framework for Human Motion Representation and Generation via Riemannian Flow Matching](2603.md)
 - [Pose-NDF: Modeling Human Pose Manifolds with Neural Distance Fields](138.md)
 - [Geometric Neural Distance Fields for Learning Human Motion Priors](137.md)
 - [Character Controllers Using Motion VAEs](136.md)
