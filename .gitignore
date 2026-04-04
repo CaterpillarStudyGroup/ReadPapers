@@ -1,0 +1,8 @@
+book
+.DS_Store
+PDF
+*.PDF
+*.pdf
+CLAUDE.md
+output
+newPDF
