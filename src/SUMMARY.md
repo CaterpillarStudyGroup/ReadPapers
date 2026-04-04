@@ -222,3 +222,4 @@
 - [Taming Diffusion Probabilistic Models for Character Control](207.md)
 - [Learned Motion Matching](208.md)
 - [MOCHA: Real-Time Motion Characterization via Context Matching](209.md)
+- [DeepLoco: Dynamic Locomotion Skills Using Hierarchical Deep Reinforcement Learning](218.md)
