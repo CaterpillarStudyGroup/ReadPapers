@@ -19,6 +19,8 @@
 - [Universal humanoid motion representations for physics-based control](191.md)
 - [DReCon: data-driven responsive control of physics-based characters](190.md)
 - [PARC: Physics-based Augmentation with Reinforcement Learning for Character Controllers](189.md)
+- [TaoAvatar: Real-Time Lifelike Full-Body Talking Avatars for Augmented Reality via 3D Gaussian Splatting](225.md)
+- [SAM 3: Segment Anything with Concepts](226.md)
 - [CLOSD: CLOSING THE LOOP BETWEEN SIMULATION AND DIFFUSION FOR MULTI-TASK CHARACTER CONTROL](188.md)
 - [MotionPersona: Characteristics-aware Locomotion Control](187.md)
 - [Diffuse-CLoC Guided Diffusion for Physics-based Character Look-ahead](186.md)
