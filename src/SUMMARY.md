@@ -235,3 +235,4 @@
 - [mimic-one: A Scalable Model Recipe for General Purpose Robot Dexterity](232.md)
 - [4D Gaussian Splatting for Real-Time Dynamic Scene Rendering](233.md)
 - [SC-GS: Sparse-Controlled Gaussian Splatting for Editable Dynamic Scenes](234.md)
+- [Smooth Skinning Decomposition with Rigid Bones](235.md)
