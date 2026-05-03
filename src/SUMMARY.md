@@ -236,3 +236,4 @@
 - [4D Gaussian Splatting for Real-Time Dynamic Scene Rendering](233.md)
 - [SC-GS: Sparse-Controlled Gaussian Splatting for Editable Dynamic Scenes](234.md)
 - [Smooth Skinning Decomposition with Rigid Bones](235.md)
+- [Robust and Accurate Skeletal Rigging from Mesh Sequences](236.md)
