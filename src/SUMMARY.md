@@ -3,6 +3,7 @@
 [ReadPapers]()
 
 - [Introduction](README.md)
+- [LiTo: Surface Light Field Tokenization](240.md)
 - [AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control](198.md)
 - [ASE: Large-Scale Reusable Adversarial Skill Embeddings for Physically Simulated Characters](199.md)
 - [Feature-Based Locomotion Controllers](200.md)
