@@ -237,3 +237,5 @@
 - [SC-GS: Sparse-Controlled Gaussian Splatting for Editable Dynamic Scenes](234.md)
 - [Smooth Skinning Decomposition with Rigid Bones](235.md)
 - [Robust and Accurate Skeletal Rigging from Mesh Sequences](236.md)
+- [FlashWorld: High-Quality 3D Scene Generation Within Seconds](238.md)
+- [SCoPE: Sightline-Coordinate Positional Encoding for Video Diffusion Transformers](239.md)
