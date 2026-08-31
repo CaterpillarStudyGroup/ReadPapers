@@ -1,0 +1,686 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Universal humanoid motion representations for physics-based control - ReadPapers</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The note of Papers">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/pagetoc.css">
+        <!-- MathJax 3 with Latin Modern fonts -->
+        <script>
+        MathJax = {
+            loader: {load: ['input/tex', 'output/chtml']},
+            tex: {
+                packages: {'[+]': ['ams', 'noerrors', 'noundefined']},
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            chtml: {
+                displayAlign: 'center',
+                fontFamily: 'Latin-Modern',
+                fontURL: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2'
+            },
+            startup: {
+                typeset: true
+            }
+        };
+        </script>
+        <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><div>ReadPapers</div></li><li class="chapter-item expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="240.html"><strong aria-hidden="true">2.</strong> LiTo: Surface Light Field Tokenization</a></li><li class="chapter-item expanded "><a href="198.html"><strong aria-hidden="true">3.</strong> AMP: Adversarial Motion Priors for Stylized Physics-Based Character Control</a></li><li class="chapter-item expanded "><a href="199.html"><strong aria-hidden="true">4.</strong> ASE: Large-Scale Reusable Adversarial Skill Embeddings for Physically Simulated Characters</a></li><li class="chapter-item expanded "><a href="200.html"><strong aria-hidden="true">5.</strong> Feature-Based Locomotion Controllers</a></li><li class="chapter-item expanded "><a href="201.html"><strong aria-hidden="true">6.</strong> DeepMimic: Example-Guided Deep Reinforcement Learning of Physics-Based Character Skills</a></li><li class="chapter-item expanded "><a href="202.html"><strong aria-hidden="true">7.</strong> ControlVAE: Model-Based Learning of Generative Controllers for Physics-Based Characters</a></li><li class="chapter-item expanded "><a href="203.html"><strong aria-hidden="true">8.</strong> Trace and Pace: Controllable Pedestrian Animation via Guided Trajectory Diffusion</a></li><li class="chapter-item expanded "><a href="193.html"><strong aria-hidden="true">9.</strong> UniPhys Unified Planner and Controller with Diffusion for Flexible</a></li><li class="chapter-item expanded "><a href="194.html"><strong aria-hidden="true">10.</strong> Diffuse-CLoC: Guided Diffusion for Physics-based Character Look-ahead</a></li><li class="chapter-item expanded "><a href="192.html"><strong aria-hidden="true">11.</strong> PDP: Physics-Based Character Animation via Diffusion Policy</a></li><li class="chapter-item expanded "><a href="195.html"><strong aria-hidden="true">12.</strong> DiffuseLoco: Real-Time Legged Locomotion Control with Diffusion from Offline Datasets</a></li><li class="chapter-item expanded "><a href="196.html"><strong aria-hidden="true">13.</strong> Perpetual Humanoid Control for Real-time Simulated Avatars</a></li><li class="chapter-item expanded "><a href="197.html"><strong aria-hidden="true">14.</strong> Calm: Conditional Adversarial Latent Models for Directable Virtual Characters</a></li><li class="chapter-item expanded "><a href="191.html" class="active"><strong aria-hidden="true">15.</strong> Universal humanoid motion representations for physics-based control</a></li><li class="chapter-item expanded "><a href="190.html"><strong aria-hidden="true">16.</strong> DReCon: data-driven responsive control of physics-based characters</a></li><li class="chapter-item expanded "><a href="189.html"><strong aria-hidden="true">17.</strong> PARC: Physics-based Augmentation with Reinforcement Learning for Character Controllers</a></li><li class="chapter-item expanded "><a href="225.html"><strong aria-hidden="true">18.</strong> TaoAvatar: Real-Time Lifelike Full-Body Talking Avatars for Augmented Reality via 3D Gaussian Splatting</a></li><li class="chapter-item expanded "><a href="226.html"><strong aria-hidden="true">19.</strong> SAM 3: Segment Anything with Concepts</a></li><li class="chapter-item expanded "><a href="188.html"><strong aria-hidden="true">20.</strong> CLOSD: CLOSING THE LOOP BETWEEN SIMULATION AND DIFFUSION FOR MULTI-TASK CHARACTER CONTROL</a></li><li class="chapter-item expanded "><a href="187.html"><strong aria-hidden="true">21.</strong> MotionPersona: Characteristics-aware Locomotion Control</a></li><li class="chapter-item expanded "><a href="186.html"><strong aria-hidden="true">22.</strong> Diffuse-CLoC Guided Diffusion for Physics-based Character Look-ahead</a></li><li class="chapter-item expanded "><a href="185.html"><strong aria-hidden="true">23.</strong> Gait-Conditioned Reinforcement Learning with Multi-Phase Curriculum for Humanoid Locomotion</a></li><li class="chapter-item expanded "><a href="184.html"><strong aria-hidden="true">24.</strong> UniPhys: Unified Planner and Controller with Diffusion for Flexible</a></li><li class="chapter-item expanded "><a href="183.html"><strong aria-hidden="true">25.</strong> Maskedmimic: Unified physics-based character control through masked motion</a></li><li class="chapter-item expanded "><a href="182.html"><strong aria-hidden="true">26.</strong> Regional Time Stepping for SPH</a></li><li class="chapter-item expanded "><a href="181.html"><strong aria-hidden="true">27.</strong> FreeGave: 3D Physics Learning from Dynamic Videos by Gaussian Velocity</a></li><li class="chapter-item expanded "><a href="180.html"><strong aria-hidden="true">28.</strong> Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations</a></li><li class="chapter-item expanded "><a href="179.html"><strong aria-hidden="true">29.</strong> ParticleGS: Particle-Based Dynamics Modeling of 3D Gaussians for Prior-free Motion Extrapolation</a></li><li class="chapter-item expanded "><a href="178.html"><strong aria-hidden="true">30.</strong> Animate3d: Animating any 3d model with multi-view video diffusion</a></li><li class="chapter-item expanded "><a href="177.html"><strong aria-hidden="true">31.</strong> Particle-Grid Neural Dynamics for Learning Deformable Object Models from RGB-D Videos</a></li><li class="chapter-item expanded "><a href="176.html"><strong aria-hidden="true">32.</strong> HAIF-GS: Hierarchical and Induced Flow-Guided Gaussian Splatting for Dynamic Scene</a></li><li class="chapter-item expanded "><a href="175.html"><strong aria-hidden="true">33.</strong> PIG: Physically-based Multi-Material Interaction with 3D Gaussians</a></li><li class="chapter-item expanded "><a href="174.html"><strong aria-hidden="true">34.</strong> EnliveningGS: Active Locomotion of 3DGS</a></li><li class="chapter-item expanded "><a href="173.html"><strong aria-hidden="true">35.</strong> SplineGS: Learning Smooth Trajectories in Gaussian Splatting for Dynamic Scene Reconstruction</a></li><li class="chapter-item expanded "><a href="172.html"><strong aria-hidden="true">36.</strong> PAMD: Plausibility-Aware Motion Diffusion Model for Long Dance Generation</a></li><li class="chapter-item expanded "><a href="171.html"><strong aria-hidden="true">37.</strong> PMG: Progressive Motion Generation via Sparse Anchor Postures Curriculum Learning</a></li><li class="chapter-item expanded "><a href="170.html"><strong aria-hidden="true">38.</strong> LengthAware Motion Synthesis via Latent Diffusion</a></li><li class="chapter-item expanded "><a href="169.html"><strong aria-hidden="true">39.</strong> IKMo: Image-Keyframed Motion Generation with Trajectory-Pose Conditioned Motion Diffusion Model</a></li><li class="chapter-item expanded "><a href="168.html"><strong aria-hidden="true">40.</strong> UniMoGen: Universal Motion Generation</a></li><li class="chapter-item expanded "><a href="167.html"><strong aria-hidden="true">41.</strong> AMD: Anatomical Motion Diffusion with Interpretable Motion Decomposition and Fusion</a></li><li class="chapter-item expanded "><a href="166.html"><strong aria-hidden="true">42.</strong> Flame: Free-form language-based motion synthesis &amp; editing</a></li><li class="chapter-item expanded "><a href="165.html"><strong aria-hidden="true">43.</strong> Human Motion Diffusion as a Generative Prior</a></li><li class="chapter-item expanded "><a href="164.html"><strong aria-hidden="true">44.</strong> Text-driven Human Motion Generation with Motion Masked Diffusion Model</a></li><li class="chapter-item expanded "><a href="163.html"><strong aria-hidden="true">45.</strong> ReMoDiffuse: RetrievalAugmented Motion Diffusion Model</a></li><li class="chapter-item expanded "><a href="162.html"><strong aria-hidden="true">46.</strong> MotionLCM: Real-time Controllable Motion Generation via Latent Consistency Model</a></li><li class="chapter-item expanded "><a href="161.html"><strong aria-hidden="true">47.</strong> ReAlign: Bilingual Text-to-Motion Generation via Step-Aware Reward-Guided Alignment</a></li><li class="chapter-item expanded "><a href="160.html"><strong aria-hidden="true">48.</strong> Absolute Coordinates Make Motion Generation Easy</a></li><li class="chapter-item expanded "><a href="159.html"><strong aria-hidden="true">49.</strong> Seamless Human Motion Composition with Blended Positional Encodings</a></li><li class="chapter-item expanded "><a href="158.html"><strong aria-hidden="true">50.</strong> FineMoGen: Fine-Grained Spatio-Temporal Motion Generation and Editing</a></li><li class="chapter-item expanded "><a href="157.html"><strong aria-hidden="true">51.</strong> Fg-T2M: Fine-Grained Text-Driven Human Motion Generation via Diffusion Model</a></li><li class="chapter-item expanded "><a href="156.html"><strong aria-hidden="true">52.</strong> Make-An-Animation: Large-Scale Text-conditional 3D Human Motion Generation</a></li><li class="chapter-item expanded "><a href="155.html"><strong aria-hidden="true">53.</strong> StableMoFusion: Towards Robust and Efficient Diffusion-based Motion Generation Framework</a></li><li class="chapter-item expanded "><a href="154.html"><strong aria-hidden="true">54.</strong> EMDM: Efficient Motion Diffusion Model for Fast and High-Quality Motion Generation</a></li><li class="chapter-item expanded "><a href="153.html"><strong aria-hidden="true">55.</strong> Motion Mamba: Efficient and Long Sequence Motion Generation</a></li><li class="chapter-item expanded "><a href="152.html"><strong aria-hidden="true">56.</strong> M2D2M: Multi-Motion Generation from Text with Discrete Diffusion Models</a></li><li class="chapter-item expanded "><a href="151.html"><strong aria-hidden="true">57.</strong> T2LM: Long-Term 3D Human Motion Generation from Multiple Sentences</a></li><li class="chapter-item expanded "><a href="150.html"><strong aria-hidden="true">58.</strong> AttT2M:Text-Driven Human Motion Generation with Multi-Perspective Attention Mechanism</a></li><li class="chapter-item expanded "><a href="149.html"><strong aria-hidden="true">59.</strong> BAD: Bidirectional Auto-Regressive Diffusion for Text-to-Motion Generation</a></li><li class="chapter-item expanded "><a href="148.html"><strong aria-hidden="true">60.</strong> MMM: Generative Masked Motion Model</a></li><li class="chapter-item expanded "><a href="147.html"><strong aria-hidden="true">61.</strong> Priority-Centric Human Motion Generation in Discrete Latent Space</a></li><li class="chapter-item expanded "><a href="146.html"><strong aria-hidden="true">62.</strong> AvatarGPT: All-in-One Framework for Motion Understanding, Planning, Generation and Beyond</a></li><li class="chapter-item expanded "><a href="145.html"><strong aria-hidden="true">63.</strong> MotionGPT: Human Motion as a Foreign Language</a></li><li class="chapter-item expanded "><a href="144.html"><strong aria-hidden="true">64.</strong> Action-GPT: Leveraging Large-scale Language Models for Improved and Generalized Action Generation</a></li><li class="chapter-item expanded "><a href="143.html"><strong aria-hidden="true">65.</strong> PoseGPT: Quantization-based 3D Human Motion Generation and Forecasting</a></li><li class="chapter-item expanded "><a href="142.html"><strong aria-hidden="true">66.</strong> Incorporating Physics Principles for Precise Human Motion Prediction</a></li><li class="chapter-item expanded "><a href="141.html"><strong aria-hidden="true">67.</strong> PIMNet: Physics-infused Neural Network for Human Motion Prediction</a></li><li class="chapter-item expanded "><a href="140.html"><strong aria-hidden="true">68.</strong> PhysDiff: Physics-Guided Human Motion Diffusion Model</a></li><li class="chapter-item expanded "><a href="139.html"><strong aria-hidden="true">69.</strong> NRDF: Neural Riemannian Distance Fields for Learning Articulated Pose Priors</a></li><li class="chapter-item expanded "><a href="2603.html"><strong aria-hidden="true">70.</strong> Riemannian Motion Generation: A Unified Framework for Human Motion Representation and Generation via Riemannian Flow Matching</a></li><li class="chapter-item expanded "><a href="220.html"><strong aria-hidden="true">71.</strong> GaussiAnimate: Rethinking Gaussian Splatting for Articulated Models via Skeleton-Aware Representation</a></li><li class="chapter-item expanded "><a href="221.html"><strong aria-hidden="true">72.</strong> SIM1: Physics-Aligned Simulator as Zero-Shot Data Scaler in Deformable Worlds</a></li><li class="chapter-item expanded "><a href="222.html"><strong aria-hidden="true">73.</strong> FIT: A Large-Scale Dataset for Fit-Aware Virtual Try-On</a></li><li class="chapter-item expanded "><a href="137.html"><strong aria-hidden="true">74.</strong> Geometric Neural Distance Fields for Learning Human Motion Priors</a></li><li class="chapter-item expanded "><a href="136.html"><strong aria-hidden="true">75.</strong> Character Controllers Using Motion VAEs</a></li><li class="chapter-item expanded "><a href="135.html"><strong aria-hidden="true">76.</strong> Improving Human Motion Plausibility with Body Momentum</a></li><li class="chapter-item expanded "><a href="134.html"><strong aria-hidden="true">77.</strong> MoGlow: Probabilistic and controllable motion synthesis using normalising flows</a></li><li class="chapter-item expanded "><a href="133.html"><strong aria-hidden="true">78.</strong> Modi: Unconditional motion synthesis from diverse data</a></li><li class="chapter-item expanded "><a href="132.html"><strong aria-hidden="true">79.</strong> MotionDiffuse: Text-Driven Human Motion Generation with Diffusion Model</a></li><li class="chapter-item expanded "><a href="131.html"><strong aria-hidden="true">80.</strong> A deep learning framework for character motion synthesis and editing</a></li><li class="chapter-item expanded "><a href="130.html"><strong aria-hidden="true">81.</strong> Multi-Object Sketch Animation with Grouping and Motion Trajectory Priors</a></li><li class="chapter-item expanded "><a href="129.html"><strong aria-hidden="true">82.</strong> TRACE: Learning 3D Gaussian Physical Dynamics from Multi-view Videos</a></li><li class="chapter-item expanded "><a href="128.html"><strong aria-hidden="true">83.</strong> X-MoGen: Unified Motion Generation across Humans and Animals</a></li><li class="chapter-item expanded "><a href="127.html"><strong aria-hidden="true">84.</strong> Gaussian Variation Field Diffusion for High-fidelity Video-to-4D Synthesis</a></li><li class="chapter-item expanded "><a href="126.html"><strong aria-hidden="true">85.</strong> MotionShot: Adaptive Motion Transfer across Arbitrary Objects for Text-to-Video Generation</a></li><li class="chapter-item expanded "><a href="114.html"><strong aria-hidden="true">86.</strong> Drop: Dynamics responses from human motion prior and projective dynamics</a></li><li class="chapter-item expanded "><a href="112.html"><strong aria-hidden="true">87.</strong> POMP: Physics-constrainable Motion Generative Model through Phase Manifolds</a></li><li class="chapter-item expanded "><a href="111.html"><strong aria-hidden="true">88.</strong> Dreamgaussian4d: Generative 4d gaussian splatting</a></li><li class="chapter-item expanded "><a href="110.html"><strong aria-hidden="true">89.</strong> Drive Any Mesh: 4D Latent Diffusion for Mesh Deformation from Video</a></li><li class="chapter-item expanded "><a href="109.html"><strong aria-hidden="true">90.</strong> AnimateAnyMesh: A Feed-Forward 4D Foundation Model for Text-Driven Universal Mesh Animation</a></li><li class="chapter-item expanded "><a href="108.html"><strong aria-hidden="true">91.</strong> ReVision: High-Quality, Low-Cost Video Generation with Explicit 3D Physics Modeling for Complex Motion and Interaction</a></li><li class="chapter-item expanded "><a href="107.html"><strong aria-hidden="true">92.</strong> Text2Video-Zero: Text-to-Image Diffusion Models are Zero-Shot Video Generators</a></li><li class="chapter-item expanded "><a href="106.html"><strong aria-hidden="true">93.</strong> Force Prompting: Video Generation Models Can Learn and Generalize Physics-based Control Signals</a></li><li class="chapter-item expanded "><a href="105.html"><strong aria-hidden="true">94.</strong> Think Before You Diffuse: LLMs-Guided Physics-Aware Video Generation</a></li><li class="chapter-item expanded "><a href="104.html"><strong aria-hidden="true">95.</strong> Generating time-consistent dynamics with discriminator-guided image diffusion models</a></li><li class="chapter-item expanded "><a href="103.html"><strong aria-hidden="true">96.</strong> GENMO:AGENeralist Model for Human MOtion</a></li><li class="chapter-item expanded "><a href="102.html"><strong aria-hidden="true">97.</strong> HGM3: HIERARCHICAL GENERATIVE MASKED MOTION MODELING WITH HARD TOKEN MINING</a></li><li class="chapter-item expanded "><a href="101.html"><strong aria-hidden="true">98.</strong> Towards Robust and Controllable Text-to-Motion via Masked Autoregressive Diffusion</a></li><li class="chapter-item expanded "><a href="100.html"><strong aria-hidden="true">99.</strong> MoCLIP: Motion-Aware Fine-Tuning and Distillation of CLIP for Human Motion Generation</a></li><li class="chapter-item expanded "><a href="99.html"><strong aria-hidden="true">100.</strong> FinePhys: Fine-grained Human Action Generation by Explicitly Incorporating Physical Laws for Effective Skeletal Guidance</a></li><li class="chapter-item expanded "><a href="98.html"><strong aria-hidden="true">101.</strong> VideoSwap: Customized Video Subject Swapping with Interactive Semantic Point Correspondence</a></li><li class="chapter-item expanded "><a href="97.html"><strong aria-hidden="true">102.</strong> DragAnything: Motion Control for Anything using Entity Representation</a></li><li class="chapter-item expanded "><a href="96.html"><strong aria-hidden="true">103.</strong> PhysAnimator: Physics-Guided Generative Cartoon Animation</a></li><li class="chapter-item expanded "><a href="95.html"><strong aria-hidden="true">104.</strong> SOAP: Style-Omniscient Animatable Portraits</a></li><li class="chapter-item expanded "><a href="94.html"><strong aria-hidden="true">105.</strong> Neural Discrete Representation Learning</a></li><li class="chapter-item expanded "><a href="93.html"><strong aria-hidden="true">106.</strong> TSTMotion: Training-free Scene-aware Text-to-motion Generation</a></li><li class="chapter-item expanded "><a href="92.html"><strong aria-hidden="true">107.</strong> Deterministic-to-Stochastic Diverse Latent Feature Mapping for Human Motion Synthesis</a></li><li class="chapter-item expanded "><a href="91.html"><strong aria-hidden="true">108.</strong> A lip sync expert is all you need for speech to lip generation in the wild</a></li><li class="chapter-item expanded "><a href="90.html"><strong aria-hidden="true">109.</strong> MUSETALK: REAL-TIME HIGH QUALITY LIP SYN-CHRONIZATION WITH LATENT SPACE INPAINTING</a></li><li class="chapter-item expanded "><a href="89.html"><strong aria-hidden="true">110.</strong> LatentSync: Audio Conditioned Latent Diffusion Models for Lip Sync</a></li><li class="chapter-item expanded "><a href="88.html"><strong aria-hidden="true">111.</strong> T2m-gpt: Generating human motion from textual descriptions with discrete representations</a></li><li class="chapter-item expanded "><a href="87.html"><strong aria-hidden="true">112.</strong> Motiongpt: Finetuned llms are general-purpose motion generators</a></li><li class="chapter-item expanded "><a href="86.html"><strong aria-hidden="true">113.</strong> Guided Motion Diffusion for Controllable Human Motion Synthesis</a></li><li class="chapter-item expanded "><a href="85.html"><strong aria-hidden="true">114.</strong> OmniControl: Control Any Joint at Any Time for Human Motion Generation</a></li><li class="chapter-item expanded "><a href="84.html"><strong aria-hidden="true">115.</strong> Learning Long-form Video Prior via Generative Pre-Training</a></li><li class="chapter-item expanded "><a href="83.html"><strong aria-hidden="true">116.</strong> Instant Neural Graphics Primitives with a Multiresolution Hash Encoding</a></li><li class="chapter-item expanded "><a href="82.html"><strong aria-hidden="true">117.</strong> Magic3D: High-Resolution Text-to-3D Content Creation</a></li><li class="chapter-item expanded "><a href="81.html"><strong aria-hidden="true">118.</strong> CogVideo: Large-scale Pretraining for Text-to-Video Generation via Transformers</a></li><li class="chapter-item expanded "><a href="80.html"><strong aria-hidden="true">119.</strong> One-Minute Video Generation with Test-Time Training</a></li><li class="chapter-item expanded "><a href="79.html"><strong aria-hidden="true">120.</strong> Key-Locked Rank One Editing for Text-to-Image Personalization</a></li><li class="chapter-item expanded "><a href="78.html"><strong aria-hidden="true">121.</strong> MARCHING CUBES: A HIGH RESOLUTION 3D SURFACE CONSTRUCTION ALGORITHM</a></li><li class="chapter-item expanded "><a href="77.html"><strong aria-hidden="true">122.</strong> Plug-and-Play Diffusion Features for Text-Driven Image-to-Image Translation</a></li><li class="chapter-item expanded "><a href="76.html"><strong aria-hidden="true">123.</strong> NULL-text Inversion for Editing Real Images Using Guided Diffusion Models</a></li><li class="chapter-item expanded "><a href="75.html"><strong aria-hidden="true">124.</strong> simple diffusion: End-to-end diffusion for high resolution images</a></li><li class="chapter-item expanded "><a href="74.html"><strong aria-hidden="true">125.</strong> One Transformer Fits All Distributions in Multi-Modal Diffusion at Scale</a></li><li class="chapter-item expanded "><a href="73.html"><strong aria-hidden="true">126.</strong> Scalable Diffusion Models with Transformers</a></li><li class="chapter-item expanded "><a href="72.html"><strong aria-hidden="true">127.</strong> All are Worth Words: a ViT Backbone for Score-based Diffusion Models</a></li><li class="chapter-item expanded "><a href="71.html"><strong aria-hidden="true">128.</strong> An image is worth 16x16 words: Transformers for image recognition at scale</a></li><li class="chapter-item expanded "><a href="70.html"><strong aria-hidden="true">129.</strong> eDiff-I: Text-to-Image Diffusion Models with an Ensemble of Expert Denoisers</a></li><li class="chapter-item expanded "><a href="69.html"><strong aria-hidden="true">130.</strong> Photorealistic text-to-image diffusion models with deep language understanding||Imagen</a></li><li class="chapter-item expanded "><a href="68.html"><strong aria-hidden="true">131.</strong> DreamFusion: Text-to-3D using 2D Diffusion</a></li><li class="chapter-item expanded "><a href="67.html"><strong aria-hidden="true">132.</strong> GLIGEN: Open-Set Grounded Text-to-Image Generation</a></li><li class="chapter-item expanded "><a href="66.html"><strong aria-hidden="true">133.</strong> Adding Conditional Control to Text-to-Image Diffusion Models</a></li><li class="chapter-item expanded "><a href="65.html"><strong aria-hidden="true">134.</strong> T2I-Adapter: Learning Adapters to Dig out More Controllable Ability for Text-to-Image Diffusion Models</a></li><li class="chapter-item expanded "><a href="64.html"><strong aria-hidden="true">135.</strong> Multi-Concept Customization of Text-to-Image Diffusion</a></li><li class="chapter-item expanded "><a href="63.html"><strong aria-hidden="true">136.</strong> An Image is Worth One Word: Personalizing Text-to-Image Generation using Textual Inversion</a></li><li class="chapter-item expanded "><a href="62.html"><strong aria-hidden="true">137.</strong> DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation</a></li><li class="chapter-item expanded "><a href="61.html"><strong aria-hidden="true">138.</strong> VisorGPT: Learning Visual Prior via Generative Pre-Training</a></li><li class="chapter-item expanded "><a href="60.html"><strong aria-hidden="true">139.</strong> NUWA-XL: Diffusion over Diffusion for eXtremely Long Video Generation</a></li><li class="chapter-item expanded "><a href="59.html"><strong aria-hidden="true">140.</strong> AnimateDiff: Animate Your Personalized Text-to-Image Diffusion Models without Specific Tuning</a></li><li class="chapter-item expanded "><a href="58.html"><strong aria-hidden="true">141.</strong> ModelScope Text-to-Video Technical Report</a></li><li class="chapter-item expanded "><a href="57.html"><strong aria-hidden="true">142.</strong> Show-1: Marrying Pixel and Latent Diffusion Models for Text-to-Video Generation</a></li><li class="chapter-item expanded "><a href="56.html"><strong aria-hidden="true">143.</strong> Make-A-Video: Text-to-Video Generation without Text-Video Data</a></li><li class="chapter-item expanded "><a href="55.html"><strong aria-hidden="true">144.</strong> Video Diffusion Models</a></li><li class="chapter-item expanded "><a href="54.html"><strong aria-hidden="true">145.</strong> Learning Transferable Visual Models From Natural Language Supervision</a></li><li class="chapter-item expanded "><a href="53.html"><strong aria-hidden="true">146.</strong> Implicit Warping for Animation with Image Sets</a></li><li class="chapter-item expanded "><a href="52.html"><strong aria-hidden="true">147.</strong> Mix-of-Show: Decentralized Low-Rank Adaptation for Multi-Concept Customization of Diffusion Models</a></li><li class="chapter-item expanded "><a href="51.html"><strong aria-hidden="true">148.</strong> Motion-Conditioned Diffusion Model for Controllable Video Synthesis</a></li><li class="chapter-item expanded "><a href="50.html"><strong aria-hidden="true">149.</strong> Stable Video Diffusion: Scaling Latent Video Diffusion Models to Large Datasets</a></li><li class="chapter-item expanded "><a href="49.html"><strong aria-hidden="true">150.</strong> UniAnimate: Taming Unified Video Diffusion Models for Consistent Human Image Animation</a></li><li class="chapter-item expanded "><a href="48.html"><strong aria-hidden="true">151.</strong> Align your Latents: High-Resolution Video Synthesis with Latent Diffusion Models</a></li><li class="chapter-item expanded "><a href="47.html"><strong aria-hidden="true">152.</strong> Puppet-Master: Scaling Interactive Video Generation as a Motion Prior for Part-Level Dynamics</a></li><li class="chapter-item expanded "><a href="46.html"><strong aria-hidden="true">153.</strong> A Recipe for Scaling up Text-to-Video Generation</a></li><li class="chapter-item expanded "><a href="45.html"><strong aria-hidden="true">154.</strong> High-Resolution Image Synthesis with Latent Diffusion Models</a></li><li class="chapter-item expanded "><a href="44.html"><strong aria-hidden="true">155.</strong> Motion-I2V: Consistent and Controllable Image-to-Video Generation with Explicit Motion Modeling</a></li><li class="chapter-item expanded "><a href="43.html"><strong aria-hidden="true">156.</strong> 数据集：HumanVid</a></li><li class="chapter-item expanded "><a href="42.html"><strong aria-hidden="true">157.</strong> HumanVid: Demystifying Training Data for Camera-controllable Human Image Animation</a></li><li class="chapter-item expanded "><a href="41.html"><strong aria-hidden="true">158.</strong> StoryDiffusion: Consistent Self-Attention for Long-Range Image and Video Generation</a></li><li class="chapter-item expanded "><a href="40.html"><strong aria-hidden="true">159.</strong> 数据集：Zoo-300K</a></li><li class="chapter-item expanded "><a href="39.html"><strong aria-hidden="true">160.</strong> Motion Avatar: Generate Human and Animal Avatars with Arbitrary Motion</a></li><li class="chapter-item expanded "><a href="38.html"><strong aria-hidden="true">161.</strong> LORA: LOW-RANK ADAPTATION OF LARGE LAN-GUAGE MODELS</a></li><li class="chapter-item expanded "><a href="37.html"><strong aria-hidden="true">162.</strong> TCAN: Animating Human Images with Temporally Consistent Pose Guidance using Diffusion Models</a></li><li class="chapter-item expanded "><a href="36.html"><strong aria-hidden="true">163.</strong> GaussianAvatar: Towards Realistic Human Avatar Modeling from a Single Video via Animatable 3D Gaussians</a></li><li class="chapter-item expanded "><a href="35.html"><strong aria-hidden="true">164.</strong> MagicPony: Learning Articulated 3D Animals in the Wild</a></li><li class="chapter-item expanded "><a href="34.html"><strong aria-hidden="true">165.</strong> Splatter a Video: Video Gaussian Representation for Versatile Processing</a></li><li class="chapter-item expanded "><a href="33.html"><strong aria-hidden="true">166.</strong> 数据集：Dynamic Furry Animal Dataset</a></li><li class="chapter-item expanded "><a href="32.html"><strong aria-hidden="true">167.</strong> Artemis: Articulated Neural Pets with Appearance and Motion Synthesis</a></li><li class="chapter-item expanded "><a href="31.html"><strong aria-hidden="true">168.</strong> SMPLer: Taming Transformers for Monocular 3D Human Shape and Pose Estimation</a></li><li class="chapter-item expanded "><a href="30.html"><strong aria-hidden="true">169.</strong> CAT3D: Create Anything in 3D with Multi-View Diffusion Models</a></li><li class="chapter-item expanded "><a href="29.html"><strong aria-hidden="true">170.</strong> PACER+: On-Demand Pedestrian Animation Controller in Driving Scenarios</a></li><li class="chapter-item expanded "><a href="28.html"><strong aria-hidden="true">171.</strong> Humans in 4D: Reconstructing and Tracking Humans with Transformers</a></li><li class="chapter-item expanded "><a href="27.html"><strong aria-hidden="true">172.</strong> Learning Human Motion from Monocular Videos via Cross-Modal Manifold Alignment</a></li><li class="chapter-item expanded "><a href="26.html"><strong aria-hidden="true">173.</strong> PhysPT: Physics-aware Pretrained Transformer for Estimating Human Dynamics from Monocular Videos</a></li><li class="chapter-item expanded "><a href="25.html"><strong aria-hidden="true">174.</strong> Imagic: Text-Based Real Image Editing with Diffusion Models</a></li><li class="chapter-item expanded "><a href="24.html"><strong aria-hidden="true">175.</strong> DiffEdit: Diffusion-based semantic image editing with mask guidance</a></li><li class="chapter-item expanded "><a href="23.html"><strong aria-hidden="true">176.</strong> Dual diffusion implicit bridges for image-to-image translation</a></li><li class="chapter-item expanded "><a href="22.html"><strong aria-hidden="true">177.</strong> SDEdit: Guided Image Synthesis and Editing with Stochastic Differential Equations</a></li><li class="chapter-item expanded "><a href="20.html"><strong aria-hidden="true">178.</strong> Prompt-to-Prompt Image Editing with Cross-Attention Control</a></li><li class="chapter-item expanded "><a href="19.html"><strong aria-hidden="true">179.</strong> WANDR: Intention-guided Human Motion Generation</a></li><li class="chapter-item expanded "><a href="18.html"><strong aria-hidden="true">180.</strong> TRAM: Global Trajectory and Motion of 3D Humans from in-the-wild Videos</a></li><li class="chapter-item expanded "><a href="17.html"><strong aria-hidden="true">181.</strong> 3D Gaussian Splatting for Real-Time Radiance Field Rendering</a></li><li class="chapter-item expanded "><a href="16.html"><strong aria-hidden="true">182.</strong> Decoupling Human and Camera Motion from Videos in the Wild</a></li><li class="chapter-item expanded "><a href="15.html"><strong aria-hidden="true">183.</strong> HMP: Hand Motion Priors for Pose and Shape Estimation from Video</a></li><li class="chapter-item expanded "><a href="14.html"><strong aria-hidden="true">184.</strong> HuMoR: 3D Human Motion Model for Robust Pose Estimation</a></li><li class="chapter-item expanded "><a href="13.html"><strong aria-hidden="true">185.</strong> Co-Evolution of Pose and Mesh for 3D Human Body Estimation from Video</a></li><li class="chapter-item expanded "><a href="12.html"><strong aria-hidden="true">186.</strong> Global-to-Local Modeling for Video-based 3D Human Pose and Shape Estimation</a></li><li class="chapter-item expanded "><a href="11.html"><strong aria-hidden="true">187.</strong> WHAM: Reconstructing World-grounded Humans with Accurate 3D Motion</a></li><li class="chapter-item expanded "><a href="10.html"><strong aria-hidden="true">188.</strong> Tackling the Generative Learning Trilemma with Denoising Diffusion GANs</a></li><li class="chapter-item expanded "><a href="9.html"><strong aria-hidden="true">189.</strong> Elucidating the Design Space of Diffusion-Based Generative Models</a></li><li class="chapter-item expanded "><a href="8.html"><strong aria-hidden="true">190.</strong> SCORE-BASED GENERATIVE MODELING THROUGHSTOCHASTIC DIFFERENTIAL EQUATIONS</a></li><li class="chapter-item expanded "><a href="7.html"><strong aria-hidden="true">191.</strong> Consistency Models</a></li><li class="chapter-item expanded "><a href="6.html"><strong aria-hidden="true">192.</strong> Classifier-Free Diffusion Guidance</a></li><li class="chapter-item expanded "><a href="5.html"><strong aria-hidden="true">193.</strong> Cascaded Diffusion Models for High Fidelity Image Generation</a></li><li class="chapter-item expanded "><a href="4.html"><strong aria-hidden="true">194.</strong> LEARNING ENERGY-BASED MODELS BY DIFFUSIONRECOVERY LIKELIHOOD</a></li><li class="chapter-item expanded "><a href="3.html"><strong aria-hidden="true">195.</strong> On Distillation of Guided Diffusion Models</a></li><li class="chapter-item expanded "><a href="2.html"><strong aria-hidden="true">196.</strong> Denoising Diffusion Implicit Models</a></li><li class="chapter-item expanded "><a href="1.html"><strong aria-hidden="true">197.</strong> PROGRESSIVE DISTILLATION FOR FAST SAMPLING OF DIFFUSION MODELS</a></li><li class="chapter-item expanded "><a href="125.html"><strong aria-hidden="true">198.</strong> Instruct-NeRF2NeRF: Editing 3D Scenes with Instructions</a></li><li class="chapter-item expanded "><a href="124.html"><strong aria-hidden="true">199.</strong> ControlVideo: Training-free Controllable Text-to-Video Generation</a></li><li class="chapter-item expanded "><a href="123.html"><strong aria-hidden="true">200.</strong> Pix2Video: Video Editing using Image Diffusion</a></li><li class="chapter-item expanded "><a href="122.html"><strong aria-hidden="true">201.</strong> Structure and Content-Guided Video Synthesis with Diffusion Models</a></li><li class="chapter-item expanded "><a href="121.html"><strong aria-hidden="true">202.</strong> MagicAnimate: Temporally Consistent Human Image Animation using Diffusion Model</a></li><li class="chapter-item expanded "><a href="120.html"><strong aria-hidden="true">203.</strong> MotionDirector: Motion Customization of Text-to-Video Diffusion Models</a></li><li class="chapter-item expanded "><a href="119.html"><strong aria-hidden="true">204.</strong> Dreamix: Video Diffusion Models are General Video Editors</a></li><li class="chapter-item expanded "><a href="118.html"><strong aria-hidden="true">205.</strong> Tune-A-Video: One-Shot Tuning of Image Diffusion Models for Text-to-Video Generation</a></li><li class="chapter-item expanded "><a href="117.html"><strong aria-hidden="true">206.</strong> TokenFlow: Consistent Diffusion Features for Consistent Video Editing</a></li><li class="chapter-item expanded "><a href="116.html"><strong aria-hidden="true">207.</strong> DynVideo-E: Harnessing Dynamic NeRF for Large-Scale Motion- and View-Change Human-Centric Video Editing</a></li><li class="chapter-item expanded "><a href="115.html"><strong aria-hidden="true">208.</strong> Content Deformation Fields for Temporally Consistent Video Processing</a></li><li class="chapter-item expanded "><a href="113.html"><strong aria-hidden="true">209.</strong> PFNN: Phase-Functioned Neural Networks</a></li><li class="chapter-item expanded "><a href="210.html"><strong aria-hidden="true">210.</strong> Recurrent Transition Networks for Character Locomotion</a></li><li class="chapter-item expanded "><a href="211.html"><strong aria-hidden="true">211.</strong> Real-Time Style Modelling of Human Locomotion</a></li><li class="chapter-item expanded "><a href="212.html"><strong aria-hidden="true">212.</strong> Motion In-Betweening with Phase Manifolds</a></li><li class="chapter-item expanded "><a href="213.html"><strong aria-hidden="true">213.</strong> Mode-Adaptive Neural Networks for Quadruped Motion Control</a></li><li class="chapter-item expanded "><a href="214.html"><strong aria-hidden="true">214.</strong> Few-shot Learning of Homogeneous Human Locomotion Styles</a></li><li class="chapter-item expanded "><a href="215.html"><strong aria-hidden="true">215.</strong> Learning predict-and-simulate policies from unorganized human motion data</a></li><li class="chapter-item expanded "><a href="216.html"><strong aria-hidden="true">216.</strong> Local Motion Phases for Learning Multi-Contact Character Movements</a></li><li class="chapter-item expanded "><a href="217.html"><strong aria-hidden="true">217.</strong> Interactive Control of Diverse Complex Characters with Neural Networks</a></li><li class="chapter-item expanded "><a href="204.html"><strong aria-hidden="true">218.</strong> Accelerated Auto-regressive Motion Diffusion Model</a></li><li class="chapter-item expanded "><a href="205.html"><strong aria-hidden="true">219.</strong> DARTControl: A Diffusion-based Autoregressive Motion Model for Real-time Text-driven Motion Control</a></li><li class="chapter-item expanded "><a href="206.html"><strong aria-hidden="true">220.</strong> Interactive Character Control with Auto-Regressive Motion Diffusion Models</a></li><li class="chapter-item expanded "><a href="207.html"><strong aria-hidden="true">221.</strong> Taming Diffusion Probabilistic Models for Character Control</a></li><li class="chapter-item expanded "><a href="208.html"><strong aria-hidden="true">222.</strong> Learned Motion Matching</a></li><li class="chapter-item expanded "><a href="209.html"><strong aria-hidden="true">223.</strong> MOCHA: Real-Time Motion Characterization via Context Matching</a></li><li class="chapter-item expanded "><a href="218.html"><strong aria-hidden="true">224.</strong> DeepLoco: Dynamic Locomotion Skills Using Hierarchical Deep Reinforcement Learning</a></li><li class="chapter-item expanded "><a href="219.html"><strong aria-hidden="true">225.</strong> Benchmarking Deep Reinforcement Learning for Continuous Control</a></li><li class="chapter-item expanded "><a href="227.html"><strong aria-hidden="true">226.</strong> SIMBICON: Simple Biped Locomotion Control</a></li><li class="chapter-item expanded "><a href="228.html"><strong aria-hidden="true">227.</strong> RLOC: Terrain-Aware Legged Locomotion using Reinforcement Learning and Optimal Control</a></li><li class="chapter-item expanded "><a href="229.html"><strong aria-hidden="true">228.</strong> Efficient Self-Supervised Data Collection for Offline Robot Learning</a></li><li class="chapter-item expanded "><a href="230.html"><strong aria-hidden="true">229.</strong> Learning Robust Autonomous Navigation and Locomotion for Wheeled-Legged Robots</a></li><li class="chapter-item expanded "><a href="231.html"><strong aria-hidden="true">230.</strong> Dataset Distillation for Offline Reinforcement Learning</a></li><li class="chapter-item expanded "><a href="232.html"><strong aria-hidden="true">231.</strong> mimic-one: A Scalable Model Recipe for General Purpose Robot Dexterity</a></li><li class="chapter-item expanded "><a href="233.html"><strong aria-hidden="true">232.</strong> 4D Gaussian Splatting for Real-Time Dynamic Scene Rendering</a></li><li class="chapter-item expanded "><a href="234.html"><strong aria-hidden="true">233.</strong> SC-GS: Sparse-Controlled Gaussian Splatting for Editable Dynamic Scenes</a></li><li class="chapter-item expanded "><a href="235.html"><strong aria-hidden="true">234.</strong> Smooth Skinning Decomposition with Rigid Bones</a></li><li class="chapter-item expanded "><a href="236.html"><strong aria-hidden="true">235.</strong> Robust and Accurate Skeletal Rigging from Mesh Sequences</a></li><li class="chapter-item expanded "><a href="238.html"><strong aria-hidden="true">236.</strong> FlashWorld: High-Quality 3D Scene Generation Within Seconds</a></li><li class="chapter-item expanded "><a href="239.html"><strong aria-hidden="true">237.</strong> SCoPE: Sightline-Coordinate Positional Encoding for Video Diffusion Transformers</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">ReadPapers</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/CaterpillarStudyGroup/ReadPapers" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main><div class="sidetoc"><nav class="pagetoc"></nav></div>
+                        <h1 id="uhmp-universal-humanoid-motion-representations-for-physics-based-control"><a class="header" href="#uhmp-universal-humanoid-motion-representations-for-physics-based-control">UHMP: Universal Humanoid Motion Representations for Physics-Based Control</a></h1>
+<p><strong>论文信息</strong>: ICLR 2024, Meta Reality Labs + CMU</p>
+<p><strong>Authors</strong>: Jialong Li, Xiangyu Xu, Minshuo Chen, Mengyi Shan, Haizhou Ge, Yandong Guo, Jingdong Wang, Tuo Zhao</p>
+<p><strong>Link</strong>: <a href="https://ar5iv.labs.arxiv.org/html/2310.04582">[2310.04582] Universal Humanoid Motion Representations for Physics-Based Control</a></p>
+<p><strong>项目主页</strong>: https://universal-humanoid-motion.github.io/</p>
+<h2 id="核心本质"><a class="header" href="#核心本质">核心本质</a></h2>
+<p>这篇论文的核心本质，是建立了一套业界通用的成熟运动控制范式（Pipeline），用以解决动画数据与物理控制之间的巨大鸿沟（Gap）。</p>
+<h2 id="1-核心目标"><a class="header" href="#1-核心目标">1. 核心目标</a></h2>
+<p><img src="assets/191_images/fig1_teaser.png" alt="Figure 1: 统一运动表示可被下游任务复用" /></p>
+<ul>
+<li>构建一个统一的运动表示（Unified Motion Representation）：使用隐变量 z 作为通用语言，同时支撑动作的自然多样性与物理的稳定性。</li>
+</ul>
+<h2 id="2-核心困境为什么需要这套范式"><a class="header" href="#2-核心困境为什么需要这套范式">2. 核心困境（为什么需要这套范式）</a></h2>
+<ul>
+<li><strong>MoCap 生成模型（如 CVAE）</strong>：动作自然、丰富、像人，但物理不稳定，仿真里会摔倒。</li>
+<li><strong>纯轨迹优化（TO/MPC）</strong>：物理极其稳定、可控制，但动作单调死板，无法覆盖 MoCap 里的复杂动作，且计算缓慢。</li>
+<li><strong>矛盾</strong>：追求多样性就不稳，追求稳定就不多样。</li>
+</ul>
+<h2 id="3-解决方案与关键流程取其精华"><a class="header" href="#3-解决方案与关键流程取其精华">3. 解决方案与关键流程（取其精华）</a></h2>
+<p>作者没有抛弃任何一方，而是用三级跳的策略，完善了一套成熟范式：</p>
+<h3 id="第一阶段建立动作先验motion-prior-phc-imitator"><a class="header" href="#第一阶段建立动作先验motion-prior-phc-imitator">第一阶段：建立动作先验（Motion Prior）—— PHC+ Imitator</a></h3>
+<p><img src="assets/191_images/fig2_pipeline.jpg" alt="Figure 2: 从预训练动作模仿器中蒸馏出隐空间" /></p>
+<ul>
+<li><strong>手段</strong>：利用大规模 MoCap 数据（如 AMASS）训练 CVAE</li>
+<li><strong>关键创新</strong>：<strong>PHC+ (Progressive Humanoid Control+)</strong> 使用渐进式训练策略
+<ul>
+<li>从 3 个基础动作原语（primitives）开始</li>
+<li>逐步增加动作复杂度</li>
+<li><strong>在 AMASS 数据集上达到 100% 成功率</strong>（这是蒸馏能成功的前提！）</li>
+</ul>
+</li>
+<li><strong>作用</strong>：让网络从无标签数据中自动学习动作的隐语义 z。这一步决定了智能体能做的动作广度与多样性</li>
+</ul>
+<h3 id="第二阶段成熟的轨迹优化与蒸馏distillation"><a class="header" href="#第二阶段成熟的轨迹优化与蒸馏distillation">第二阶段：成熟的轨迹优化与蒸馏（Distillation）</a></h3>
+<ul>
+<li><strong>手段</strong>：作者自研了一套非常成熟、高质量的全身轨迹优化器。它虽然慢，但能在物理仿真里算出稳定、自然、物理正确的参考轨迹</li>
+<li><strong>关键操作</strong>：利用这套优化器作为&quot;老师&quot;，对 CVAE 的解码器（Decoder）进行知识蒸馏</li>
+<li><strong>蒸馏 Loss 公式</strong>（变分信息瓶颈）：
+<pre><code>L = L_action + αL_regu + βL_KL
+</code></pre>
+<ul>
+<li><code>L_action</code>：动作重建损失</li>
+<li><code>L_regu</code>：正则化项</li>
+<li><code>L_KL</code>：KL 散度，约束 z 接近先验分布</li>
+<li><code>β</code> 使用退火策略（annealed schedule），从 0 逐渐增加</li>
+</ul>
+</li>
+<li><strong>目的</strong>：在不破坏统一表示 z 的前提下，把物理稳定性灌进网络</li>
+</ul>
+<h3 id="第三阶段高层强化学习high-level-rl"><a class="header" href="#第三阶段高层强化学习high-level-rl">第三阶段：高层强化学习（High-level RL）</a></h3>
+<ul>
+<li><strong>手段</strong>：固定蒸馏好的 Decoder 作为底层执行器，训练上层 RL 策略</li>
+<li><strong>作用</strong>：RL 只负责输出指令 z，实现简单、灵活的高层语义控制</li>
+</ul>
+<h2 id="4-最终成果与贡献"><a class="header" href="#4-最终成果与贡献">4. 最终成果与贡献</a></h2>
+<p><img src="assets/191_images/fig3_results.jpg" alt="Figure 3: 使用统一运动表示的策略以类人行为解决多种任务" /></p>
+<ul>
+<li><strong>统一表示 z</strong>：现在的 z 既代表了 MoCap 里的丰富动作语义，也代表了物理上的可执行状态。</li>
+<li><strong>PHC+ 100% 成功率</strong>：在 AMASS 数据集上实现完美跟踪，证明动作先验质量足够高</li>
+<li><strong>范式确立</strong>：这篇论文真正的历史贡献，是定型并普及了这套 <strong>Prior（先验）+ Distillation（蒸馏）+ RL（高层控制）</strong> 的标准流水线。后来所有人做基于物理的角色控制，基本都在沿用这套成熟的框架</li>
+<li><strong>下游任务验证</strong>：
+<ul>
+<li>复杂地形穿越（Terrain Traversal）</li>
+<li>VR 动作追踪（Motion Tracking）</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-不可回避的局限性因果真相"><a class="header" href="#5-不可回避的局限性因果真相">5. 不可回避的局限性（因果真相）</a></h2>
+<p><img src="assets/191_images/fig4_curves.png" alt="Figure 4: 各生成任务的训练曲线" /></p>
+<ul>
+<li>虽然动作变稳了，但天花板依然被轨迹优化器锁死。</li>
+<li>因为依赖轨迹优化生成数据，所以该系统能做的动作受限于优化器的求解能力。</li>
+<li><strong>注意</strong>：论文实验展示了复杂地形穿越和 VR 动作追踪，但更复杂的跳跃、翻滚、交互动作仍受限于优化器能力。</li>
+</ul>
+<hr />
+<h2 id="详细技术流程"><a class="header" href="#详细技术流程">详细技术流程</a></h2>
+<p><img src="assets/191_images/fig5_success_rate.png" alt="Figure 5: 成功率对比" /></p>
+<h3 id="阶段-1motion-prior动作先验-phc-cvae-训练"><a class="header" href="#阶段-1motion-prior动作先验-phc-cvae-训练">阶段 1：Motion Prior（动作先验）—— PHC+ CVAE 训练</a></h3>
+<p><strong>作用</strong>：从动作捕捉数据学习统一、丰富的语义隐空间 z</p>
+<p><strong>学习类型</strong>：<strong>监督学习</strong>（变分自编码器）</p>
+<ul>
+<li>输入：s^p + s^g-mimic</li>
+<li>标签：MoCap 动作数据</li>
+<li>Loss：重建 Loss + KL 散度</li>
+</ul>
+<p><strong>核心作用</strong>：<strong>把目标转化为行动</strong></p>
+<ul>
+<li>输入模仿目标 s^g-mimic（来自动作捕捉）</li>
+<li>学习输出对应的动作 a（PD 控制器目标）</li>
+</ul>
+<h4 id="与标准-cvae-的区别"><a class="header" href="#与标准-cvae-的区别">与标准 CVAE 的区别</a></h4>
+<table><thead><tr><th>组件</th><th>标准 CVAE</th><th>UHMP Motion Prior</th></tr></thead><tbody>
+<tr><td><strong>输入</strong></td><td>数据 x（如图像、姿态序列）</td><td>本体感知 s^p（关节位置、速度）</td></tr>
+<tr><td><strong>条件</strong></td><td>外部标签 c（如类别、文本）</td><td>模仿目标 s^g-mimic（来自动作捕捉）</td></tr>
+<tr><td><strong>输出</strong></td><td>重建输入 x̂</td><td>动作 a（PD 控制器目标）</td></tr>
+<tr><td><strong>Prior</strong></td><td>p(z|c) = N(0,I) 固定</td><td>R(z|s^p) = N(z | μ^p_t, σ^p_t) 可学习</td></tr>
+<tr><td><strong>训练目标</strong></td><td>数据重建</td><td>动作重建 + 物理稳定性</td></tr>
+<tr><td><strong>训练策略</strong></td><td>单次训练</td><td>PHC+ 渐进式（从 3 个原语开始）</td></tr>
+</tbody></table>
+<p><strong>本质区别</strong>：</p>
+<blockquote>
+<p>UHMP 不是&quot;标准 CVAE&quot;，而是<strong>披着 CVAE 外衣的动作生成模型</strong>——框架思想一样，但每个组件都为控制任务重新设计了。</p>
+</blockquote>
+<ul>
+<li>
+<p><strong>网络架构</strong>：</p>
+<pre><code>Encoder:  E(z | s^p, s^g-mimic)  →  计算隐变量 z
+Decoder:  D(a | s^p, z)          →  输出动作 a（PD 控制器目标）
+Prior:    R(z | s^p)             →  可学习的高斯先验
+</code></pre>
+<ul>
+<li><code>s^p</code>：本体感知状态（proprioception），包括关节位置、速度等</li>
+<li><code>s^g-mimic</code>：模仿目标（来自动作捕捉数据）</li>
+<li><strong>Prior 灵感来自 HuMoR</strong>：<code>R(z|s^p) = N(z | μ^p_t, σ^p_t)</code></li>
+</ul>
+</li>
+<li>
+<p><strong>训练数据</strong>：原始 MoCap 动作数据（AMASS），无标签，包含走路、跑、蹲、转身等大量人类动作</p>
+</li>
+<li>
+<p><strong>PHC+ 渐进式训练</strong>：</p>
+<ul>
+<li>从 3 个基础动作原语（primitives）开始</li>
+<li>逐步增加动作复杂度</li>
+<li>达到 100% AMASS 成功率</li>
+</ul>
+</li>
+</ul>
+<h4 id="为什么需要渐进式训练"><a class="header" href="#为什么需要渐进式训练">为什么需要渐进式训练？</a></h4>
+<p><strong>原因 1：降低优化难度</strong></p>
+<pre><code>AMASS 包含的动作复杂度跨度大：
+- 简单：站立、慢走、转身
+- 中等：快走、跑步、下蹲
+- 复杂：跳跃、翻滚、舞蹈
+
+直接全部训练 → 网络偏向简单动作，复杂动作学不会
+渐进训练 → 先学会基础，再扩展复杂度
+</code></pre>
+<p><strong>原因 2：保证物理稳定性</strong></p>
+<pre><code>UHMP 的 CVAE 最终要用于物理控制：
+- 输出动作 a → PD 控制器目标 → 物理仿真执行
+
+如果直接学复杂动作：
+- 基础平衡能力没学会 → 仿真中摔倒
+- 动作质量差 → 蒸馏阶段无法收敛
+
+渐进训练 → 确保基础动作足够稳定
+</code></pre>
+<p><strong>原因 3：避免 KL Collapse（CVAE 经典问题）</strong></p>
+<pre><code>CVAE 的 ELBO 损失：
+L = 重建项 - KL 散度
+
+KL Collapse 现象：
+- Decoder 太强 → 不需要 z 也能重建
+- 网络忽略隐变量 z
+- z 失去控制多样性能力
+
+渐进训练的作用：
+- Phase 1：网络必须用 z 区分&quot;站立&quot;vs&quot;走路&quot;vs&quot;转身&quot;
+- 养成&quot;依赖 z&quot;的习惯
+- 后期不会轻易抛弃 z
+</code></pre>
+<p><strong>本质</strong>：这是 **Curriculum Learning（课程学习）**思想的体现——先易后难，让网络逐步掌握复杂技能。</p>
+<ul>
+<li><strong>目标</strong>：重建动画姿态，学习自然动作规律，z 代表动作风格/类型</li>
+</ul>
+<h3 id="阶段-2motion-distillation动作蒸馏-用轨迹优化器训练-decoder"><a class="header" href="#阶段-2motion-distillation动作蒸馏-用轨迹优化器训练-decoder">阶段 2：Motion Distillation（动作蒸馏）—— 用轨迹优化器训练 Decoder</a></h3>
+<p><strong>作用</strong>：把物理稳定性灌进网络，保留 z 不变</p>
+<p><strong>学习类型</strong>：<strong>监督学习</strong>（不是强化学习）</p>
+<ul>
+<li>有明确的输入：s_t + z</li>
+<li>有明确的标签：轨迹优化器输出的动作</li>
+<li>有监督 Loss：MSE 重建损失</li>
+</ul>
+<p><strong>核心作用</strong>：<strong>让行动变得稳定</strong></p>
+<ul>
+<li>阶段 1 的 Decoder 能生成动作，但可能物理不稳定</li>
+<li>阶段 2 用轨迹优化器的&quot;标准答案&quot;微调，保证物理稳定</li>
+</ul>
+<h4 id="蒸馏关系"><a class="header" href="#蒸馏关系">蒸馏关系</a></h4>
+<pre><code>老师：轨迹优化器 (Trajectory Optimizer)
+       ↓ (生成&quot;标准答案&quot;)
+学生：Decoder
+       ↓ (学习模仿)
+输出：物理稳定的动作
+</code></pre>
+<ul>
+<li><strong>用到的关键模块</strong>：作者自研的成熟、高质量、全身轨迹优化器（Trajectory Optimizer）</li>
+<li><strong>轨迹优化器的作用</strong>：以 MoCap 为参考，在物理仿真中计算出稳定、不摔倒、符合动力学的姿态序列</li>
+<li><strong>蒸馏数据</strong>：轨迹优化器生成的物理稳定姿态序列（&quot;老师&quot;的标准答案）</li>
+<li><strong>网络</strong>：只使用阶段 1 训练好的 CVAE Decoder（解码器）</li>
+<li><strong>Decoder 输入</strong>：当前物理状态 s_t + 隐变量 z</li>
+<li><strong>Decoder 输出</strong>：动作 a（PD 控制器目标）</li>
+<li><strong>训练目标</strong>：让 Decoder 输出尽量逼近轨迹优化器的稳定姿态</li>
+<li><strong>注意</strong>：这一步只微调 Decoder，不改变 z 的语义空间。</li>
+</ul>
+<h4 id="decoder-的演进阶段-1-vs-阶段-2"><a class="header" href="#decoder-的演进阶段-1-vs-阶段-2">Decoder 的演进：阶段 1 vs 阶段 2</a></h4>
+<table><thead><tr><th>方面</th><th>阶段 1 Decoder</th><th>阶段 2 Decoder</th></tr></thead><tbody>
+<tr><td><strong>网络结构</strong></td><td>相同</td><td>相同（同一网络）</td></tr>
+<tr><td><strong>权重</strong></td><td>从 MoCap 学习</td><td>在阶段 1 基础上微调</td></tr>
+<tr><td><strong>输出特性</strong></td><td>像 MoCap 动作</td><td>像轨迹优化器输出（物理稳定）</td></tr>
+<tr><td><strong>训练数据</strong></td><td>原始 MoCap</td><td>轨迹优化器生成的数据</td></tr>
+<tr><td><strong>目标</strong></td><td>重建动画姿态</td><td>逼近物理稳定动作</td></tr>
+</tbody></table>
+<p><strong>关键设计：如何保证微调后还能&quot;接上&quot;？</strong></p>
+<ol>
+<li>
+<p><strong>Encoder 和 Prior 冻结</strong></p>
+<ul>
+<li>阶段 2 只更新 Decoder 权重</li>
+<li>Encoder 和 Prior 保持不变</li>
+<li>z 的语义空间不被破坏</li>
+</ul>
+</li>
+<li>
+<p><strong>小学习率微调</strong></p>
+<ul>
+<li>阶段 2 使用比阶段 1 更小的学习率</li>
+<li>Decoder 只小幅调整，不颠覆阶段 1 学到的内容</li>
+</ul>
+</li>
+<li>
+<p><strong>KL 正则约束</strong></p>
+<pre><code>L = L_action + αL_regu + βL_KL
+</code></pre>
+<ul>
+<li>L_KL 项约束输出不要偏离原始分布太远</li>
+<li>防止&quot;微调过头&quot;</li>
+</ul>
+</li>
+<li>
+<p><strong>实验验证</strong></p>
+<ul>
+<li>阶段 3 能正常学习复杂任务（地形穿越、VR 追踪）</li>
+<li>证明 Encoder-Prior-Decoder 仍然兼容</li>
+</ul>
+</li>
+</ol>
+<p><strong>本质</strong>：阶段 2 是<strong>兼容性微调</strong>，不是<strong>重新训练</strong>——Decoder 变了，但和 Encoder/Prior 的接口（z 的语义）保持一致。</p>
+<h4 id="如果阶段-2-还是不能保证稳定怎么办"><a class="header" href="#如果阶段-2-还是不能保证稳定怎么办">如果阶段 2 还是不能保证稳定怎么办？</a></h4>
+<p><strong>问题：为什么阶段 2 可能失败？</strong></p>
+<table><thead><tr><th>原因</th><th>说明</th><th>解决方案</th></tr></thead><tbody>
+<tr><td><strong>轨迹优化器本身失败</strong></td><td>某些 MoCap 动作在物理上不可执行</td><td>筛选数据集，剔除无法优化的动作</td></tr>
+<tr><td><strong>Decoder 容量不足</strong></td><td>网络太小，学不会复杂映射</td><td>增加网络层数或宽度</td></tr>
+<tr><td><strong>微调过头</strong></td><td>学习率太大，破坏了阶段 1 的语义</td><td>降低学习率，增加 KL 权重</td></tr>
+<tr><td><strong>蒸馏数据不足</strong></td><td>轨迹优化器生成的样本太少</td><td>增加蒸馏数据量，多次迭代</td></tr>
+</tbody></table>
+<p><strong>论文中的保障机制</strong>：</p>
+<ol>
+<li>
+<p><strong>PHC+ 100% 成功率</strong></p>
+<ul>
+<li>阶段 1 已经达到 AMASS 完美跟踪</li>
+<li>基础动作质量有保证</li>
+</ul>
+</li>
+<li>
+<p><strong>轨迹优化器是物理正确的</strong></p>
+<ul>
+<li>基于优化方法（不是学习）</li>
+<li>生成的动作天然物理稳定</li>
+</ul>
+</li>
+<li>
+<p><strong>提前终止（Early Termination）</strong></p>
+<ul>
+<li>如果 Decoder 输出导致摔倒，立即终止</li>
+<li>让训练专注于成功的样本</li>
+</ul>
+</li>
+<li>
+<p><strong>渐进式蒸馏</strong></p>
+<ul>
+<li>先蒸馏简单动作（走路、站立）</li>
+<li>再蒸馏复杂动作（跑步、跳跃）</li>
+</ul>
+</li>
+</ol>
+<p><strong>极端情况</strong>：</p>
+<blockquote>
+<p>如果某些动作确实物理不可执行（如 MoCap 数据有穿透、抖动），轨迹优化器会失败，这些动作会被剔除出训练集。UHMP 承认&quot;不是所有 MoCap 动作都能物理实现&quot;，这是合理的取舍。</p>
+</blockquote>
+<p><strong>与 HuMoR 的关系</strong>：</p>
+<ul>
+<li>Prior 设计 <code>R(z|s^p) = N(z | μ^p_t, σ^p_t)</code> 灵感来自 HuMoR</li>
+<li>但 UHMP 进一步将先验用于下游物理控制任务</li>
+</ul>
+<h3 id="阶段-3high-level-control高层强化学习"><a class="header" href="#阶段-3high-level-control高层强化学习">阶段 3：High-level Control（高层强化学习）</a></h3>
+<p><strong>作用</strong>：学习用 z 控制角色完成任务</p>
+<p><strong>学习类型</strong>：<strong>强化学习</strong></p>
+<ul>
+<li>没有标签，只有奖励信号</li>
+<li>需要探索（从先验 R(z|s^p) 采样 z）</li>
+<li>目标：最大化累积奖励</li>
+</ul>
+<p><strong>核心作用</strong>：<strong>生成任务目标</strong></p>
+<ul>
+<li>阶段 1-2 已经学会&quot;能走起来&quot;和&quot;怎么走&quot;</li>
+<li>阶段 3 只学习&quot;往哪走&quot;（根据任务目标选择 z）</li>
+</ul>
+<p><strong>网络状态</strong>：</p>
+<ul>
+<li><strong>Decoder D</strong>：固定（阶段 2 蒸馏后的版本）</li>
+<li><strong>Prior R</strong>：固定（阶段 1 训练好的版本）</li>
+<li><strong>Encoder E</strong>：不使用（任务阶段不需要编码）</li>
+<li><strong>高层策略 π_task</strong>：可训练，学习输出合适的 z</li>
+</ul>
+<h4 id="为什么-decoder-和-prior-固定后还能工作"><a class="header" href="#为什么-decoder-和-prior-固定后还能工作">为什么 Decoder 和 Prior 固定后还能工作？</a></h4>
+<pre><code>阶段 1 + 阶段 2 训练完成后：
+┌──────────────────────────────────────┐
+│  Encoder E: z 的语义空间已学会        │
+│  Prior R: 能根据 s^p 生成合适的 z       │
+│  Decoder D: 能根据 z 输出稳定动作      │
+└──────────────────────────────────────┘
+         ↓
+阶段 3：固定底层，只训高层
+- Decoder 和 Prior 构成&quot;动作执行器&quot;
+- 高层策略学习&quot;如何选择 z&quot;
+- 就像学会了&quot;开车&quot;，只需要学&quot;往哪开&quot;
+</code></pre>
+<p><strong>类比</strong>：</p>
+<blockquote>
+<p>阶段 1-2：培训司机（学会开车技能）
+阶段 3：安排任务（学习如何送货、载客、赛车）
+司机已经会开车了，只需要知道目的地</p>
+</blockquote>
+<h4 id="三阶段学习类型对比"><a class="header" href="#三阶段学习类型对比">三阶段学习类型对比</a></h4>
+<table><thead><tr><th>阶段</th><th>方法</th><th>学习类型</th><th>Loss/信号</th></tr></thead><tbody>
+<tr><td><strong>阶段 1</strong></td><td>PHC+ CVAE</td><td>监督学习</td><td>重建 Loss + KL 散度</td></tr>
+<tr><td><strong>阶段 2</strong></td><td>Distillation</td><td>监督学习</td><td>MSE（模仿轨迹优化器）</td></tr>
+<tr><td><strong>阶段 3</strong></td><td>High-level Policy</td><td>强化学习</td><td>任务奖励</td></tr>
+</tbody></table>
+<h4 id="三阶段核心作用对比"><a class="header" href="#三阶段核心作用对比">三阶段核心作用对比</a></h4>
+<table><thead><tr><th>阶段</th><th>核心作用</th><th>输入</th><th>输出</th></tr></thead><tbody>
+<tr><td><strong>阶段 1</strong></td><td>把目标转化为行动</td><td>模仿目标 s^g-mimic</td><td>能生成动作的 CVAE</td></tr>
+<tr><td><strong>阶段 2</strong></td><td>让行动变得稳定</td><td>轨迹优化器的&quot;标准答案&quot;</td><td>物理稳定的 Decoder</td></tr>
+<tr><td><strong>阶段 3</strong></td><td>生成任务目标</td><td>任务目标 s^g</td><td>选择哪个 z（动作指令）</td></tr>
+</tbody></table>
+<p><strong>关键结论</strong>：</p>
+<blockquote>
+<p>UHMP 只有<strong>阶段 3 是强化学习</strong>，阶段 1 和 2 都是监督学习。
+这与 ASE/AMP 等直接使用对抗学习 +RL 的方法有本质区别。</p>
+<p><strong>阶段 1-2 解决了&quot;能走起来&quot;和&quot;怎么走&quot;，阶段 3 只负责&quot;往哪走&quot;</strong>。</p>
+</blockquote>
+<h4 id="与传统端到端-rl-的对比"><a class="header" href="#与传统端到端-rl-的对比">与传统端到端 RL 的对比</a></h4>
+<table><thead><tr><th>方法</th><th>需要学什么</th><th>难度</th></tr></thead><tbody>
+<tr><td><strong>传统端到端 RL</strong></td><td>目标→行动→稳定 一起学</td><td>地狱级</td></tr>
+<tr><td><strong>UHMP</strong></td><td>阶段 1：目标→行动<br>阶段 2：行动→稳定<br>阶段 3：任务→目标</td><td>简单级</td></tr>
+</tbody></table>
+<p><strong>为什么 UHMP 更简单？</strong></p>
+<ul>
+<li>传统 RL：同时学太多东西，探索空间巨大，容易学到&quot;奇怪但有效&quot;的步态</li>
+<li>UHMP：分层击破，每层专注一件事，底层用监督学习保证质量</li>
+</ul>
+<hr />
+<h2 id="6-与论文199ase的对比"><a class="header" href="#6-与论文199ase的对比">6. 与论文199（ASE）的对比</a></h2>
+<p><img src="assets/191_images/fig6_amass_issues.png" alt="Figure 6: AMASS 数据集问题可视化" /></p>
+<h3 id="61-它们是不是都在解决通用性"><a class="header" href="#61-它们是不是都在解决通用性">6.1 它们是不是都在解决&quot;通用性&quot;？</a></h3>
+<p><strong>是，但不是同一种通用性。</strong></p>
+<p>两篇论文都在回答同一个大问题：</p>
+<blockquote>
+<p>如何让物理角色控制摆脱&quot;一个任务训一个策略&quot;、&quot;一个动作写一套跟踪器&quot;的低通用性困境？</p>
+</blockquote>
+<p>但它们切入的是这个问题的不同侧面：</p>
+<ul>
+<li><strong>论文199（ASE）</strong>：主攻<strong>任务通用性 / 技能复用性</strong>。目标是先预训练出一个可复用的技能库，再让上层策略在新任务里调用这些技能。</li>
+<li><strong>论文191（UHMP）</strong>：主攻<strong>动作通用性 / 运动表示统一性</strong>。目标是用统一隐变量 z 覆盖丰富的动作语义，同时通过蒸馏把这些动作变成物理可执行的控制表示。</li>
+</ul>
+<p>所以更准确地说：</p>
+<ul>
+<li>ASE 在解决：<strong>学到的能力能不能跨任务复用？</strong></li>
+<li>UHMP 在解决：<strong>大量动作能不能被统一表示，并稳定落地到物理控制？</strong></li>
+</ul>
+<h3 id="62-两者的共同点"><a class="header" href="#62-两者的共同点">6.2 两者的共同点</a></h3>
+<ol>
+<li>
+<p><strong>都引入了隐变量 z 作为高层控制接口</strong></p>
+<ul>
+<li>都不是直接让 RL 输出低层关节控制，而是先输出一个更抽象的 latent code。</li>
+<li>这意味着高层决策与低层动作生成被解耦。</li>
+</ul>
+</li>
+<li>
+<p><strong>都采用分层控制结构</strong></p>
+<ul>
+<li>高层策略负责选择 latent 指令。</li>
+<li>低层模块负责把 latent 指令变成物理动作。</li>
+</ul>
+</li>
+<li>
+<p><strong>都试图摆脱传统逐动作跟踪、逐任务手工设计的范式</strong></p>
+<ul>
+<li>都代表了从&quot;手工指定控制逻辑&quot;转向&quot;学习统一运动先验&quot;的趋势。</li>
+</ul>
+</li>
+</ol>
+<h3 id="63-两者最关键的差异"><a class="header" href="#63-两者最关键的差异">6.3 两者最关键的差异</a></h3>
+<table><thead><tr><th>维度</th><th>论文199：ASE</th><th>论文191：UHMP</th></tr></thead><tbody>
+<tr><td><strong>核心目标</strong></td><td>技能可复用、跨任务迁移</td><td>动作表示统一、物理稳定可执行</td></tr>
+<tr><td><strong>通用性的类型</strong></td><td>任务通用性</td><td>动作通用性</td></tr>
+<tr><td><strong>z 的本质</strong></td><td>技能索引 / 技能地址</td><td>动作语义表示</td></tr>
+<tr><td><strong>z 的来源</strong></td><td>训练中随机采样，并通过互信息约束赋予语义</td><td>从 MoCap 数据中通过 CVAE 学出来</td></tr>
+<tr><td><strong>低层控制器</strong></td><td>预训练技能策略 (\pi(a|s,z))</td><td>蒸馏后的 Decoder</td></tr>
+<tr><td><strong>关键训练机制</strong></td><td>对抗模仿 + 技能发现 + 两阶段训练</td><td>动作先验 + 轨迹优化蒸馏 + 高层 RL</td></tr>
+<tr><td><strong>主要优点</strong></td><td>下游任务迁移快、技能可复用</td><td>动作自然性与物理稳定性结合得更成熟</td></tr>
+<tr><td><strong>主要瓶颈</strong></td><td>技能语义较隐式，仍偏 locomotion/基础技能</td><td>上限受轨迹优化器能力限制</td></tr>
+</tbody></table>
+<h3 id="64-最重要的一点它们都用了-z但-z-不是同一种东西"><a class="header" href="#64-最重要的一点它们都用了-z但-z-不是同一种东西">6.4 最重要的一点：它们都用了 z，但 z 不是同一种东西</a></h3>
+<p>这是最容易混淆、但也是最关键的区别。</p>
+<h4 id="ase-的-z技能索引"><a class="header" href="#ase-的-z技能索引">ASE 的 z：&quot;技能索引&quot;</a></h4>
+<ul>
+<li>z 更像一个<strong>人为构造的技能地址空间</strong>。</li>
+<li>论文通过互信息最大化，强迫不同 z 对应不同行为模式。</li>
+<li>因此 z 的目标是：<strong>让系统拥有一组可区分、可调用、可复用的技能</strong>。</li>
+</ul>
+<p>可以理解为：</p>
+<ul>
+<li>z1 可能对应走路</li>
+<li>z2 可能对应跑步</li>
+<li>z3 可能对应转身或攻击</li>
+</ul>
+<p>所以 ASE 的 z 首先服务的是<strong>技能复用</strong>。</p>
+<h4 id="uhmp-的-z动作语义码"><a class="header" href="#uhmp-的-z动作语义码">UHMP 的 z：&quot;动作语义码&quot;</a></h4>
+<ul>
+<li>z 是从大量动作数据中通过 CVAE 自动学出的连续语义表示。</li>
+<li>它不是先验定义好的技能编号，而是 MoCap 分布压缩后的连续表达。</li>
+<li>随后作者再用轨迹优化蒸馏，把这个语义空间变成物理稳定、可执行的控制空间。</li>
+</ul>
+<p>所以 UHMP 的 z 首先服务的是<strong>统一表示大量动作</strong>。</p>
+<p>一句话概括：</p>
+<blockquote>
+<p>ASE 的 z 是&quot;给高层策略调用技能用的地址&quot;；
+UHMP 的 z 是&quot;从动作数据中学出来的统一语义表示&quot;。</p>
+</blockquote>
+<h3 id="65-从研究脉络上看它们是什么关系"><a class="header" href="#65-从研究脉络上看它们是什么关系">6.5 从研究脉络上看，它们是什么关系？</a></h3>
+<p>它们不是简单的谁替代谁，而是同一研究脉络中两条互补路线：</p>
+<ul>
+<li><strong>ASE</strong> 强调：先把大量技能学出来，并让它们能迁移到不同任务。</li>
+<li><strong>UHMP</strong> 强调：先把大量动作压缩进统一表示，再通过蒸馏获得物理上稳定、易控的执行器。</li>
+</ul>
+<p>如果把&quot;通用物理角色控制&quot;看作最终目标，那么：</p>
+<ul>
+<li>ASE 更像是在回答：<strong>如何做出一个可复用的技能库？</strong></li>
+<li>UHMP 更像是在回答：<strong>如何做出一个统一且稳定的运动表示层？</strong></li>
+</ul>
+<p>两者合起来，才更接近真正的通用角色控制系统。</p>
+<h3 id="66-与-controlvae-的对比"><a class="header" href="#66-与-controlvae-的对比">6.6 与 ControlVAE 的对比</a></h3>
+<table><thead><tr><th>维度</th><th>ControlVAE (202)</th><th>UHMP (191)</th></tr></thead><tbody>
+<tr><td><strong>Prior 设计</strong></td><td>状态条件高斯 p(z|s)</td><td>可学习高斯先验 R(z|s^p)</td></tr>
+<tr><td><strong>训练方式</strong></td><td>世界模型监督学习</td><td>轨迹优化蒸馏 + RL</td></tr>
+<tr><td><strong>多样性保证</strong></td><td>KL 散度 + 数据平衡</td><td>变分信息瓶颈</td></tr>
+<tr><td><strong>下游任务</strong></td><td>梯度优化</td><td>高层 RL 策略</td></tr>
+</tbody></table>
+<p><strong>共同点</strong>：</p>
+<ul>
+<li>都使用可学习的先验分布（非固定标准正态）</li>
+<li>都用Decoder作为底层控制器</li>
+<li>都支持多种下游任务</li>
+</ul>
+<p><strong>关键区别</strong>：</p>
+<ul>
+<li>ControlVAE 用世界模型进行监督学习，UHMP 用轨迹优化器蒸馏</li>
+<li>ControlVAE 的 prior 依赖完整状态 s，UHMP 的 prior 仅依赖 proprioception s^p</li>
+</ul>
+<hr />
+<h2 id="七关键公式总结"><a class="header" href="#七关键公式总结">七、关键公式总结</a></h2>
+<h3 id="蒸馏-loss变分信息瓶颈"><a class="header" href="#蒸馏-loss变分信息瓶颈">蒸馏 Loss（变分信息瓶颈）</a></h3>
+<pre><code>L = L_action + αL_regu + βL_KL
+</code></pre>
+<ul>
+<li><code>β</code> 使用退火策略，从 0 逐渐增加</li>
+</ul>
+<h3 id="learnable-prior灵感来自-humor"><a class="header" href="#learnable-prior灵感来自-humor">Learnable Prior（灵感来自 HuMoR）</a></h3>
+<pre><code>R(z|s^p) = N(z | μ^p_t, σ^p_t)
+</code></pre>
+<h3 id="网络架构"><a class="header" href="#网络架构">网络架构</a></h3>
+<pre><code>Encoder:  E(z | s^p, s^g-mimic)  →  隐变量 z
+Decoder:  D(a | s^p, z)          →  动作 a（PD 目标）
+Prior:    R(z | s^p)             →  可学习高斯先验
+</code></pre>
+<h3 id="高层策略"><a class="header" href="#高层策略">高层策略</a></h3>
+<pre><code>π_task(z | s^p, s^g)  从 R(z|s^p) 采样用于探索
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="197.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="190.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="197.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="190.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="theme/pagetoc.js"></script>
+        <script type="text/javascript" src="theme/mermaid.min.js"></script>
+        <script type="text/javascript" src="theme/mermaid-init.js"></script>
+    </body>
+</html>
